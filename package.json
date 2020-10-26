@@ -1,0 +1,22 @@
+{
+  "name": "praksesprojekts_alma_kristiana_vitola",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKVitola/Praksesprojekts_Alma_Kristiana_Vitola.git"
+  },
+  "author": "AKVitola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AKVitola/Praksesprojekts_Alma_Kristiana_Vitola/issues"
+  },
+  "homepage": "https://github.com/AKVitola/Praksesprojekts_Alma_Kristiana_Vitola#readme",
+  "dependencies": {
+    "ejs": "^3.1.5"
+  }
+}
