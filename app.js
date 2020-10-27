@@ -7,9 +7,9 @@ const app = express();
 // Require static assets from assets folder
 app.use(express.static(path.join(__dirname, "/assets/")));
 
-// set the view engine as ejs
-// app.engine('ejs', require('ejs').renderFile);
-app.set("view engine", "ejs");
+// set the view engine as html
+app.engine('.html', require('ejs').renderFile);
+app.set("view engine", "html");
 
 // Set 'views' directory for any views being rendered res.render()
 // app.set("views", path.join(__dirname, ""));
@@ -25,27 +25,27 @@ app.get('/', function (req, res) {
 });
 
 // app.get('/ideja', function (req, res) {
-//   res.render('pages/ideja');
+//   res.render('ideja');
 // });
 
 // app.get('/piesaki_sapni', function (req, res) {
-//   res.render('pages/piesaki_sapni');
+//   res.render('piesaki_sapni');
 // });
 
 // app.get('/uznemejiem', function (req, res) {
-//   res.render('pages/uznemejiem');
+//   res.render('uznemejiem');
 // });
 
 // app.get('/sapnu_banka', function (req, res) {
-//   res.render('pages/sapnu_banka');
+//   res.render('sapnu_banka');
 // });
 
 // app.get('/sapnus_atbalsta', function (req, res) {
-//   res.render('pages/sapnus_atbalsta');
+//   res.render('sapnus_atbalsta');
 // });
 
 // app.get('/iedvesmas_stasti', function (req, res) {
-//   res.render('pages/iedvesmas_stasti');
+//   res.render('iedvesmas_stasti');
 // });
 
 
