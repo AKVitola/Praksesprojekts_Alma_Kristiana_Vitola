@@ -1,0 +1,99 @@
+<%- include ("partials/_head") %>
+
+<body>
+  <div class="container">
+
+    <%- include ("partials/_header") %>
+
+    <main>
+      <section class="introduction" id="js-introduction">
+          <div class="video-placeholder" id="js-video-img"></div>
+          <div class="video-overlay" id="js-ovelay">
+            <div class="video-bcground" id="js-video-bcground"></div>
+            <video class="video" id="js-video" type="video/mp4" controls controlsList="nodownload">
+              Jūsu interneta pārlūks neļauj atskaņot video.
+              <source src="https://sparkleheart.org/wp-content/uploads/2020/09/SparkleHeart_animacija_V4.mp4">
+            </video>
+          </div>
+        <p class="about-company">SparkleHeart ir biedrība, kas radīta, lai palīdzētu cilvēkiem piepildīt pat pārdrošākos sapņus. Šeit satiekas sapņotāji
+        un viņu atbalstītāji - uzņēmumi, kas sniedz palīdzīgu roku, lai kopā pasauli padarītu par labāku vietu mums visiem.Mēs
+        esam gatavi palīdzēt Tev piepildīt sapni. Kā pamats iedvesmai - tiek radīti arī 99 stāsti par Latvijas sievietēm.</p>
+      </section>
+
+      <section class="gallery">
+        <div class="flex-container-gallery wrap">
+          <div class="col first-img">
+            <img class="responsive-img" src="/img/Zanda.jpg" alt="Sieviete pārgājienā.">
+          </div>
+          <div class="col second-img">
+            <img class="responsive-img" src="/img/Sibilla.jpg" alt="Sieviete ar suni.">
+          </div>
+
+          <div class="col colage-img">
+            <div class="row-inner top-img">
+              <img class="responsive-img" src="/img/Brinuma_meita.jpg" alt="Trīs cilvēku kopbilde.">
+            </div>
+            <div class="row-inner bottom-img">
+              <img class="responsive-img" src="/img/Alina.jpg" alt="Sieviete Vecrīgā.">
+            </div>
+          </div>
+          <div class="col last-img">
+            <img class="responsive-img" src="/img/Anda.jpg" alt="Pāra kopbilde.">
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+          <div class="flex-container-contacts">
+            <div class="contacts-row upper-text">
+              <h3 class="section-titel">Vēlies piepildīt savu sapni?</h3>
+            </div>
+            <div class="contacts-row">
+              <h3 class="section-titel"> Vēlies palīdzēt kādam piepildīt sapni?</h3>
+            </div>
+          </div>
+
+          <div class="flex-container-btn">
+            <a href="/">
+              <button class="btn user-btn btn-text">Sapņotājiem</button>
+            </a>
+            <div class="lower-btn">
+              <a href="/">
+                <button class="btn user-btn">Uzņēmējiem</button>
+              </a>
+            </div>
+        </div>
+
+        <form class="contact-form" action="/">
+          <h3 class="form-title">Sazināties ar mums</h3>
+          <input class="form-field" type="text" name="name" placeholder="Vārds, Uzvārds*" required>
+          <input class="form-field" type="email" name="email" placeholder="E-pasts*" required><br>
+          <input class="form-field" type="tel" name="tel" placeholder="Telefons*" required><br>
+          <textarea class="form-field comment-field" name="comment" cols="30" rows="10" placeholder="Jautājums, vai komentārs*" required></textarea><br>
+          <p class="mandatory-info small-form-text">* obligāti aizpildāmie lauki</p>
+
+          <div class="checkbox">
+            <input type="checkbox" id="agree" name="agree" required>
+          </div>
+          <div class="text-block">
+            <label class="small-form-text" for="agree">Piekrītu, ka mani dati tiks izmantoti likumdošanā noteiktā kārtībā un tiks saglabāti līdz brīdim, kamēr tas būs
+            nepieciešams.</label> <br>
+          </div>
+          <input class="btn submit-form-btn" type="submit" formtarget="_blank" value="Sūtīt">
+        </form>
+      </section>
+
+      <%- include ("partials/_benefactors") %>
+
+      <div class="topButtonContainer">
+        <button class="toTop-Button" id="js-goToTopButton" onclick="goToTop()" title="Go to top">&#10143;</button>
+      </div>
+    </main>
+
+    <%- include ("partials/_footer") %>
+
+  </div>
+
+  <script src="/js/theme.js"></script>
+</body>
+</html>
