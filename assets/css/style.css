@@ -1,3 +1,6 @@
+/* ========================Index
+    ================================*/
+
 *,
 *:before,
 *:after {
@@ -85,7 +88,7 @@ body {
 }
 
 .nav,
-.about-company,
+.page-text,
 .btn,
 .form-field,
 .small-form-text,
@@ -107,6 +110,11 @@ body {
 .nav-item {
   display: inline-block;
   padding-bottom: 3px;
+}
+
+.nav-item > a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav-lang-item {
@@ -250,7 +258,7 @@ body {
   outline: 0;
 }
 
-.about-company {
+.page-text {
   position: absolute;
   width: 654px;
   height: 114px;
@@ -633,13 +641,175 @@ input[type="checkbox"]:checked {
   right: -1px;
 }
 
+/* ========================Ideja
+===============================*/
+
+.container.idea {
+  height: 2236.34px;
+}
+
+.idea > .page-heading {
+  position: absolute;
+  width: 182px;
+  height: 70px;
+  left: 592px;
+  top: 205px;
+
+  margin: 0;
+
+  font-size: 48px;
+  line-height: 71px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-heading,
+.referent-name,
+.founder-text {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  color: #2f4858;
+}
+
+.idea > .page-text {
+  position: absolute;
+  width: 606px;
+  height: 112px;
+  left: 380px;
+  top: 335px;
+}
+
+.founder {
+  position: absolute;
+  width: 1366px;
+  height: 705px;
+  left: 0;
+  top: 597px;
+}
+
+.founder-img-tablet,
+.founder-img-mobile {
+  display: none;
+}
+
+.founder-overlay {
+  position: inherit;
+  width: 1366px;
+  height: 705px;
+  background-image: url(../img/juris-bcground.png);
+  background-size: cover;
+  z-index: 2;
+}
+
+.founder::before,
+.founder::after {
+  content: "";
+  background-image: url(../img/ripped.png);
+  position: inherit;
+
+  max-width: 100%;
+  width: 1366px;
+  height: 55px;
+  left: 0;
+  z-index: 3;
+}
+
+.founder::after {
+  transform: rotate(-180deg);
+  top: 650px;
+}
+
+.founder-text {
+  position: absolute;
+  width: 818px;
+  height: 108px;
+  left: 274px;
+  top: 483px;
+
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  z-index: 4;
+}
+
+.reference {
+  position: absolute;
+  left: 381px;
+  top: 1447px;
+  width: 602px;
+  height: 213px;
+}
+
+.referent-name {
+  width: 388px;
+  height: 29px;
+
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.referent-position {
+  position: inherit;
+  top: 27px;
+  width: 500px;
+  height: 25px;
+}
+
+.referent-position,
+.referent-quote {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.referent-quote {
+  position: inherit;
+  top: 101px;
+  width: 602px;
+  height: 149px;
+
+  font-style: italic;
+  font-size: 24px;
+  line-height: 29px;
+
+  margin: 0;
+}
+
+.arrow-btn {
+  position: absolute;
+  width: 80px;
+  height: 23px;
+  left: 2px;
+  top: 248px;
+}
+
+.arrow1 {
+  margin-right: 43px;
+}
+
+.arrow-btn > img {
+  width: 12px;
+  height: 23px;
+}
+
+.idea-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2243px;
+}
+
 /*========================================
                  Media
 =========================================*/
 
 /* Mobile devices
 ================= */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
   .container,
   .header,
   .footer,
@@ -738,7 +908,7 @@ input[type="checkbox"]:checked {
     width: 97%;
   }
 
-  .about-company {
+  .page-text {
     top: 296px;
     left: 20px;
     width: 280px;
@@ -1040,369 +1210,124 @@ input[type="checkbox"]:checked {
     font-size: 11px;
     line-height: 13px;
   }
-}
 
-/*iPads, Tablets
-================ */
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-  .container,
-  .header,
-  .footer,
-  .flex-container-gallery {
-    width: 481px;
+  /* ========================Ideja
+===============================*/
+
+  .container.idea {
+    height: 1828px;
+    width: 320px;
   }
 
-  .container {
-    height: 3400px;
-  }
-
-  /* ===Header=== */
-
-  .header {
-    height: 50px;
-  }
-
-  .ripped_header {
-    top: 37px;
-  }
-
-  .black-logo {
-    left: 50px;
-    width: 88px;
-    height: auto;
-  }
-
-  .menu-icon {
-    top: 13px;
-    right: 50px;
-
-    display: block;
-  }
-
-  /* === Overlay menu=== */
-
-  .nav {
-    height: 0%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    background: #fff;
-    overflow: hidden;
-    transition: 1s ease-in-out;
-  }
-
-  .nav-lang-item {
-    position: relative;
-    top: -480px;
-    padding-left: 0;
-  }
-
-  .inner-nav {
-    position: relative;
-    top: 13%;
-    margin: 15% 22%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-  }
-
-  .nav-item {
-    margin: 20px 0;
-    padding-bottom: 5px;
-
-    font-size: 25px;
-    color: #000;
-    transition: 0.3s ease-in-out;
-  }
-
-  /* ===Go to top button=== */
-
-  .topButtonContainer {
-    right: 60px;
-  }
-
-  .toTop-Button {
-    font-size: 50px;
-  }
-
-  /* ===Introduction section=== */
-
-  .video-placeholder {
-    width: 481px;
-    height: 254px;
-    background-size: 86px 83px, contain;
-  }
-
-  .video {
-    top: 8%;
-    width: 97%;
-  }
-
-  .about-company {
-    top: 368px;
-    left: 50.5px;
-    width: 380px;
-    height: 124px;
-
-    font-size: 16px;
-    line-height: 18px;
-  }
-
-  /* ===Gallery section===*/
-
-  .flex-container-gallery {
-    top: 531px;
-    display: flex;
-  }
-
-  .flex-container-gallery.wrap {
-    flex-wrap: wrap;
-  }
-
-  .first-img {
-    order: 3;
-  }
-
-  .second-img {
-    order: 4;
-  }
-
-  .first-img img,
-  .second-img img {
-    width: 240.5px;
-    height: 261px;
-  }
-
-  .colage-img {
-    order: 1;
-  }
-
-  .colage-img img {
-    width: 208px;
-  }
-
-  .bottom-img {
-    height: 128px;
-  }
-
-  .last-img {
-    order: 2;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .last-img img {
-    width: 273px;
-    height: 258px;
-  }
-
-  .flex-container-gallery::before {
-    top: 42px;
-    z-index: 1;
-  }
-
-  .flex-container-gallery::after {
-    top: 542px;
-  }
-
-  /* ===Contacts section=== */
-
-  .flex-container-contacts {
-    top: 1270px;
-    left: 0;
-    flex-direction: column;
-  }
-
-  .contacts-row {
-    width: 481px;
-    align-items: center;
-  }
-
-  .contacts-row.upper-text {
-    margin-bottom: 160px;
-  }
-
-  .flex-container-btn {
-    top: 1336px;
-    left: 124px;
-    width: 233px;
-    flex-direction: column;
-  }
-
-  .lower-btn {
-    margin-top: 148px;
-  }
-
-  .contact-form {
-    top: 1750px;
+  .idea > .page-heading {
+    top: 103px;
     left: 20px;
-    width: 441px;
+    width: 280px;
+    height: 46px;
+
+    font-size: 36px;
+    line-height: 53px;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  .form-field {
-    width: 441px;
+  .idea > .page-text {
+    left: 20px;
+    top: 183px;
+    width: 280px;
+    height: 124px;
   }
 
-  .form-title {
-    margin-bottom: 45px;
+  .founder {
+    top: 387px;
   }
 
-  .small-form-text {
-    margin-top: 0;
-  }
-
-  .checkbox {
-    margin-top: 10px;
-  }
-
-  .text-block {
-    width: 400px;
-    display: inline;
-    float: right;
-    margin-top: 10px;
-  }
-
-  .submit-form-btn {
-    left: 130.5px;
-    top: 658px;
-  }
-
-  /* ===Benefactors section=== */
-
-  .benefactors {
-    top: 2600px;
-    height: 732px;
-  }
-
-  .benefactors-titel {
-    width: 440px;
-    left: 20.5px;
-  }
-
-  .benefactors-titel > .section-titel {
-    font-size: 24px;
-    line-height: 36px;
-  }
-
-  .flex-container-logos {
-    width: 380px;
-    height: 220px;
-    left: 50.5px;
-    top: 180px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .logo-teikums img,
-  .logo-citybee img,
-  .logo-sem img {
-    width: 163px;
-  }
-
-  .logo-linearis img {
-    width: 58px;
-    margin-left: 90px;
-    margin-right: 60px;
-  }
-
-  /* ===Footer=== */
-
-  .footer {
-    top: 3033px;
-    height: 483px;
-    background-size: cover;
-  }
-
-  .flex-container-footer {
-    left: 50px;
-    top: 60px;
-    bottom: 0;
-  }
-
-  .golden-logo img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .footer-nav,
-  .bank-account {
+  .founder-img,
+  .founder-img-tablet {
     display: none;
   }
 
-  .line-break {
-    display: none;
-  }
-
-  .adress {
-    position: absolute;
-    right: 67px;
-    top: 135px;
-    width: 300px;
-
-    font-size: 12px;
-    line-height: 15px;
-    text-align: left;
-  }
-
-  .owner-name {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 17px;
-  }
-
-  .route-to-accoount {
+  .founder-img-mobile {
     display: block;
+  }
+
+  .founder,
+  .founder-img-mobile,
+  .founder-overlay {
+    width: 320px;
+    height: 475px;
+  }
+
+  .founder::before {
+    height: 39px;
+    top: -19px;
+  }
+
+  .founder::after {
+    top: 438px;
+  }
+
+  .founder-text {
+    top: 241px;
+    left: 20px;
+    width: 280px;
+    height: 168px;
+
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .reference {
+    left: 20px;
+    top: 985px;
+  }
+
+  .reference,
+  .referent-name,
+  .referent-position,
+  .referent-quote {
+    width: 279px;
+  }
+
+  .referent-name {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .referent-position {
+    height: 39px;
+    top: 40px;
+
+    margin: 0;
 
     font-size: 14px;
     line-height: 17px;
   }
 
-  .route-to-accoount > p {
-    margin: 0;
-    font-weight: bold;
+  .referent-quote {
+    top: 99px;
+    height: 66px;
+
+    font-size: 12px;
+    line-height: 15px;
   }
 
-  .social-media {
-    right: 300px;
-    top: 272px;
-    height: 25px;
-
-    margin-top: 35px;
-    margin-bottom: 35px;
+  .referent-quote > span {
+    display: none;
   }
 
-  .fb-icon,
-  .ig-icon {
-    height: 25px;
+  .arrow-btn {
+    top: 192px;
+    left: 1px;
   }
 
-  .copyright {
-    bottom: 51px;
-  }
-
-  .private {
-    width: 200px;
-    bottom: 30px;
-    right: 167px;
-  }
-
-  .copyright-text {
-    font-size: 11px;
-    line-height: 13px;
+  .idea-footer,
+  .idea-footer > .footer {
+    top: 652px;
   }
 }
 
-/* 768px - my tablet size. (Small screens, laptops)
+/* 768px - Tablet
 ======================== */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1365px) {
   .container,
   .header,
   .footer,
@@ -1510,7 +1435,7 @@ input[type="checkbox"]:checked {
     width: 97%;
   }
 
-  .about-company {
+  .page-text {
     width: 608px;
     height: 140px;
     left: 81px;
@@ -1721,257 +1646,83 @@ input[type="checkbox"]:checked {
     line-height: 21px;
     letter-spacing: 0.4px;
   }
-}
 
-/*Desktops, large screens
-=========================*/
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .container,
-  .header,
-  .footer,
-  .flex-container-gallery {
-    width: 992px;
+  /* ========================Ideja
+===============================*/
+
+  .container.idea {
+    height: 1968px;
+    width: 768px;
   }
 
-  .container {
-    height: 3264px;
+  .idea > .page-heading {
+    top: 167px;
+    left: 208px;
+    width: 352px;
+    height: 52px;
   }
 
-  /* ===Header=== */
-
-  .black-logo {
-    left: 3px;
+  .idea > .page-text {
+    left: 81px;
+    top: 288px;
   }
 
-  .nav {
-    left: 154px;
-    width: 830px;
+  .founder {
+    top: 550px;
+    width: 768px;
+    height: 495px;
   }
 
-  .nav-item,
-  .nav-lang-item {
-    font-size: 17px;
+  .founder-img {
+    display: none;
   }
 
-  /* ===Introduction section=== */
-
-  .video-placeholder {
-    width: 992px;
-    height: 524px;
-    background-size: 106px 103px, contain;
+  .founder-img-tablet {
+    display: block;
+    width: 768px;
+    height: 495px;
   }
 
-  .video {
-    top: 12%;
-    width: 97%;
+  .founder-overlay {
+    width: 768px;
+    height: 495px;
   }
 
-  .about-company {
-    top: 693px;
-    left: 169px;
+  .founder::before {
+    height: 39px;
+    top: -15px;
   }
 
-  /* ===Gallery section===*/
-
-  .flex-container-gallery {
-    top: 900px;
+  .founder::after {
+    top: 455px;
   }
 
-  .flex-container-gallery::before {
-    top: 45px;
+  .founder-text {
+    top: 268px;
+    left: 93px;
+    width: 595px;
+    height: 138px;
   }
 
-  .last-img {
-    display: flex;
-    align-items: center;
+  .reference {
+    left: 81px;
+    top: 1194px;
   }
 
-  .flex-container-gallery::after {
-    top: 285px;
+  .referent-quote {
+    left: 2px;
   }
 
-  /* ===Contacts section=== */
-
-  .flex-container-contacts {
-    top: 1342px;
-    left: 57px;
-
-    width: 878px;
+  .arrow-btn {
+    width: 110px;
   }
 
-  .flex-container-btn {
-    top: 1428px;
-    left: 128px;
-
-    width: 680px;
+  .arrow1 {
+    margin-right: 66px;
   }
 
-  .contact-form {
-    top: 1630px;
-    left: 190px;
-  }
-
-  .text-block {
-    width: 570px;
-    display: inline;
-    float: right;
-    margin-top: 25px;
-  }
-
-  .checkbox {
-    margin-top: 25px;
-  }
-
-  .submit-form-btn {
-    top: 599px;
-  }
-
-  /* ===Benefactors section=== */
-
-  .benefactors {
-    top: 2449px;
-  }
-
-  .benefactors-titel {
-    left: 299px;
-  }
-
-  .flex-container-logos {
-    left: 46px;
-    width: 900px;
-  }
-
-  /* ===Footer=== */
-
-  .footer {
-    top: 2899px;
-  }
-
-  .flex-container-footer {
-    left: 36px;
-    right: 36px;
-  }
-
-  .footer-nav {
-    left: 200px;
-  }
-
-  .bank-account {
-    left: 350px;
-  }
-}
-
-/*Extra large screens, TV*
-=======================*/
-@media only screen and (min-width: 1200px) and (max-width: 1365px) {
-  .container,
-  .header,
-  .ripped_header,
-  .footer,
-  .flex-container-gallery {
-    width: 1200px;
-  }
-
-  .container {
-    height: 3516px;
-  }
-
-  /* ===Header=== */
-
-  .nav {
-    width: 870px;
-  }
-
-  /* ===Introduction section=== */
-
-  .video-placeholder {
-    width: 1200px;
-    height: 634px;
-    background-size: 126px 123px, contain;
-  }
-
-  .video {
-    top: 10%;
-    width: 95%;
-  }
-
-  .about-company {
-    top: 797px;
-    left: 273px;
-  }
-
-  /* ===Gallery section===*/
-
-  .flex-container-gallery {
-    top: 1061px;
-  }
-
-  .flex-container-gallery::before {
-    top: 20px;
-  }
-
-  .last-img {
-    display: flex;
-    align-items: center;
-  }
-
-  .flex-container-gallery::after {
-    top: 315px;
-  }
-
-  /* ===Contacts section=== */
-
-  .flex-container-contacts {
-    top: 1600px;
-    left: 111px;
-  }
-
-  .flex-container-btn {
-    top: 1686px;
-    left: 220px;
-  }
-
-  .contact-form {
-    top: 1888px;
-    left: 294px;
-  }
-
-  .text-block {
-    width: 575px;
-    display: inline;
-    float: right;
-    margin-top: 25px;
-  }
-
-  .checkbox {
-    margin-top: 25px;
-  }
-
-  /* ===Benefactors section=== */
-
-  .benefactors {
-    top: 2690px;
-  }
-
-  .benefactors-titel {
-    left: 403px;
-  }
-
-  .flex-container-logos {
-    left: 85px;
-  }
-
-  /* ===Footer=== */
-
-  .footer {
-    top: 3140px;
-  }
-
-  .footer-nav {
-    left: 250px;
-  }
-
-  .bank-account {
-    left: 470px;
+  .idea-footer,
+  .idea-footer > .footer {
+    top: 798px;
   }
 }

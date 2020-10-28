@@ -24,9 +24,9 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
-// app.get('/ideja', function (req, res) {
-//   res.render('ideja');
-// });
+app.get('/ideja', function (req, res) {
+  res.render('ideja');
+});
 
 // app.get('/piesaki_sapni', function (req, res) {
 //   res.render('piesaki_sapni');
