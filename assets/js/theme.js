@@ -114,7 +114,7 @@ function displayGoToTopButton() {
 //Goes to the first section with id - introduction
 
 function goToTop() {
-  let targetDiv = document.querySelector("#js-introduction");
+  let targetDiv = document.querySelector("#js-pageTop");
   let targetPosition = calculateTargetPos(targetDiv);
   scrollToLocation(targetPosition);
 }

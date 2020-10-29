@@ -32,9 +32,9 @@ app.get('/ideja', function (req, res) {
 //   res.render('piesaki_sapni');
 // });
 
-// app.get('/uznemejiem', function (req, res) {
-//   res.render('uznemejiem');
-// });
+app.get('/uznemejiem', function (req, res) {
+  res.render('uznemejiem');
+});
 
 // app.get('/sapnu_banka', function (req, res) {
 //   res.render('sapnu_banka');

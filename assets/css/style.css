@@ -333,6 +333,7 @@ body {
   justify-content: space-around;
 }
 
+.bussnes-form-title,
 .section-titel,
 .form-title {
   font-family: "Oswald", sans-serif;
@@ -386,6 +387,7 @@ body {
 
 /* ===Form section=== */
 
+.bussnes-form-title,
 .form-title {
   font-size: 30px;
   line-height: 44px;
@@ -641,6 +643,20 @@ input[type="checkbox"]:checked {
   right: -1px;
 }
 
+/* ~~~~~~~~~~~~~~Global clases~~~~~~~~~~~~~~~~~ */
+
+.page-heading {
+  margin: 0;
+
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  color: #2f4858;
+  font-size: 48px;
+  line-height: 71px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* ========================Ideja
 ===============================*/
 
@@ -654,16 +670,8 @@ input[type="checkbox"]:checked {
   height: 70px;
   left: 592px;
   top: 205px;
-
-  margin: 0;
-
-  font-size: 48px;
-  line-height: 71px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
-.page-heading,
 .referent-name,
 .founder-text {
   font-family: "Oswald", sans-serif;
@@ -803,6 +811,72 @@ input[type="checkbox"]:checked {
   top: 2243px;
 }
 
+/* ========================Business Page
+=======================================*/
+
+.container.businessPage {
+  height: 1725px;
+}
+
+.businessman > .page-heading {
+  position: absolute;
+  width: 408px;
+  height: 70px;
+  left: 479px;
+  top: 206px;
+}
+
+.businessman > .page-text {
+  position: absolute;
+  width: 810px;
+  height: 49px;
+  left: 278px;
+  top: 336px;
+}
+
+.business-form {
+  position: absolute;
+  top: 536px;
+  left: 377px;
+  height: 665px;
+  width: 612px;
+}
+
+.business-form > .form-title {
+  height: 48px;
+  margin-bottom: 60px;
+}
+
+.businessName > input[type="text"] {
+  width: 612px;
+}
+
+.business-form > .submit-form-btn {
+  top: 679px;
+}
+
+.business-form > .comment-field {
+  margin-bottom: 22px;
+}
+
+.business-form > .text-block {
+  margin-top: 35px;
+  width: 577px;
+  line-height: 17px;
+}
+
+.business-form > .checkbox {
+  margin-right: 15px;
+  margin-top: 36px;
+}
+
+.business-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1803px;
+}
+
 /*========================================
                  Media
 =========================================*/
@@ -838,9 +912,15 @@ input[type="checkbox"]:checked {
   }
 
   .menu-icon {
-    top: 13px;
-    right: 20px;
+    top: 19px;
+    right: 22px;
     display: block;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 19px;
   }
 
   /* === Overlay menu=== */
@@ -1211,6 +1291,12 @@ input[type="checkbox"]:checked {
     line-height: 13px;
   }
 
+  /* ~~~~~~~~~~~~~~Global clases~~~~~~~~~~~~~~~~~ */
+  .page-heading {
+    font-size: 36px;
+    line-height: 53px;
+  }
+
   /* ========================Ideja
 ===============================*/
 
@@ -1224,9 +1310,6 @@ input[type="checkbox"]:checked {
     left: 20px;
     width: 280px;
     height: 46px;
-
-    font-size: 36px;
-    line-height: 53px;
   }
 
   .idea > .page-text {
@@ -1323,6 +1406,81 @@ input[type="checkbox"]:checked {
   .idea-footer > .footer {
     top: 652px;
   }
+
+  /* ========================Business Page
+=======================================*/
+
+  .container.businessPage {
+    height: 1545px;
+  }
+
+  .businessman > .page-heading {
+    position: absolute;
+    left: 21px;
+    top: 102px;
+    width: 280px;
+    height: 46px;
+  }
+
+  .businessman > .page-text {
+    position: absolute;
+    width: 280px;
+    height: 68px;
+    left: 21px;
+    top: 183px;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .business-form {
+    position: absolute;
+    left: 20px;
+    top: 370px;
+    height: 549px;
+    width: 280px;
+  }
+
+  .business-form > .form-field {
+    padding-top: 3px;
+    padding-left: 13px;
+  }
+
+  .business-form > .comment-field {
+    padding-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .business-form > .form-title {
+    height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .businessName > input[type="text"] {
+    width: 280px;
+  }
+
+  .business-form > .text-block {
+    margin-top: 12px;
+    width: 243px;
+    line-height: 15px;
+  }
+
+  .business-form > .checkbox {
+    margin-top: 14px;
+  }
+
+  .business-form > .submit-form-btn {
+    top: 546px;
+  }
+
+  .business-footer,
+  .business-footer > .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 533.5px;
+  }
 }
 
 /* 768px - Tablet
@@ -1402,23 +1560,24 @@ input[type="checkbox"]:checked {
   /* ===Menu Icon=== */
 
   .menu-icon {
-    top: 27.3px;
+    top: 33.5px;
     right: 76px;
 
     display: block;
-    width: 28px;
-    height: 50px;
+    width: 29px;
+    height: 40px;
   }
 
   .bar1,
   .bar2,
   .bar3 {
-    width: 25px;
-    height: 2px;
+    width: 23px;
+    height: 1px;
 
-    margin-bottom: 5.5px;
-    border: 1.3px solid #000;
-    border-radius: 43%;
+    margin-bottom: 5.6px;
+    border: 1.1px solid #000;
+    border-radius: 40px;
+    box-sizing: content-box;
   }
 
   /* ===Introduction section=== */
@@ -1724,5 +1883,67 @@ input[type="checkbox"]:checked {
   .idea-footer,
   .idea-footer > .footer {
     top: 798px;
+  }
+
+  /* ========================Business Page
+=======================================*/
+
+  .container.businessPage {
+    height: 1709px;
+  }
+
+  .businessman > .page-heading {
+    position: absolute;
+    left: 209px;
+    top: 166px;
+    width: 352px;
+    height: 52px;
+  }
+
+  .businessman > .page-text {
+    position: absolute;
+    left: 82px;
+    top: 287px;
+    width: 608px;
+    height: 47px;
+  }
+
+  .business-form {
+    position: absolute;
+    top: 485px;
+    left: 80px;
+    height: 665px;
+    width: 608px;
+  }
+
+  .businessName > input[type="text"] {
+    width: 608px;
+  }
+
+  .business-form > .comment-field {
+    margin-bottom: 13px;
+  }
+
+  .business-form > .text-block {
+    margin-top: 10px;
+    width: 577px;
+    line-height: 17px;
+  }
+
+  .business-form > .checkbox {
+    margin-right: 0;
+    margin-top: 13px;
+  }
+
+  .business-form > .submit-form-btn {
+    top: 635px;
+  }
+
+  .business-footer,
+  .business-footer > .footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 666px;
   }
 }

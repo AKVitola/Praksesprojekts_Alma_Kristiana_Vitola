@@ -1,0 +1,31 @@
+<%- include ("partials/_head") %>
+
+<body>
+  <div class="container businessPage">
+
+    <%- include ("partials/_header") %>
+
+    <main>
+      <section class="businessman" id="js-pageTop">
+        <h1 class="page-heading">Uzņēmējiem</h1>
+          <p class="page-text">
+            Ja ticat labākas pasaules attīstībai un vēlaties piedalīties starptautisku ideju realizēšanā, tad priecāsimies ar Jums
+            iepazīties.
+          </p>
+      </section>
+
+      <section>
+          <%- include ("partials/_business-form.ejs") %>
+      </section>
+
+      <%- include ("partials/_toTopBtn.ejs") %>
+
+    </main>
+
+    <section class="business-footer">
+      <%- include ("partials/_footer") %>
+    </section>
+
+  </div>
+
+<%- include ("partials/_end") %>
