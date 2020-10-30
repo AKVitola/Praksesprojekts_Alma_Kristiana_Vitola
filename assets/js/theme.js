@@ -138,6 +138,18 @@ function calculateTargetPos(target, offset = 0) {
 }
 
 
+        //====== Show submit message ======
+        //=================================
+
+const hiddenFormEnding = document.getElementById("js-hide-message");
+const submitMessage = document.getElementById("js-submit-message");
+const submitButton = document.getElementById("js-submit-form-btn");
+
+// Te jāaizvieto ar submit vēlāk.
+submitButton.addEventListener("click", function() {
+  hiddenFormEnding.style.display = "none";
+  submitMessage.style.display = "block";
+});
 
 
 

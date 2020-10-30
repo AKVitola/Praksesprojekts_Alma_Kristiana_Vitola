@@ -982,6 +982,29 @@ input[type="checkbox"]:checked {
   height: 660px;
 }
 
+.submit-message {
+  display: none;
+  width: 603px;
+  height: 80px;
+
+  margin-top: 49px;
+
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #ffa800;
+}
+
+.submit-title {
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.submit-message > .page-text {
+  color: #ffa800;
+}
+
 /*========================================
                  Media
 =========================================*/
@@ -1743,6 +1766,26 @@ input[type="checkbox"]:checked {
   .dream-footer {
     position: absolute;
     top: 45px;
+  }
+
+  .submit-message {
+    display: none;
+    width: 280px;
+    height: 91px;
+
+    margin-top: 39px;
+  }
+
+  .submit-title {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    margin-bottom: 34px;
+  }
+
+  .submit-message > .page-text {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
