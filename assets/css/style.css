@@ -88,7 +88,6 @@ body {
 }
 
 .nav,
-.page-text,
 .btn,
 .form-field,
 .small-form-text,
@@ -258,7 +257,7 @@ body {
   outline: 0;
 }
 
-.page-text {
+.introduction > .page-text {
   position: absolute;
   width: 654px;
   height: 114px;
@@ -266,9 +265,6 @@ body {
   top: 919px;
 
   margin: 0;
-
-  text-align: center;
-  color: #2f4858;
 }
 
 /* ===Gallery section===*/
@@ -395,6 +391,10 @@ body {
   margin-bottom: 57px;
 }
 
+.form-title {
+  margin-bottom: 51px;
+}
+
 .contact-form {
   position: absolute;
   top: 2012px;
@@ -479,7 +479,8 @@ input[type="checkbox"]:checked {
   width: 573px;
   display: inline;
   float: right;
-  margin-top: 30px;
+  margin-top: 33px;
+  line-height: 17px;
 }
 
 .submit-form-btn {
@@ -487,7 +488,7 @@ input[type="checkbox"]:checked {
   width: 182px;
   height: 62px;
   left: 215px;
-  top: 602px;
+  top: 598px;
 
   border-radius: 50px;
   border: 0;
@@ -655,6 +656,30 @@ input[type="checkbox"]:checked {
   line-height: 71px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.page-undertitle {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+
+  margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: #2f4858;
+}
+
+.page-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #2f4858;
+
+  margin: 0;
 }
 
 /* ========================Ideja
@@ -877,6 +902,86 @@ input[type="checkbox"]:checked {
   top: 1803px;
 }
 
+/* =================Submit dream Page Desktop
+============================================*/
+
+.container.submit-dream {
+  height: 2935px;
+}
+
+.about-submit > .page-heading {
+  position: absolute;
+  width: 394px;
+  height: 71px;
+  left: 486px;
+  top: 205px;
+}
+
+.about-submit > .page-text.large {
+  position: absolute;
+  width: 818px;
+  height: 31px;
+  left: 269px;
+  top: 336px;
+
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.flex-container-dreams {
+  position: absolute;
+  top: 457px;
+  left: 168px;
+  width: 1030px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dream-colum {
+  width: 394px;
+  height: 594px;
+  align-items: center;
+  text-align: center;
+}
+
+.dream-row > .balloon-img {
+  margin-left: 10px;
+}
+
+.dream-row > .page-undertitle {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.dream-row > .page-undertitle.balloon {
+  margin-top: 49px;
+  margin-bottom: 21px;
+}
+
+.dream-row > .personal {
+  margin-top: 139px;
+}
+
+.dream-row > .professional {
+  margin-top: 50px;
+}
+
+.dream-page-gallery > .gallery .flex-container-gallery {
+  position: absolute;
+  top: 1201px;
+}
+
+.dream-form > .contact-form {
+  position: absolute;
+  top: 1750px;
+  left: 377px;
+  width: 612px;
+  height: 660px;
+}
+
 /*========================================
                  Media
 =========================================*/
@@ -988,14 +1093,11 @@ input[type="checkbox"]:checked {
     width: 97%;
   }
 
-  .page-text {
+  .introduction > .page-text {
     top: 296px;
     left: 20px;
     width: 280px;
     height: 124px;
-
-    font-size: 12px;
-    line-height: 15px;
   }
 
   /* ===Gallery section===*/
@@ -1297,7 +1399,17 @@ input[type="checkbox"]:checked {
     line-height: 53px;
   }
 
-  /* ========================Ideja
+  .page-undertitle {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .page-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  /* ==============Ideja Mobile
 ===============================*/
 
   .container.idea {
@@ -1407,7 +1519,7 @@ input[type="checkbox"]:checked {
     top: 652px;
   }
 
-  /* ========================Business Page
+  /* ===============Business Page Mobile
 =======================================*/
 
   .container.businessPage {
@@ -1480,6 +1592,157 @@ input[type="checkbox"]:checked {
     left: 0;
     right: 0;
     top: 533.5px;
+  }
+
+  /* ===============Submit dream Page Mobile
+============================================*/
+
+  .container.submit-dream {
+    height: 2930px;
+  }
+
+  .about-submit > .page-heading {
+    width: 280px;
+    height: 46px;
+    left: 20px;
+    top: 102px;
+  }
+
+  .about-submit > .page-text.large {
+    width: 280px;
+    height: 43px;
+    left: 19px;
+    top: 183px;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .flex-container-dreams {
+    top: 302px;
+    left: 20px;
+    width: 280px;
+    height: 969px;
+
+    flex-direction: column;
+    justify-content: unset;
+  }
+
+  .dream-row > .dog-img {
+    width: 159.41px;
+    height: 190px;
+  }
+
+  .dream-row > .balloon-img {
+    width: 160px;
+    height: 185.7px;
+    margin-left: 39px;
+  }
+
+  .dream-colum {
+    width: 280px;
+  }
+
+  .dream-row > .page-undertitle {
+    margin-top: 29px;
+    margin-bottom: 15px;
+  }
+
+  .dream-row > .page-undertitle.balloon {
+    margin-top: 27px;
+    margin-bottom: 12px;
+  }
+
+  .dream-row > .personal-dream {
+    height: 68px;
+  }
+
+  .dream-row > .professional-dream {
+    height: 108px;
+  }
+
+  .dream-row > .personal {
+    margin-top: 44px;
+    margin-bottom: 80px;
+  }
+
+  .dream-row > .professional {
+    margin-top: 49px;
+    margin-bottom: 120px;
+  }
+
+  .dream-page-gallery > .gallery .flex-container-gallery {
+    position: absolute;
+    top: 1395px;
+  }
+
+  .dream-page-gallery > .gallery .first-img {
+    order: 3;
+    width: 160px;
+    height: 192px;
+  }
+
+  .first-img > img.dream-img1 {
+    width: 163px;
+    height: 195px;
+  }
+
+  .dream-page-gallery > .gallery .colage-img {
+    order: 4;
+    width: 160px;
+    height: 154px;
+  }
+
+  .colage-img .row-inner > img.dream-img2,
+  .colage-img .row-inner > img.dream-img3 {
+    width: 164px;
+    height: 97.5px;
+  }
+
+  .dream-page-gallery > .gallery .second-img {
+    order: 1;
+    width: 123px;
+    height: 154px;
+  }
+
+  .second-img > img.dream-img4 {
+    width: 123px;
+    height: 154px;
+  }
+
+  .dream-page-gallery > .gallery .last-img {
+    order: 2;
+    width: 197px;
+    height: 154px;
+  }
+
+  .last-img > img.dream-img5 {
+    width: 197px;
+    height: 154px;
+  }
+
+  .dream-page-gallery > .gallery .flex-container-gallery::before {
+    top: -25px;
+    z-index: 1;
+  }
+
+  .dream-page-gallery > .gallery .flex-container-gallery::after {
+    top: 310px;
+  }
+
+  .dream-page-gallery > .gallery .flex-container-gallery .row-inner {
+    height: 95px;
+  }
+
+  .dream-form > .contact-form {
+    top: 1863px;
+    left: 20px;
+    width: 280px;
+  }
+
+  .dream-footer {
+    position: absolute;
+    top: 45px;
   }
 }
 
@@ -1594,7 +1857,7 @@ input[type="checkbox"]:checked {
     width: 97%;
   }
 
-  .page-text {
+  .introduction > .page-text {
     width: 608px;
     height: 140px;
     left: 81px;
@@ -1806,7 +2069,7 @@ input[type="checkbox"]:checked {
     letter-spacing: 0.4px;
   }
 
-  /* ========================Ideja
+  /* ===============Ideja Tablet
 ===============================*/
 
   .container.idea {
@@ -1885,7 +2148,7 @@ input[type="checkbox"]:checked {
     top: 798px;
   }
 
-  /* ========================Business Page
+  /* ================Business Page Tablet
 =======================================*/
 
   .container.businessPage {
@@ -1945,5 +2208,77 @@ input[type="checkbox"]:checked {
     left: 0;
     right: 0;
     top: 666px;
+  }
+
+  /* ================Submit dream Page Tablet
+============================================*/
+
+  .container.submit-dream {
+    height: 3280px;
+  }
+
+  .about-submit > .page-heading {
+    width: 352px;
+    height: 52px;
+    left: 208px;
+    top: 167px;
+  }
+
+  .about-submit > .page-text.large {
+    width: 608px;
+    height: 59px;
+    left: 78px;
+    top: 288px;
+  }
+
+  .flex-container-dreams {
+    top: 437px;
+    left: 80px;
+    width: 608px;
+    height: 1215px;
+
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .dream-colum {
+    width: 608px;
+  }
+
+  .dream-row > .personal-dream {
+    height: 48px;
+    margin-left: 3px;
+  }
+
+  .dream-row > .professional-dream {
+    height: 114px;
+  }
+
+  .dream-row > .page-undertitle.dog {
+    margin-bottom: 28px;
+  }
+
+  .dream-row > .personal,
+  .dream-row > .professional {
+    margin-top: 50px;
+  }
+
+  .dream-page-gallery > .gallery .flex-container-gallery {
+    position: absolute;
+    top: 1665px;
+  }
+
+  .dream-form > .contact-form {
+    top: 2117px;
+    left: 80px;
+  }
+
+  .dream-form > .contact-form .text-block {
+    margin-top: 15px;
+  }
+
+  .dream-footer {
+    position: absolute;
+    top: 277px;
   }
 }
