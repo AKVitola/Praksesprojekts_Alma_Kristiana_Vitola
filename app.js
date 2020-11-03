@@ -36,9 +36,9 @@ app.get('/uznemejiem', function (req, res) {
   res.render('uznemejiem');
 });
 
-// app.get('/sapnu_banka', function (req, res) {
-//   res.render('sapnu_banka');
-// });
+app.get('/sapnu_banka', function (req, res) {
+  res.render('sapnu_banka');
+});
 
 // app.get('/sapnus_atbalsta', function (req, res) {
 //   res.render('sapnus_atbalsta');

@@ -1,11 +1,11 @@
 <%- include ("partials/_head") %>
 
-  <div class="container">
+  <div class="container" id="js-pageTop">
 
     <%- include ("partials/_header") %>
 
     <main>
-      <section class="introduction" id="js-pageTop">
+      <section class="introduction">
           <div class="video-placeholder" id="js-video-img"></div>
           <div class="video-overlay" id="js-ovelay">
             <div class="video-bcground" id="js-video-bcground"></div>
@@ -42,30 +42,8 @@
         </div>
       </section>
 
-      <section class="contacts">
-          <div class="flex-container-contacts">
-            <div class="contacts-row upper-text">
-              <h3 class="section-titel">Vēlies piepildīt savu sapni?</h3>
-            </div>
-            <div class="contacts-row">
-              <h3 class="section-titel"> Vēlies palīdzēt kādam piepildīt sapni?</h3>
-            </div>
-          </div>
-
-          <div class="flex-container-btn">
-            <a href="/">
-              <button class="btn user-btn btn-text">Sapņotājiem</button>
-            </a>
-            <div class="lower-btn">
-              <a href="/">
-                <button class="btn user-btn">Uzņēmējiem</button>
-              </a>
-            </div>
-        </div>
-
-        <%- include ("partials/_form") %>
-
-      </section>
+      <%- include ("partials/_contact") %>
+      <%- include ("partials/_form") %>
 
       <%- include ("partials/_benefactors") %>
       <%- include ("partials/_toTopBtn") %>
