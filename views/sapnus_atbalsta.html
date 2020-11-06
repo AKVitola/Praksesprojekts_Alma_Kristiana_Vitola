@@ -1,0 +1,57 @@
+<%- include ("partials/_head") %>
+
+<body>
+  <div class="container supportersPage">
+
+    <%- include ("partials/_header") %>
+
+    <main>
+      <section class="dream-supporters">
+        <h1 class="page-heading">Sapņus atbalsta</h1>
+        <p class="page-text">
+          Sadarbības partneri ir uzņēmumi, kuri savā preču vai pakalpojumu ikdienā ir integrējuši SparkleHeart zīmolu un dala ar
+          to konkrētu daļu savu ienākumu.
+        </p>
+      </section>
+
+      <section class="select-container">
+        <div class="custom-select city-select">
+          <label for="city" class="page-text">Uzņemuma atrašanas vieta</label>
+          <select class="dropdown" name="city" id="city" required>
+            <option value=""disabled selected hidden>Izvēlies</option>
+            <option value="riga">Rīga</option>
+            <option value="jelgava">Jelgava</option>
+            <option value="ogre">Ogre</option>
+          </select>
+        </div>
+
+        <div class="custom-select type-select">
+          <label for="type" class="page-text">Uzņēmuma veids</label>
+          <select class="dropdown" name="type" id="type" required>
+            <option value=""disabled selected hidden>Izvēlies</option>
+            <option value="beauty">Skaistumkopšana</option>
+            <option value="translate">Tulkošana</option>
+            <option value="food">Ēdināšana</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="map-container">
+        <iframe class="map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d34811.154247729995!2d24.175851881457536!3d56.95398997294243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slv!2slv!4v1604570900609!5m2!1slv!2slv"
+          width="1366" height="648" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          tabindex="0"></iframe>
+      </section>
+
+
+      <%- include ("partials/_toTopBtn") %>
+
+    </main>
+
+    <section class="supporters-footer">
+      <%- include ("partials/_footer") %>
+    </section>
+
+  </div>
+
+  <%- include ("partials/_end") %>

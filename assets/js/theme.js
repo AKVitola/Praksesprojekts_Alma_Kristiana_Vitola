@@ -152,4 +152,29 @@ submitButton.addEventListener("click", function() {
 });
 
 
+        //====== Show supporters after select  ======
+        //==========================================
+
+var purch = {
+  logo : "",
+  city : "Rīga",
+  type : "Ēdināšana",
+  name  : "PURCH resturant",
+  adress : "+37125425254",
+  number : "Dzelzavas iela 51A"
+};
+
+var kurts = {
+  logo : "",
+  city : "Rīga",
+  type : "Ēdināšana",
+  name  : "Kurts coffee",
+  adress : "+37123202079",
+  number : "Cēsu iela 20, Tērbatas iela 2i"
+};
+
+
+
+
+
 

@@ -15,7 +15,6 @@ html,
 body {
   height: 100vh;
   width: 100vw;
-
   margin: 0;
   padding: 0;
 }
@@ -23,9 +22,7 @@ body {
 .container {
   height: 100%;
   width: 100%;
-
   margin: 0 auto;
-
   background: #fff;
 }
 
@@ -39,7 +36,6 @@ body {
 .header {
   width: 100%;
   height: 90px;
-
   background: #fff;
 }
 
@@ -62,7 +58,6 @@ body {
   z-index: 2;
 
   margin: 0 auto;
-
   background-image: url(../img/ripped_header.png);
 }
 
@@ -84,7 +79,6 @@ body {
   z-index: 3;
 
   margin: 0;
-
   font-weight: 500;
   color: #060606;
 }
@@ -658,6 +652,7 @@ input[type="checkbox"] {
 
 .page-heading {
   font-family: "Oswald", sans-serif;
+  font-style: normal;
   font-weight: 500;
   font-size: 48px;
   line-height: 71px;
@@ -683,6 +678,7 @@ input[type="checkbox"] {
 
 .page-text {
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
@@ -1113,6 +1109,282 @@ input[type="checkbox"] {
 .bank-footer > .footer {
   top: 0;
 }
+
+/* ===================Supporters Page Desktop
+============================================*/
+
+.dream-supporters > .page-heading {
+  width: 394px;
+  height: 74px;
+  margin: 85px auto 60px auto;
+}
+
+.dream-supporters > .page-text {
+  width: 818px;
+  height: 48px;
+  margin: 60px auto 90px auto;
+}
+
+.select-container {
+  width: 601px;
+  height: 78;
+  display: flex;
+  flex-direction: row;
+  margin: 90px auto 60px auto;
+}
+
+.custom-select > .page-text {
+  text-align: left;
+  color: #ff8a00;
+}
+
+.city-select {
+  margin-right: 30px;
+}
+
+.dropdown {
+  width: 288px;
+  height: 43px;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  vertical-align: middle;
+  color: #2f4858;
+
+  margin-top: 15px;
+  padding-left: 15px;
+
+  background: rgba(196, 196, 196, 0.4);
+  border: none;
+  border-radius: 6px;
+
+  outline: none;
+}
+
+.dropdown > option:checked {
+  display: none;
+  font-weight: bold;
+}
+
+.map-container {
+  width: 1366px;
+  height: 648px;
+  margin: 0 auto;
+}
+
+.supporters-footer {
+  height: 331px;
+}
+
+/* =============Inspiration Page Desktop
+=======================================*/
+
+.stories {
+  width: 818px;
+  height: 160px;
+  margin: 85px auto 150px auto;
+}
+
+.stories > .page-undertitle {
+  width: 600px;
+  height: 70px;
+  margin: 0 auto 60px auto;
+}
+
+.stories > .page-text {
+  width: 818px;
+  height: 30px;
+  margin: 60px auto 0 auto;
+}
+
+.story-grid-container {
+  position: relative;
+  width: 1030px;
+  height: 2944px;
+  display: grid;
+  grid-template-columns: repeat(6, 160px);
+  grid-template-rows: repeat(17, 160px);
+  gap: 14px;
+  margin: 150px auto;
+
+  align-content: center;
+}
+
+.story-image::before {
+  content: "";
+  background-image: url(../img/extra-gold.png);
+  position: absolute;
+  margin-left: -1px;
+  width: 161px;
+  height: 160px;
+  z-index: 2;
+  opacity: 0.5;
+
+  transition: opacity 0.5s;
+}
+
+.story-image:hover::before {
+  opacity: 1;
+}
+
+.gold-image,
+.post-gallery,
+.story-image,
+.story-image > img {
+  width: 160px;
+  height: 160px;
+  margin: 0;
+}
+
+.gold-image {
+  content: "";
+  background-image: url(../img/extra-gold.png);
+  position: absolute;
+  width: 161px;
+  height: 160px;
+}
+
+.gold-number {
+  position: relative;
+  bottom: -117px;
+  right: 14px;
+}
+
+.story-image > .page-undertitle.new-stories {
+  position: relative;
+  top: -146px;
+  z-index: 3;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: none;
+  color: #fff;
+  margin-top: 42px;
+}
+
+.gold-number,
+.story-number {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: right;
+  color: #fff;
+  margin: 0;
+}
+
+.story-number {
+  position: relative;
+  bottom: 43.5px;
+  right: 14px;
+  z-index: 3;
+}
+
+.story-video {
+  position: relative;
+}
+
+.content-gallery {
+  position: absolute;
+  top: -146px;
+  width: 160px;
+  height: 160px;
+  z-index: 4;
+
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.content-gallery:hover {
+  opacity: 1;
+}
+
+.content-gallery > .page-undertitle {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: none;
+  color: #fff;
+  margin-top: 62px;
+}
+
+.more-dreams-btn {
+  display: none;
+}
+
+.sparkle-team {
+  width: 1035px;
+  height: 545px;
+  margin: 150px auto;
+}
+
+.sparkle-team > .page-undertitle {
+  width: 394px;
+  height: 30px;
+  margin: 0 auto 30px auto;
+}
+
+.sparkle-team > .page-text {
+  width: 606px;
+  height: 46px;
+  margin: 30px auto 60px auto;
+}
+
+.team-gallery-container {
+  width: 1035px;
+  height: 365px;
+  display: flex;
+  flex-direction: row;
+}
+
+.team-mate,
+.team-mate > .founder-overlay {
+  top: unset;
+  width: 289px;
+  height: 365px;
+}
+
+.team-mate.middle {
+  margin: 0 84px;
+}
+
+.about-founder {
+  position: relative;
+  bottom: 98px;
+  width: 289px;
+  margin: 0 auto;
+  z-index: 3;
+  vertical-align: baseline;
+}
+
+.about-founder.first {
+  bottom: 75px;
+}
+
+.about-founder.third {
+  width: 271px;
+}
+
+.about-founder > .name {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+.about-founder > .page-text {
+  font-weight: unset;
+  color: #fff;
+}
+
+.inspiration-footer > .footer {
+  top: 0;
+}
+
 /*========================================
                  Media
 =========================================*/
@@ -2009,6 +2281,182 @@ input[type="checkbox"] {
     width: 125.64px;
     height: 80px;
   }
+
+  /* ===================Supporters Page Mobile
+============================================*/
+
+  .dream-supporters > .page-heading {
+    width: 280px;
+    height: 46px;
+    margin: 50px auto 30px auto;
+  }
+
+  .dream-supporters > .page-text {
+    width: 282px;
+    height: 70px;
+    margin: 30px auto 80px auto;
+  }
+
+  .dream-supporters > .page-text,
+  .dropdown {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .select-container {
+    width: 280px;
+    height: 190px;
+    flex-direction: column;
+  }
+
+  .city-select {
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+
+  .dropdown {
+    width: 280px;
+  }
+
+  .map-container,
+  .map {
+    width: 100%;
+    height: 606px;
+  }
+
+  /* =============Inspiration Page Mobile
+=======================================*/
+
+  .stories {
+    width: 280px;
+    height: 204px;
+    margin: 50px auto 80px auto;
+  }
+
+  .stories > .page-undertitle {
+    width: 280px;
+    height: 99px;
+  }
+
+  .stories > .page-text {
+    width: 280px;
+    height: 45px;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .story-grid-container {
+    width: 280px;
+    height: 1450px;
+    grid-template-columns: repeat(2, 134px);
+    grid-template-rows: repeat(10, 134px);
+    gap: 12px;
+    margin: 80px auto 50px auto;
+  }
+
+  .content-gallery,
+  .post-gallery,
+  .story-image,
+  .story-image > img {
+    width: 134px;
+    height: 134px;
+  }
+
+  .gold-image,
+  .story-image::before {
+    width: 135px;
+    height: 134px;
+  }
+
+  .content-gallery {
+    top: -120px;
+  }
+
+  .content-gallery > .page-undertitle {
+    margin-top: 49px;
+  }
+
+  .gold-number,
+  .story-number {
+    font-size: 36px;
+    line-height: 53px;
+  }
+
+  .gold-number {
+    bottom: -90.5px;
+    right: 10px;
+  }
+
+  .story-image > .page-undertitle.new-stories {
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 52px;
+  }
+
+  .more-dreams-btn {
+    width: 233px;
+    display: block;
+    margin: 50px auto 120px auto;
+  }
+
+  .sparkle-team {
+    width: 280px;
+    height: 1304px;
+    margin: 120px auto;
+  }
+
+  .sparkle-team > .page-undertitle {
+    width: 280px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 auto;
+  }
+
+  .sparkle-team > .page-text {
+    width: 280px;
+    height: 52px;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 30px auto 80px auto;
+  }
+
+  .team-gallery-container {
+    width: 280px;
+    height: 1112px;
+    flex-direction: column;
+  }
+
+  .team-mate,
+  .team-mate > img,
+  .team-mate > .founder-overlay {
+    width: 280px;
+    height: 354px;
+  }
+
+  .team-mate.middle {
+    margin: 25px 0;
+  }
+
+  .about-founder {
+    bottom: 85px;
+  }
+
+  .about-founder.first,
+  .about-founder.second {
+    bottom: 65px;
+  }
+
+  .about-founder > .name {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .about-founder > .page-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 /* 768px - Tablet
@@ -2477,7 +2925,7 @@ input[type="checkbox"] {
     margin-top: 15px;
   }
 
-  .dream-footer > footer {
+  .dream-footer > .footer {
     top: 0;
   }
 
@@ -2571,5 +3019,135 @@ input[type="checkbox"] {
   .megaphone-img,
   .people-img {
     height: 100px;
+  }
+
+  /* ===================Supporters Page Tablet
+============================================*/
+
+  .dream-supporters > .page-heading {
+    width: 352px;
+    height: 52px;
+    margin: 80px auto 60px auto;
+  }
+
+  .dream-supporters > .page-text {
+    width: 608px;
+    height: 67px;
+  }
+
+  .select-container {
+    margin: 90px auto 70px auto;
+  }
+
+  .map-container,
+  .map {
+    width: 100%;
+    height: 812px;
+  }
+
+  /* =============Inspiration Page Tablet
+=======================================*/
+
+  .stories {
+    width: 608px;
+    height: 148px;
+    margin: 80px auto;
+  }
+
+  .stories > .page-undertitle {
+    width: 608px;
+    height: 52px;
+  }
+
+  .stories > .page-text {
+    width: 608px;
+    height: 36px;
+  }
+
+  .story-grid-container {
+    width: 608px;
+    height: 767px;
+    grid-template-columns: repeat(4, 143px);
+    grid-template-rows: repeat(5, 143px);
+    gap: 12px;
+    margin: 0 auto;
+  }
+
+  .gold-image,
+  .story-image::before {
+    width: 144px;
+    height: 143px;
+  }
+
+  .content-gallery,
+  .post-gallery,
+  .story-image,
+  .story-image > img {
+    width: 143px;
+    height: 143px;
+  }
+
+  .gold-number {
+    bottom: -99.5px;
+    right: 10px;
+  }
+
+  .story-image > .page-undertitle.new-stories {
+    top: -146px;
+    margin-top: 42px;
+  }
+
+  .content-gallery {
+    top: -129px;
+  }
+
+  .content-gallery > .page-undertitle {
+    margin-top: 53.5px;
+  }
+
+  .more-dreams-btn {
+    width: 233px;
+    display: block;
+    margin: 50px auto 150px auto;
+  }
+
+  .sparkle-team {
+    width: 606px;
+    height: 1569px;
+  }
+
+  .sparkle-team > .page-undertitle {
+    width: 394px;
+    height: 30px;
+  }
+
+  .sparkle-team > .page-text {
+    width: 606px;
+    height: 46px;
+    margin: 30px auto 90px auto;
+  }
+
+  .team-gallery-container {
+    width: 352px;
+    height: 1373px;
+    flex-direction: column;
+
+    margin: 0 auto;
+  }
+
+  .team-mate,
+  .team-mate > img,
+  .team-mate > .founder-overlay {
+    width: 352px;
+    height: 440px;
+  }
+
+  .team-mate.middle {
+    margin: 25px 0;
+  }
+
+  .about-founder,
+  .about-founder.third {
+    width: 323px;
   }
 }
