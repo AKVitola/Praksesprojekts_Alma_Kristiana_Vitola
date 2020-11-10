@@ -7,13 +7,17 @@ const video = document.getElementById("js-video");
 const pageOverlay = document.getElementById("js-ovelay");
 const pageBcground = document.getElementById("js-video-bcground");
 
-videoImg.addEventListener("click", function() {
-  showVideo();
-});
+if (videoImg !== null) {
+  videoImg.addEventListener("click", function() {
+    showVideo();
+  });
+}
 
-pageBcground.addEventListener("click", function() {
-  hideVideo();
-});
+if (pageBcground !== null) {
+  pageBcground.addEventListener("click", function() {
+    hideVideo();
+  });
+}
 
 function showVideo() {
   pageOverlay.style.display = "block";
@@ -44,6 +48,10 @@ function playVidDelay(delay) {
 
         // ====== Overlay menu======
         //============================
+
+function transformIcon(menuIcon) {
+    menuIcon.classList.toggle("change");
+}
 
 function closeMenu() {
   document.getElementById("js-nav").style.height = "0%";
@@ -111,8 +119,6 @@ function displayGoToTopButton() {
   }
 }
 
-//Goes to the first section with id - introduction
-
 function goToTop() {
   let targetDiv = document.querySelector("#js-pageTop");
   let targetPosition = calculateTargetPos(targetDiv);
@@ -146,35 +152,114 @@ const submitMessage = document.getElementById("js-submit-message");
 const submitButton = document.getElementById("js-submit-form-btn");
 
 // Te jāaizvieto ar submit vēlāk.
-submitButton.addEventListener("click", function() {
-  hiddenFormEnding.style.display = "none";
-  submitMessage.style.display = "block";
-});
+
+if (submitButton !== null) {
+  submitButton.addEventListener("click", function() {
+    hiddenFormEnding.style.display = "none";
+    submitMessage.style.display = "block";
+  });
+}
+
 
 
         //====== Show supporters after select  ======
         //==========================================
 
-var purch = {
-  logo : "",
-  city : "Rīga",
-  type : "Ēdināšana",
-  name  : "PURCH resturant",
-  adress : "+37125425254",
-  number : "Dzelzavas iela 51A"
+const companies = {
+
+  purch: {
+    logo : "",
+    city : "Rīga",
+    type : "Ēdināšana",
+    name  : "PURCH resturant",
+    adress : "+37125425254",
+    number : "Dzelzavas iela 51A"
+  },
+
+  kurts: {
+    logo : "",
+    city : "Rīga",
+    type : "Ēdināšana",
+    name  : "Kurts coffee",
+    adress : "+37123202079",
+    number : "Cēsu iela 20, Tērbatas iela 2i"
+  },
+
+   auch: {
+    logo : "",
+    city : "Rīga",
+    type : "Skaistumkopšana",
+    name  : "AUCH beauty home",
+    adress : "+37128361686",
+    number : "Adrese10"
+  },
+
+  linearis: {
+    logo : "",
+    city : "Rīga",
+    type : "Tulkošana",
+    name  : "Linearis translations",
+    adress : "+37167277260",
+    number : "Adrese30"
+  }
+}
+
+
+
+
+        //====== Cookie banner ======
+        //===========================
+
+if (localStorage.getItem("cookieSeen") != "shown") {
+  $("#js-cookie-banner").delay(2000).fadeIn();
+  localStorage.setItem("cookieSeen","shown")
 };
 
-var kurts = {
-  logo : "",
-  city : "Rīga",
-  type : "Ēdināšana",
-  name  : "Kurts coffee",
-  adress : "+37123202079",
-  number : "Cēsu iela 20, Tērbatas iela 2i"
-};
+$("#js-agreeToCookies").click(function() {
+  $("#js-cookie-banner").fadeOut();
+})
+
+$("#js-denyToCookies").click(function() {
+  $("#js-cookie-banner").fadeOut();
+})
 
 
+        //====== Quotes Slideshow ======
+        //==============================
 
+let slideIndex = 1;
 
+// When the page loads, it first runs the showSlides(n) function, to determine which slide to show first.
+window.addEventListener("load",function() {
+  showSlides(slideIndex);
+})
 
+function showSlides(n){
+  const slides = document.getElementsByClassName("js-quote-slide");
+  let slidesCount = slides.length;
 
+  if (slidesCount === 0) {
+    return
+  }
+
+  if (n > slidesCount) {
+    slideIndex = 1
+  }
+
+  if (n < 1) {
+    slideIndex = slidesCount
+  }
+
+  for (let i = 0; i < slidesCount; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+function previousSlide() {
+  showSlides(slideIndex -= 1);
+}
+
+function nextSlide() {
+  showSlides(slideIndex += 1);
+}

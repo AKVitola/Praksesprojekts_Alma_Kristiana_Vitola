@@ -47,3 +47,7 @@ app.get("/sapnus_atbalsta", function (req, res) {
 app.get('/iedvesmas_stasti', function (req, res) {
   res.render('iedvesmas_stasti');
 });
+
+app.get("*", function (req, res) {
+    res.render('404');
+})

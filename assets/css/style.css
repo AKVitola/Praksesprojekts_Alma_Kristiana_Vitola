@@ -121,7 +121,7 @@ body {
   font-weight: bold;
 }
 
-/* === Underline animation for nav === */
+/* === Underline animation for header nav === */
 
 .underline-animation {
   position: relative;
@@ -142,15 +142,7 @@ body {
 
 .underline-animation:hover::before {
   visibility: visible;
-  width: 85%;
-}
-
-.shostest-line.underline-animation:hover::before {
-  width: 27%;
-}
-
-.medium-line.underline-animation:hover::before {
-  width: 70%;
+  width: 100%;
 }
 
 /* ===Menu icon=== */
@@ -171,9 +163,11 @@ body {
   display: block;
   height: 2px;
   width: 20px;
-  background-color: #000;
-  margin-bottom: 4.5px;
   z-index: 2;
+  margin-bottom: 4.5px;
+
+  background-color: #000;
+  transition: 0.4s;
 }
 
 /* ===Go to top button=== */
@@ -597,6 +591,11 @@ input[type="checkbox"] {
   padding-bottom: 3px;
 }
 
+.footer-list-item > a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .bank-account {
   padding-left: 82px;
 }
@@ -646,6 +645,25 @@ input[type="checkbox"] {
 
 .private {
   right: -1px;
+}
+
+/* === Underline animation for footer nav === */
+
+.footer-nav-list > .underline-animation:hover::before {
+  visibility: visible;
+  width: 85%;
+}
+
+.footer-nav-list > .longer-line.underline-animation:hover::before {
+  width: 100%;
+}
+
+.footer-nav-list > .medium-line.underline-animation:hover::before {
+  width: 70%;
+}
+
+.footer-nav-list > .shostest-line.underline-animation:hover::before {
+  width: 27%;
 }
 
 /* ~~~~~~~~~~~~~~Global clases Desktop~~~~~~~~~~~~~~~~~ */
@@ -767,6 +785,10 @@ input[type="checkbox"] {
   margin: 150px auto;
 }
 
+.js-quote-slide {
+  display: none;
+}
+
 .referent-name {
   width: 388px;
   height: 29px;
@@ -779,8 +801,8 @@ input[type="checkbox"] {
 
 .referent-position {
   width: 500px;
-  height: 25px;
-  margin: 10px 0 30px 0;
+  margin: 0;
+  margin-top: 10px;
 }
 
 .referent-position,
@@ -800,6 +822,7 @@ input[type="checkbox"] {
   line-height: 29px;
 
   margin: 0;
+  margin-top: 30px;
 }
 
 .arrow-btn {
@@ -815,6 +838,12 @@ input[type="checkbox"] {
 .arrow-btn > img {
   width: 12px;
   height: 23px;
+}
+
+.prev-quote-btn,
+.next-quote-btn {
+  cursor: pointer;
+  user-select: none;
 }
 
 .idea-footer > .footer {
@@ -1385,6 +1414,145 @@ input[type="checkbox"] {
   top: 0;
 }
 
+/* ====================Error Page Desktop
+=======================================*/
+
+.error-wrap > .benefactors {
+  /* width: 1366px; */
+  height: 877px;
+  width: 100%;
+}
+
+.inner-error {
+  position: relative;
+  top: 170px;
+  width: 606px;
+  height: 372px;
+  margin: 0 auto;
+}
+
+.error-number {
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 142px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.error-message {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: none;
+  margin-bottom: 30px;
+}
+
+.inner-error > .page-text {
+  margin-bottom: 50px;
+}
+
+.error-btn {
+  width: 233px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.error-btn > a .btn {
+  color: #ffa800;
+}
+
+.error-btn > a .user-btn {
+  background-color: #fff;
+}
+
+.error-btn > a .btn:hover {
+  background-color: #ffda16;
+  color: #fff;
+}
+
+.error-btn > a .btn:active {
+  background-color: #ff8a00;
+  color: #fff;
+}
+
+.error-footer {
+  height: 254px;
+}
+
+.error-footer > .footer {
+  top: -95px;
+}
+
+/* ================Cookie-banner Desktop
+=======================================*/
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0px;
+  z-index: 4;
+
+  width: 818px;
+  height: 96px;
+  padding: 30px 46px;
+  margin-left: calc(50% - 409px);
+
+  display: flex;
+  display: none;
+
+  align-self: center;
+  justify-content: space-between;
+
+  background-color: #2f4858;
+  border-radius: 5px;
+}
+
+.cookie-text {
+  width: 376px;
+  height: 34px;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.cookie-text > a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.cookie-text,
+.cookie-btn {
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+}
+
+.cookie-btn {
+  width: 131px;
+  height: 34px;
+  border: 0;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+}
+
+.cookie-agree-btn {
+  background-color: #ffa800;
+}
+
+.cookie-deny-btn {
+  color: #2f4858;
+}
+
+/* .close {
+  height: 20px;
+  background-color: #777;
+  border: none;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+} */
+
 /*========================================
                  Media
 =========================================*/
@@ -1423,6 +1591,18 @@ input[type="checkbox"] {
   .bar2,
   .bar3 {
     width: 19px;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5.5px, 5px);
+    transform: rotate(-45deg) translate(-5.5px, 5px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -4px);
+    transform: rotate(45deg) translate(-4px, -4px);
   }
 
   /* === Overlay menu=== */
@@ -2457,6 +2637,53 @@ input[type="checkbox"] {
     font-size: 14px;
     line-height: 17px;
   }
+
+  /* ==================Error Page Mobile
+=======================================*/
+
+  .error-wrap > .benefactors {
+    height: 620px;
+  }
+
+  .inner-error {
+    top: 120px;
+    width: 320px;
+  }
+
+  .error-number {
+    font-size: 66px;
+    line-height: 83px;
+  }
+
+  /* ==============Cookie-banner Mobile
+=======================================*/
+
+  .cookie-banner {
+    width: 320px;
+    height: 130px;
+    padding: 20px 20px;
+    margin-left: calc(50% - 160px);
+  }
+
+  .cookie-text {
+    height: 90px;
+  }
+
+  .cookie-btn {
+    margin-top: 0px;
+  }
+
+  .cookie-agree-btn {
+    position: relative;
+    right: -50px;
+  }
+
+  .cookie-deny-btn {
+    position: relative;
+    top: 50px;
+    right: 30px;
+    padding: 0 15px;
+  }
 }
 
 /* 768px - Tablet
@@ -2549,6 +2776,18 @@ input[type="checkbox"] {
     border: 1.1px solid #000;
     border-radius: 40px;
     box-sizing: content-box;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
   }
 
   /* ===Introduction section=== */
@@ -3149,5 +3388,22 @@ input[type="checkbox"] {
   .about-founder,
   .about-founder.third {
     width: 323px;
+  }
+
+  /* ================Cookie-banner Tablet
+=======================================*/
+
+  .cookie-banner {
+    width: 608px;
+    padding: 20px 25px;
+    margin-left: calc(50% - 304px);
+  }
+
+  .cookie-text {
+    width: 260px;
+  }
+
+  .cookie-btn {
+    margin-top: 10px;
   }
 }
