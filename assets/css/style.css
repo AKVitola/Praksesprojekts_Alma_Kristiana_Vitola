@@ -1200,11 +1200,48 @@ input[type="checkbox"] {
 .map-container {
   width: 1366px;
   height: 648px;
-  margin: 0 auto;
+  margin: 60px auto 0 auto;
 }
 
 .supporters-footer {
   height: 331px;
+}
+
+.supporters-footer > .footer {
+  top: -28px;
+}
+
+.displayInfoWrap {
+  width: 820px;
+  margin: 150px auto 60px auto;
+}
+
+.created-div {
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.created-div > .page-text.name {
+  margin-left: 97px;
+  margin-right: 30px;
+  text-align: left;
+
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: none;
+}
+
+.created-div > .page-text.contacts {
+  text-align: right;
+}
+
+.created-div > .page-text {
+  width: 288px;
+  margin: auto 0;
+}
+
+.created-div > img {
+  width: 120px;
 }
 
 /* =============Inspiration Page Desktop
@@ -1543,15 +1580,6 @@ input[type="checkbox"] {
 .cookie-deny-btn {
   color: #2f4858;
 }
-
-/* .close {
-  height: 20px;
-  background-color: #777;
-  border: none;
-  color: white;
-  border-radius: 2px;
-  cursor: pointer;
-} */
 
 /*========================================
                  Media

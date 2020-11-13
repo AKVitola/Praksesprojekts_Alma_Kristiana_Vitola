@@ -162,49 +162,110 @@ if (submitButton !== null) {
 
 
 
-        //====== Show supporters after select  ======
-        //==========================================
+        //====== Supporters company information and location ======
+        //========================================================
 
-const companies = {
-
-  purch: {
-    logo : "",
-    city : "Rīga",
-    type : "Ēdināšana",
+const companies = [
+  {
+    logo : "/img/purch.png",
+    cityCode: "riga",
+    typeCode : "food",
     name  : "PURCH resturant",
-    adress : "+37125425254",
-    number : "Dzelzavas iela 51A"
+    number : "+37125425254",
+    adress : "Dzelzavas iela 51A",
+    latitude : "56.958008",
+    longitude : "24.190937"
   },
-
-  kurts: {
-    logo : "",
-    city : "Rīga",
-    type : "Ēdināšana",
-    name  : "Kurts coffee",
-    adress : "+37123202079",
-    number : "Cēsu iela 20, Tērbatas iela 2i"
+  {
+    logo : "/img/kurts.png",
+    cityCode: "riga",
+    typeCode : "food",
+    name : "Kurts coffee",
+    number : "+37123202079",
+    adress : "Cēsu iela 20, Tērbatas iela 2i",
+    latitude : "56.951087",
+    longitude : "24.121022"
   },
-
-   auch: {
-    logo : "",
-    city : "Rīga",
-    type : "Skaistumkopšana",
+  {
+    logo : "/img/auch.png",
+    cityCode: "riga",
+    typeCode : "beauty",
     name  : "AUCH beauty home",
-    adress : "+37128361686",
-    number : "Adrese10"
+    number : "+37128361686",
+    adress : "Cēsu iela 20",
+    latitude : "56.965192",
+    longitude : "24.140532"
   },
-
-  linearis: {
-    logo : "",
-    city : "Rīga",
-    type : "Tulkošana",
+  {
+    logo : "/img/Linearis.png",
+    cityCode: "riga",
+    typeCode : "translate",
     name  : "Linearis translations",
-    adress : "+37167277260",
-    number : "Adrese30"
+    number : "+37167277260",
+    adress : "Krišjāņa Barona iela 59",
+    latitude : "56.956795",
+    longitude : "24.132112"
   }
+];
+
+function selectedCity() {
+  const citySelect = document.getElementById("js-city");
+  let displayCity = citySelect.options[citySelect.selectedIndex].value;
+
+  return displayCity;
 }
 
+function selectedType() {
+  const typeSelect = document.getElementById("js-type");
+  let displayType = typeSelect.options[typeSelect.selectedIndex].value;
 
+  return displayType;
+}
+
+function showCompanies() {
+
+  hideCompanies();
+
+  let filteredCompanies = companies.filter(companyMatch);
+
+  filteredCompanies.forEach(company => {
+    printCompany(company);
+  });
+}
+
+function hideCompanies() {
+  const container = document.getElementById("js-businessInfo");
+  container.innerHTML = "";
+}
+
+function companyMatch(company) {
+  let cityMatch = true;
+  let typeMatch = true;
+
+  if (selectedCity() != '') {
+    cityMatch = company.cityCode === selectedCity();
+  }
+
+  if (selectedType() != '') {
+    typeMatch = company.typeCode === selectedType();
+  }
+
+  return cityMatch && typeMatch;
+}
+
+function printCompany(company) {
+  const parentSection = document.getElementById("js-businessInfo");
+
+  console.log(company);
+
+  let div = document.createElement("div");
+  parentSection.appendChild(div);
+  div.setAttribute("class", "created-div");
+  div.innerHTML  = '<img src="' + company.logo + '"><p class="page-text name">' + company.name + ' </p><p class="page-text contacts">' + company.adress + '<br> ' + company.number + '</p>';
+}
+
+let latitude
+let longitude
 
 
         //====== Cookie banner ======
