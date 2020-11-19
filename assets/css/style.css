@@ -1197,20 +1197,6 @@ input[type="checkbox"] {
   font-weight: bold;
 }
 
-.map-container {
-  width: 1366px;
-  height: 648px;
-  margin: 60px auto 0 auto;
-}
-
-.supporters-footer {
-  height: 331px;
-}
-
-.supporters-footer > .footer {
-  top: -28px;
-}
-
 .displayInfoWrap {
   width: 820px;
   margin: 150px auto 60px auto;
@@ -1244,6 +1230,111 @@ input[type="checkbox"] {
   width: 120px;
 }
 
+.map-container {
+  width: 100%;
+  height: 648px;
+  margin: 60px auto 0 auto;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  height: 136px;
+  width: 57px;
+  margin-right: 67px;
+  margin-bottom: 90px;
+}
+
+button.zoom-control {
+  height: 57px;
+  width: 57px;
+  margin-bottom: 22px;
+
+  border-radius: 14px;
+  border: 0;
+  background: rgba(255, 168, 0, 0.5);
+  outline: none;
+  cursor: pointer;
+}
+
+.control-symbol {
+  font-family: "Oswald", sans-serif;
+  font-size: 38px;
+  font-weight: bold;
+  color: #2f4858;
+}
+
+.gm-style .gm-style-iw {
+  display: inline-block;
+  width: 486px;
+  height: 174px;
+  margin: 0;
+  padding: 22px 27px 25px 30px;
+  background-color: rgba(255, 168, 0, 0.5);
+  border-radius: 14px;
+}
+
+.gm-style-iw-d > div {
+  width: 430px;
+  height: 140px;
+}
+
+.popup-logo {
+  position: relative;
+  width: 120px;
+  height: 140px;
+  display: inline-block;
+}
+
+.popup-logo > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+}
+
+.popup-text-wrap {
+  position: absolute;
+  top: 22px;
+  right: 27px;
+  width: 290px;
+  height: 140px;
+  display: inline;
+}
+
+.popup-name,
+.popup-contacts {
+  width: 290px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-name > p {
+  font-size: 24px;
+  line-height: 36px;
+  text-transform: none;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.popup-contacts > p {
+  font-weight: normal;
+  text-align: right;
+}
+
+.supporters-footer {
+  height: 331px;
+}
+
+.supporters-footer > .footer {
+  top: -28px;
+}
 /* =============Inspiration Page Desktop
 =======================================*/
 
@@ -2530,6 +2621,11 @@ input[type="checkbox"] {
   .map {
     width: 100%;
     height: 606px;
+  }
+
+  .controls {
+    margin-right: 27px;
+    margin-bottom: 50px;
   }
 
   /* =============Inspiration Page Mobile
