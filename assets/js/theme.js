@@ -85,7 +85,6 @@ function hideButtonInOverlayMenu() {
   document.getElementById("js-goToTopButton").style.display = "none";
 }
 
-
 // === Close menu when an list item is clicked on
 
 let liElements = document.getElementById("js-nav").getElementsByTagName("li");
@@ -99,6 +98,36 @@ function closeMenuOnSelect() {
     startPageScrolling();
   }
 }
+
+// === Add class active when a list item is clicked on
+
+let setActive = function () {
+
+    // Get the last item in the path (e.g. index)
+    let url = window.location.pathname.split('/').pop();
+
+    // Add active nav class based on url
+
+    // header nav bar
+    $(".nav ul li a").each(function () {
+        if ($(this).attr("href") == url || $(this).attr("href") == '') {
+            $(this).closest('li').addClass("active");
+        }
+    })
+
+    //footer nav bar
+    //I add the class to the a tag so the border is as long as the text not as the li element
+    $(".footer-nav ul li a").each(function () {
+        if ($(this).attr("href") == url || $(this).attr("href") == '') {
+            $(this).closest('a').addClass("active");
+        }
+    })
+};
+
+$(function () {
+    setActive();
+});
+
 
         //====== Go to top button ======
         //==============================
@@ -175,7 +204,7 @@ const companies = [
     adress : "Dzelzavas iela 51A",
     email : "info@purch.lv",
     latitude : "56.958008",
-    longitude : "24.190937"
+    longitude : "24.190937",
   },
   {
     logo : "/img/kurts.png",
@@ -186,7 +215,7 @@ const companies = [
     adress : "Cēsu iela 20, Tērbatas iela 2i",
     email : "kurst@epasts.lv",
     latitude : "56.951087",
-    longitude : "24.121022"
+    longitude : "24.121022",
   },
   {
     logo : "/img/auch.png",
@@ -197,7 +226,7 @@ const companies = [
     adress : "Cēsu iela 20, Rīga",
     email : "auchbeauty@gmail.com",
     latitude : "56.965192",
-    longitude : "24.140532"
+    longitude : "24.140532",
   },
   {
     logo : "/img/logo_Linearis.png",
@@ -208,10 +237,11 @@ const companies = [
     adress : "Krišjāņa Barona iela 59",
     email : "info@linearis.lv",
     latitude : "56.956795",
-    longitude : "24.132112"
+    longitude : "24.132112",
   }
 ];
 
+//Returns the selected city/type from dropdowns.
 function selectedCity() {
   const citySelect = document.getElementById("js-city");
   let displayCity = citySelect.options[citySelect.selectedIndex].value;
@@ -226,13 +256,15 @@ function selectedType() {
   return displayType;
 }
 
-window.addEventListener('load', (company) => {
-  showCompanies();
-  hideCompanies();
-});
+if(document.getElementById("js-businessInfo") !== null) {
+  window.addEventListener('load', () => {
+    showCompanies();
+    hideCompanies();
+  });
+}
 
+//Hides previously showed companies and markers and show the new ones according to the selection in the dropdown.
 function showCompanies() {
-
   hideCompanies();
   removeMarkers();
 
@@ -249,7 +281,10 @@ function hideCompanies() {
   container.innerHTML = "";
 }
 
+//Check if company matches selected dropdown values.
+//If there is no selection made in dropdown then all the companies are shown.
 function companyMatch(company) {
+  //Return true if nothing is selected.
   let cityMatch = true;
   let typeMatch = true;
 
@@ -264,6 +299,7 @@ function companyMatch(company) {
   return cityMatch && typeMatch;
 }
 
+//Creates a div for each selected company and displays its information.
 function printCompany(company) {
   const parentSection = document.getElementById("js-businessInfo");
 
@@ -273,43 +309,15 @@ function printCompany(company) {
   div.innerHTML  = '<img src="' + company.logo + '"><p class="page-text name">' + company.name + ' </p><p class="page-text contacts">' + company.adress + '<br> ' + company.number + '</p>';
 }
 
-let markers = [];
-function displayMarker(company) {
-  const marker = new google.maps.Marker({
-    position: new google.maps.LatLng(company.latitude,company.longitude),
-    map,
-    icon: "/img/marker.png"
-  });
-  markers.push(marker);
-
-  let activeIcon = {url: "/img/blackMarker.png"};
-  let icon = {url: "/img/marker.png"};
-  let contentString =
-  '<div class="popup-logo"><img src="' + company.logo +
-     '"></div><div class="popup-text-wrap"><div class="popup-name"><p class="page-undertitle name">' + company.name +
-     ' </p></div><div class="popup-contacts"><p class="page-text contacts">' + company.number + '<br> ' + company.email +
-     '<br> ' + company.adress + '</p></div></div>';
-
-  marker.addListener('click', (function() {
-    for (let j = 0; j < markers.length; j++) {
-      markers[j].setIcon(icon);
-    }
-    this.setIcon(activeIcon);
-
-    infowindow.open(map, marker);
-    infowindow.setContent(contentString);
-  }));
-}
-
-function removeMarkers(){
-  for(let i = 0; i < markers.length; i++){
-      markers[i].setMap(null);
-  }
-}
-
 let map;
 let infowindow;
+let markers = [];
+
 function initMap() {
+  if(document.getElementById("js-map") === null) {
+    return
+  }
+
   map = new google.maps.Map(document.getElementById("js-map"), {
     center: { lat: 56.9495211, lng: 24.0959005 },
     disableDefaultUI: true,
@@ -577,6 +585,7 @@ function initInfoWindow() {
   });
 }
 
+//Adds a zoom functionality to the custom buttons.
 function initZoomControl(map) {
   document.querySelector(".js-zoom-in").onclick = function () {
     map.setZoom(map.getZoom() + 1);
@@ -589,6 +598,40 @@ function initZoomControl(map) {
   );
 }
 
+//Displays a custom marker for selected companies.
+function displayMarker(company) {
+  const marker = new google.maps.Marker({
+    position: new google.maps.LatLng(company.latitude,company.longitude),
+    map,
+    icon: "/img/marker.png"
+  });
+  markers.push(marker);
+
+  let activeIcon = {url: "/img/blackMarker.png"};
+  let icon = {url: "/img/marker.png"};
+  let contentString =
+  '<div class="popup-logo"><img src="' + company.logo +
+     '"></div><div class="popup-text-wrap"><div class="popup-name"><p class="page-undertitle name">' + company.name +
+     ' </p></div><div class="popup-contacts"><p class="page-text contacts">' + company.number + '<br> ' + company.email +
+     '<br> ' + company.adress + '</p></div></div>';
+
+  //Shows information window when marker is clicked on and changes icon.
+  marker.addListener('click', (function() {
+    for (let j = 0; j < markers.length; j++) {
+      markers[j].setIcon(icon);
+    }
+    this.setIcon(activeIcon);
+
+    infowindow.open(map, marker);
+    infowindow.setContent(contentString);
+  }));
+}
+
+function removeMarkers(){
+  for(let i = 0; i < markers.length; i++){
+      markers[i].setMap(null);
+  }
+}
 
         //====== Cookie banner ======
         //===========================
@@ -645,4 +688,279 @@ function previousSlide() {
 
 function nextSlide() {
   showSlides(slideIndex += 1);
+}
+
+//====== Numbered gold squares======
+//=================================
+
+const stories = [
+  { id : 1,
+    name : "Alīna",
+    image : "/img/1.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_9OF99_Alina.mp4",
+  },
+  { id : 2,
+    name : "Gunita",
+    image : "/img/2.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_16OF99_Gunita.mp4",
+  },
+  { id : 3,
+    name : "Egija",
+    image : "/img/3.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_17OF99_Egija.mp4",
+  },
+  { id : 4,
+    name : "Asnāte",
+    image : "/img/4.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_7OF99_Asnate.mp4",
+  },
+  { id : 5,
+    name : "Arta",
+    image : "/img/5.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_4OF99_Arta.mp4",
+  },
+  { id : 6,
+    name : "Anda",
+    image : "/img/6.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_6OF99_Anda.mp4",
+  },
+  { id : 7,
+    name : "Ilze",
+    image : "/img/7.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_14OF99_Ilze.mp4",
+  },
+  { id : 8,
+    name : "Indra",
+    image : "/img/8.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_8OF99_Indra.mp4",
+  },
+  { id : 9,
+    name : "Katrīna",
+    image : "/img/9.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_15OF99_Katrina.mp4",
+  },
+  { id : 10,
+    name : "Ketija",
+    image : "/img/10.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_5OF99_Ketija.mp4",
+  },
+  { id : 11,
+    name : "Lauma",
+    image : "/img/11.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/Lauma.mp4",
+  },
+  { id : 12,
+    name : "Līga",
+    image : "/img/12.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_10OF99_Liga.mp4",
+  },
+  { id : 13,
+    name : "Marta",
+    image : "/img/13.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_12OF99_Marta.mp4",
+  },
+  { id : 14,
+    name : "Regīna",
+    image : "/img/14.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_11OF99_Regina.mp4",
+  },
+  { id : 15,
+    name : "Zanda",
+    image : "/img/15.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_13OF99_Zanda.mp4",
+  },
+  { id : 16,
+    name : "Valentīna",
+    image : "/img/16.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_3OF99_Valentina.mp4",
+  },
+  { id : 17,
+    name : "Sibilla",
+    image : "/img/17.jpg",
+    link : "https://sparkleheart.org/wp-content/uploads/2020/09/Sibilla.mp4",
+  },
+  { id : 18,
+    name : "Jauns stāsts tiks pievienots drīzumā",
+    soon : true,
+  },
+]
+
+
+let storyNumber = 1;
+let gridLenght;
+let gridLengthLimit = 99;
+const gridContainer = document.getElementById("js-grid-container");
+
+//On page load gold squares are generated and also on page resize the appropriate number of squares are generated.
+if(document.getElementById("js-grid-container") !== null) {
+  window.addEventListener("load", () => {
+    generateGoldSquares(stories);
+    addClickEventToGoldSquares();
+  })
+
+  window.addEventListener("resize", () => {
+    generateGoldSquares(stories);
+    addClickEventToGoldSquares();
+  });
+}
+
+//Generated gold squares are deleted and the necessary number is then generated according to the width of the window.
+function generateGoldSquares(stories) {
+  deleteGoldSquares();
+  squareCount();
+
+  storyNumber = 1;
+
+  stories.forEach(story => {
+    createArticle(story);
+  });
+
+  while (storyNumber <= gridLenght) {
+    createArticle();
+  }
+}
+
+function deleteGoldSquares() {
+  gridContainer.innerHTML = "";
+}
+
+function squareCount() {
+  if(window.innerWidth > 1366) {
+    gridLenght = 99;
+  } else {
+    gridLenght = 20;
+  }
+}
+
+function createArticle(story = null) {
+  let article = document.createElement("article");
+  gridContainer.appendChild(article);
+  article.setAttribute("class", "post-gallery");
+  article.setAttribute("id", storyNumber);
+  article.innerHTML = generateStoryContent(story);
+}
+
+function generateStoryContent(story) {
+  let result;
+
+  if (!story) {
+    result = `<div class="gold-image"></div>
+              <div class="gold-number page-undertitle">${storyNumber}</div>`;
+  } else {
+    result = `<figure class="story-image">
+                <img src="${story.image}" alt="${story.name}">
+                <div class="content-gallery">
+                  <p class="page-undertitle">${story.name}</p>
+                </div>
+              </figure>
+              <div class="story-number page-undertitle">${storyNumber}</div>­`;
+
+    if(story.soon) {
+      result = `<figure class="story-image">
+                  <img src="/img/extra-gold.png" alt="Zelta krāsas kvadrāts.">
+                  <p class="page-undertitle new-stories">${story.name}</p>
+                </figure>
+                <div class="story-number page-undertitle">${storyNumber}</div>­­`
+    }
+  }
+
+  storyNumber += 1;
+
+  return result;
+}
+
+//Clicking on the button 20 more squares are generated till reaches 99 squares then the button is hidden.
+if(document.getElementById("js-more-dreams") !== null) {
+  const btnMoreSquares = document.getElementById("js-more-dreams");
+
+  btnMoreSquares.addEventListener("click", () => {
+    increaseGridLength(20);
+
+    if(gridLenght >= gridLengthLimit) {
+      btnMoreSquares.style.display = "none";
+    }
+
+    gridContainer.style.height = "auto";
+
+    while (storyNumber <= gridLenght) {
+      createArticle();
+    }
+  })
+}
+
+function increaseGridLength(step) {
+  gridLenght = gridLenght + step;
+
+  if (gridLenght > gridLengthLimit) {
+      gridLenght = gridLengthLimit;
+  }
+}
+
+
+//====== Dream video ======
+//=========================
+
+function addClickEventToGoldSquares() {
+  const goldSquares = document.getElementsByClassName("post-gallery");
+  let goldSquareCount = goldSquares.length;
+
+  for (let i = 0; i < goldSquareCount; i++) {
+    goldSquares[i].addEventListener("click", () => {
+      let goldSquareId = goldSquares[i].id;
+      let story = stories.find(story => story.id == goldSquareId);
+
+      if (story != null && story.hasOwnProperty("link")) {
+        fullscreenOverlay(story);
+      }
+    });
+  }
+}
+
+function fullscreenOverlay(story) {
+  let overlayDiv = document.createElement("div");
+
+  document.body.appendChild(overlayDiv);
+  overlayDiv.setAttribute("class", "dream-overlay");
+  overlayDiv.innerHTML = generateOverlayContent(story);
+
+  const closeIcon = document.getElementById("js-closeIcon");
+  const playImg = document.getElementById("js-story-playImg");
+  const storyVideo = document.getElementById("js-story-video");
+
+  if(overlayDiv !== null) {
+    closeIcon.addEventListener("click", () => {
+      overlayDiv.remove();
+      startPageScrolling();
+    });
+
+    playImg.addEventListener("click", () => {
+      hideplayImg();
+    });
+
+    storyVideo.addEventListener("click", () => {
+      hideplayImg();
+    })
+
+    stopPageScrolling();
+  }
+}
+
+function generateOverlayContent(story) {
+  return `<div class= "overlay-inner-container">
+            <div class="closeIcon" id="js-closeIcon"></div>
+            <video class="story-video" id="js-story-video" type="video/mp4" controls controlsList="nodownload">
+              Jūsu interneta pārlūks neļauj atskaņot video.
+              <source src="${story.link}">
+            </video>
+            <img class="story-video-playImg" id="js-story-playImg" src="../img/play.png" alt="Atskaņošanas pogas attēls." width="126" height="123">
+            <div class="storyteller" id="js-storyteller">
+              <p class="page-undertitle">${story.name}</p>
+            </div>
+          </div>`
+}
+
+
+function hideplayImg() {
+  const playImg = document.getElementById("js-story-playImg");
+  playImg.style.zIndex = "-1";
 }

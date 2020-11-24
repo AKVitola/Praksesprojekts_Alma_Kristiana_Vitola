@@ -104,7 +104,7 @@ body {
 
 .nav-item {
   display: inline-block;
-  padding-bottom: 3px;
+  padding-bottom: 3.5px;
 }
 
 .nav-item > a {
@@ -121,7 +121,11 @@ body {
   font-weight: bold;
 }
 
-/* === Underline animation for header nav === */
+.active {
+  border-bottom: 3px solid #ffa800;
+}
+
+/* === Underline animation for header/footer nav === */
 
 .underline-animation {
   position: relative;
@@ -140,6 +144,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.footer-nav-link > .underline-animation:hover::before,
 .underline-animation:hover::before {
   visibility: visible;
   width: 100%;
@@ -594,6 +599,7 @@ input[type="checkbox"] {
 .footer-list-item > a {
   color: inherit;
   text-decoration: none;
+  padding-bottom: 3.5px;
 }
 
 .bank-account {
@@ -645,25 +651,6 @@ input[type="checkbox"] {
 
 .private {
   right: -1px;
-}
-
-/* === Underline animation for footer nav === */
-
-.footer-nav-list > .underline-animation:hover::before {
-  visibility: visible;
-  width: 85%;
-}
-
-.footer-nav-list > .longer-line.underline-animation:hover::before {
-  width: 100%;
-}
-
-.footer-nav-list > .medium-line.underline-animation:hover::before {
-  width: 70%;
-}
-
-.footer-nav-list > .shostest-line.underline-animation:hover::before {
-  width: 27%;
 }
 
 /* ~~~~~~~~~~~~~~Global clases Desktop~~~~~~~~~~~~~~~~~ */
@@ -743,7 +730,7 @@ input[type="checkbox"] {
   top: 564px;
   width: 1366px;
   height: 705px;
-  z-index: 2;
+  z-index: 1;
 
   background-image: url(../img/juris-bcground.png);
   background-size: cover;
@@ -756,7 +743,7 @@ input[type="checkbox"] {
   position: absolute;
   width: 1366px;
   height: 55px;
-  z-index: 3;
+  z-index: 1;
 }
 
 .founder::after {
@@ -1328,6 +1315,11 @@ button.zoom-control {
   text-align: right;
 }
 
+.gm-style .gm-style-iw > button {
+  top: 5px !important;
+  padding-right: 40px !important;
+}
+
 .supporters-footer {
   height: 331px;
 }
@@ -1361,6 +1353,7 @@ button.zoom-control {
   width: 1030px;
   height: 2944px;
   display: grid;
+  z-index: 1;
   grid-template-columns: repeat(6, 160px);
   grid-template-rows: repeat(17, 160px);
   gap: 14px;
@@ -1437,13 +1430,9 @@ button.zoom-control {
   z-index: 3;
 }
 
-.story-video {
-  position: relative;
-}
-
 .content-gallery {
-  position: absolute;
-  top: -146px;
+  position: relative;
+  top: -164px;
   width: 160px;
   height: 160px;
   z-index: 4;
@@ -1457,16 +1446,83 @@ button.zoom-control {
 }
 
 .content-gallery > .page-undertitle {
+  position: absolute;
+  top: 0px;
+  width: 160px;
+  height: 98px;
+  margin-top: 62px;
+
   font-weight: bold;
   font-size: 24px;
   line-height: 36px;
   text-transform: none;
   color: #fff;
-  margin-top: 62px;
+  cursor: pointer;
 }
 
 .more-dreams-btn {
   display: none;
+}
+
+.dream-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.overlay-inner-container {
+  width: 912px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.story-video {
+  position: relative;
+  top: 142px;
+  width: 912px;
+  height: 511px;
+  outline: 0;
+}
+
+.story-video-playImg {
+  position: relative;
+  top: -164px;
+  cursor: pointer;
+  outline: none;
+  align-self: center;
+}
+
+.storyteller {
+  position: relative;
+  top: 12px;
+  height: 53px;
+  width: 912px;
+  margin: 25px auto 0 auto;
+}
+
+.storyteller > .page-undertitle {
+  font-size: 36px;
+  line-height: 53px;
+  text-transform: none;
+  color: #fff;
+}
+
+.closeIcon {
+  position: relative;
+  top: 94px;
+  width: 23px;
+  height: 23px;
+  margin-left: 957px;
+  background: url(../img/close.png);
 }
 
 .sparkle-team {
@@ -1624,11 +1680,7 @@ button.zoom-control {
   padding: 30px 46px;
   margin-left: calc(50% - 409px);
 
-  display: flex;
   display: none;
-
-  align-self: center;
-  justify-content: space-between;
 
   background-color: #2f4858;
   border-radius: 5px;
@@ -1637,9 +1689,12 @@ button.zoom-control {
 .cookie-text {
   width: 376px;
   height: 34px;
+  margin-right: 48px;
+
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
+  display: inline-block;
 }
 
 .cookie-text > a {
@@ -1666,6 +1721,7 @@ button.zoom-control {
 
 .cookie-agree-btn {
   background-color: #ffa800;
+  margin-right: 32px;
 }
 
 .cookie-deny-btn {
@@ -2674,10 +2730,12 @@ button.zoom-control {
   }
 
   .content-gallery {
-    top: -120px;
+    top: -138px;
   }
 
   .content-gallery > .page-undertitle {
+    width: 134px;
+    height: 85px;
     margin-top: 49px;
   }
 
@@ -2702,6 +2760,42 @@ button.zoom-control {
     width: 233px;
     display: block;
     margin: 50px auto 120px auto;
+  }
+
+  .overlay-inner-container {
+    width: 279px;
+    height: 430px;
+  }
+
+  .story-video {
+    top: 184px;
+    width: 279px;
+    height: 156px;
+  }
+
+  .story-video-playImg {
+    top: 54px;
+    width: 86px;
+    height: 83px;
+  }
+
+  .storyteller {
+    width: 279px;
+    height: 36px;
+    top: 93px;
+  }
+
+  .storyteller > .page-undertitle {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .closeIcon {
+    width: 15px;
+    height: 15px;
+    margin-left: 264px;
+    top: 166px;
+    background-position: center;
   }
 
   .sparkle-team {
@@ -2790,22 +2884,20 @@ button.zoom-control {
   }
 
   .cookie-text {
+    width: 135px;
     height: 90px;
-  }
-
-  .cookie-btn {
-    margin-top: 0px;
+    margin-right: 10px;
+    vertical-align: top;
   }
 
   .cookie-agree-btn {
-    position: relative;
-    right: -50px;
+    margin-right: 0;
   }
 
   .cookie-deny-btn {
     position: relative;
-    top: 50px;
-    right: 30px;
+    right: -147.5px;
+    top: -35px;
     padding: 0 15px;
   }
 }
@@ -3461,10 +3553,12 @@ button.zoom-control {
   }
 
   .content-gallery {
-    top: -129px;
+    top: -147px;
   }
 
   .content-gallery > .page-undertitle {
+    width: 143px;
+    height: 89.5px;
     margin-top: 53.5px;
   }
 
@@ -3472,6 +3566,34 @@ button.zoom-control {
     width: 233px;
     display: block;
     margin: 50px auto 150px auto;
+  }
+
+  .overlay-inner-container {
+    width: 608px;
+    height: 500px;
+  }
+
+  .story-video {
+    top: 349px;
+    width: 608px;
+    height: 341px;
+  }
+
+  .story-video-playImg {
+    top: 130px;
+  }
+
+  .storyteller {
+    width: 608px;
+    top: 218px;
+  }
+
+  .closeIcon {
+    width: 20px;
+    height: 20px;
+    margin-left: 633px;
+    top: 304px;
+    background-position: center;
   }
 
   .sparkle-team {
@@ -3525,9 +3647,11 @@ button.zoom-control {
 
   .cookie-text {
     width: 260px;
+    height: 50px;
+    margin-right: 10px;
   }
 
-  .cookie-btn {
-    margin-top: 10px;
+  .cookie-agree-btn {
+    margin-right: 15px;
   }
 }
