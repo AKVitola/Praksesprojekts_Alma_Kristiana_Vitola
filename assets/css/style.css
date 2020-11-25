@@ -969,12 +969,46 @@ input[type="checkbox"] {
   margin: 85px auto 150px auto;
 }
 
-.bank-video-container > .video-placeholder {
+.video-placeholder {
+  position: relative;
+  top: -47px;
   height: 769px;
   margin-top: 130px;
-
+  cursor: pointer;
+  outline: none;
   background: url(../img/play.png) center, url(../img/video-img.jpg);
   background-repeat: no-repeat;
+}
+
+.video-overlay,
+.video-bcground {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.video-bcground {
+  background-color: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.video {
+  display: none;
+  position: relative;
+  top: 10%;
+  width: 90%;
+  max-width: 1366px;
+  z-index: 4;
+  margin: auto;
+  outline: 0;
 }
 
 .aim-wrap {
@@ -2463,13 +2497,20 @@ button.zoom-control {
 
   .bank-video-container {
     height: 256px;
-    width: 100%;
+    width: 320px;
     margin: 50px auto 120px auto;
   }
 
-  .bank-video-container > .video-placeholder {
+  .video-placeholder {
+    top: -5px;
     height: 180px;
     margin-top: 30px;
+    background-size: 70px 68px, cover;
+  }
+
+  .video {
+    top: 5%;
+    width: 97%;
   }
 
   .aim-wrap {
@@ -3361,13 +3402,20 @@ button.zoom-control {
 
   .bank-video-container {
     height: 544px;
-    width: 100%;
+    width: 768px;
     margin: 80px auto 150px auto;
   }
 
-  .bank-video-container > .video-placeholder {
+  .video-placeholder {
+    top: -20px;
     height: 432px;
     margin-top: 60px;
+    background-size: 126px 123px, cover;
+  }
+
+  .video {
+    top: 10%;
+    width: 97%;
   }
 
   .aim-wrap {
