@@ -204,50 +204,26 @@ body {
 
 /* ===Introduction section=== */
 
-.video-placeholder {
+.video-container {
   position: relative;
   top: -47px;
   width: 1366px;
   height: 722px;
-
-  z-index: 1;
   margin: 0 auto;
-
   cursor: pointer;
   outline: none;
-  background: url(../img/play.png) center, url(../img/Sparkle_Video.jpg);
+}
+
+.custom-play-icon {
+  display: none;
+  position: absolute;
+  top: 300px;
+  width: 126px;
+  height: 123px;
+  margin-left: calc(50% - 63px);
+  z-index: 1;
+  background: url(../img/play.png) center;
   background-repeat: no-repeat;
-}
-
-.video-overlay,
-.video-bcground {
-  display: none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 3;
-
-  overflow: hidden;
-  cursor: pointer;
-  text-align: center;
-}
-
-.video-bcground {
-  background-color: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.video {
-  display: none;
-  position: relative;
-  top: 10%;
-  width: 90%;
-  max-width: 1366px;
-  z-index: 4;
-  margin: auto;
-  outline: 0;
 }
 
 .introduction > .page-text {
@@ -1834,17 +1810,18 @@ button.zoom-control {
 
   /* ===Introduction section=== */
 
-  .video-placeholder {
+  .video-container {
     top: -5px;
-    width: 100%;
-    min-width: 320px;
-    max-height: 169px;
-    background-size: 70px 68px, cover;
+    width: 320px;
+    height: 169px;
   }
 
-  .video {
-    top: 5%;
-    width: 97%;
+  .custom-play-icon {
+    top: 50px;
+    width: 86px;
+    height: 83px;
+    margin-left: calc(50% - 43px);
+    background-size: 70px 68px;
   }
 
   .introduction > .page-text {
@@ -3008,19 +2985,14 @@ button.zoom-control {
 
   /* ===Introduction section=== */
 
-  .video-placeholder {
+  .video-container {
     top: -20px;
-    width: 100%;
-    min-width: 768px;
-    height: 100%;
-    max-height: 722px;
-    min-height: 406px;
-    background-size: 126px 123px, cover;
+    width: 768px;
+    height: 406px;
   }
 
-  .video {
-    top: 10%;
-    width: 97%;
+  .custom-play-icon {
+    top: 150px;
   }
 
   .introduction > .page-text {

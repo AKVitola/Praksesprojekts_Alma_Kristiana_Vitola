@@ -1,48 +1,69 @@
+        //====== Embeded youtube video======
+        //==================================
+const videoContainer = document.getElementById("js-video-container");
+const customPlayIcon = document.getElementById("js-custom-play-icon");
 
-        //====== Play video in an overlay ======
-        //============================
+window.addEventListener('load', () => {
+  // slideswow in idea page
+  showSlides(slideIndex);
 
-const videoImg = document.getElementById("js-video-img");
-const video = document.getElementById("js-video");
-const pageOverlay = document.getElementById("js-ovelay");
-const pageBcground = document.getElementById("js-video-bcground");
+  //play icon in index page
+  if (videoContainer != null) {
+    customPlayIcon.style.display= "block";
+  }
+});
 
-if (videoImg !== null) {
-  videoImg.addEventListener("click", function() {
-    showVideo();
+function addEventToCustomPlayIcon(event) {
+  if (videoContainer != null) {
+    customPlayIcon.addEventListener("click", function() {
+      customPlayIcon.style.zIndex= "-1";
+      onPlayerReady(event);
+    });
+  }
+}
+
+//This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+//This function creates an <iframe> (and YouTube player) after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '100%',
+    width: '100%',
+    videoId: '1PalAURGxtM',
+    playerVars:{
+      rel: 0,
+      modestbranding: 1
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
   });
 }
 
-if (pageBcground !== null) {
-  pageBcground.addEventListener("click", function() {
-    hideVideo();
-  });
+// The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
 }
 
-function showVideo() {
-  pageOverlay.style.display = "block";
-  pageBcground.style.display = "block";
-  video.style.display = "block";
-  playVidDelay(1000);
-  video.currentTime = 0;
-  stopPageScrolling();
-  hideButtonInOverlayMenu();
+//The API calls this function when the player's state changes.
+var done = false;
+function onPlayerStateChange(event) {
+  if(event.data == YT.PlayerState.PLAYING) {
+    customPlayIcon.style.zIndex= "-1";
+  }
 
-}
+  if(event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+    customPlayIcon.style.zIndex= "1";
+  }
 
-function hideVideo() {
-  video.style.display = "none";
-  pageOverlay.style.display = "none";
-  pageBcground.style.display = "none";
-  video.pause();
-  startPageScrolling();
-  displayGoToTopButton();
-}
-
-function playVidDelay(delay) {
-  setTimeout(function(){
-     video.play();
-  }, delay)
+  addEventToCustomPlayIcon(event);
 }
 
 
@@ -181,14 +202,12 @@ const submitMessage = document.getElementById("js-submit-message");
 const submitButton = document.getElementById("js-submit-form-btn");
 
 // Te jāaizvieto ar submit vēlāk.
-
 if (submitButton !== null) {
   submitButton.addEventListener("click", function() {
     hiddenFormEnding.style.display = "none";
     submitMessage.style.display = "block";
   });
 }
-
 
 
         //====== Supporters company information and location ======
@@ -656,10 +675,6 @@ $("#js-denyToCookies").click(function() {
 let slideIndex = 1;
 
 // When the page loads, it first runs the showSlides(n) function, to determine which slide to show first.
-window.addEventListener("load",function() {
-  showSlides(slideIndex);
-})
-
 function showSlides(n){
   const slides = document.getElementsByClassName("js-quote-slide");
   let slidesCount = slides.length;
