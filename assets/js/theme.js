@@ -13,13 +13,11 @@ window.addEventListener('load', () => {
   }
 });
 
-function addEventToCustomPlayIcon(event) {
-  if (videoContainer != null) {
-    customPlayIcon.addEventListener("click", function() {
-      customPlayIcon.style.zIndex= "-1";
-      onPlayerReady(event);
-    });
-  }
+if (videoContainer != null) {
+  customPlayIcon.addEventListener("click", function() {
+    customPlayIcon.style.zIndex= "-1";
+      player.playVideo();
+  });
 }
 
 //This code loads the IFrame Player API code asynchronously.
@@ -41,15 +39,9 @@ function onYouTubeIframeAPIReady() {
       modestbranding: 1
     },
     events: {
-      'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
     }
   });
-}
-
-// The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  event.target.playVideo();
 }
 
 //The API calls this function when the player's state changes.
@@ -62,8 +54,6 @@ function onPlayerStateChange(event) {
   if(event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
     customPlayIcon.style.zIndex= "1";
   }
-
-  addEventToCustomPlayIcon(event);
 }
 
 
