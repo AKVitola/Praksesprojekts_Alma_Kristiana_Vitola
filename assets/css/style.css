@@ -676,7 +676,7 @@ input[type="checkbox"] {
 .idea > .page-heading {
   width: 182px;
   height: 70px;
-  margin: 85px auto 60px auto;
+  margin: 115px auto 60px auto;
 }
 
 .referent-name,
@@ -690,6 +690,7 @@ input[type="checkbox"] {
   width: 606px;
   height: 112px;
   margin: 0 auto 150px auto;
+  font-weight: normal;
 }
 
 .founder {
@@ -707,7 +708,7 @@ input[type="checkbox"] {
   position: absolute;
   top: 564px;
   width: 1366px;
-  height: 705px;
+  height: 735px;
   z-index: 1;
 
   background-image: url(../img/juris-bcground.png);
@@ -726,7 +727,7 @@ input[type="checkbox"] {
 
 .founder::after {
   transform: rotate(-180deg);
-  top: 1217px;
+  top: 1247px;
 }
 
 .founder-text {
@@ -757,17 +758,17 @@ input[type="checkbox"] {
 .referent-name {
   width: 388px;
   height: 29px;
-
   margin: 0;
-
+  margin-left: -1px;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 28px;
 }
 
 .referent-position {
   width: 500px;
   margin: 0;
-  margin-top: 10px;
+  margin-left: -2px;
+  margin-top: 12px;
 }
 
 .referent-position,
@@ -787,17 +788,17 @@ input[type="checkbox"] {
   line-height: 29px;
 
   margin: 0;
-  margin-top: 30px;
+  margin-top: 33px;
 }
 
 .arrow-btn {
   width: 80px;
   height: 23px;
-  margin-top: 30px;
+  margin-top: 27px;
 }
 
 .arrow1 {
-  margin-right: 43px;
+  margin-right: 41px;
 }
 
 .arrow-btn > img {
@@ -2193,19 +2194,21 @@ button.zoom-control {
     line-height: 15px;
   }
 
-  /* ==============Ideja Mobile
+  /* ==============Idea page Mobile
 ===============================*/
 
   .idea > .page-heading {
     width: 280px;
     height: 46px;
+    margin: 58px auto 34px auto;
+    padding-left: 2px;
   }
 
   .idea > .page-text {
-    width: 280px;
+    width: 282px;
     height: 124px;
-
     margin: 0 auto 80px auto;
+    padding-left: 1.2px;
   }
 
   .founder-img,
@@ -2224,28 +2227,33 @@ button.zoom-control {
     height: 475px;
   }
 
+  .founder {
+    margin-bottom: 123px;
+  }
+
   .founder-overlay {
     top: 375px;
   }
 
   .founder::before {
-    height: 39px;
+    height: 36px;
   }
 
   .founder::after {
-    top: 815px;
+    top: 826px;
   }
 
   .founder-text {
-    top: -216px;
+    top: -217px;
     width: 280px;
     height: 168px;
-
     font-size: 18px;
     line-height: 27px;
+    padding-left: 2px;
   }
 
   .reference {
+    height: 216px;
     margin: 104px auto 120px auto;
   }
 
@@ -2259,21 +2267,21 @@ button.zoom-control {
   .referent-name {
     font-size: 18px;
     line-height: 27px;
+    margin-left: 1px;
   }
 
   .referent-position {
     height: 39px;
-    margin: 10px 0 20px 0;
-
+    margin: 11px 2px 20px 0;
     font-size: 14px;
     line-height: 17px;
   }
 
   .referent-quote {
     height: 66px;
-
     font-size: 12px;
     line-height: 15px;
+    margin-top: 20px;
   }
 
   .referent-quote > span {
@@ -2283,10 +2291,16 @@ button.zoom-control {
   .arrow-btn {
     top: 192px;
     left: 1px;
+    margin-top: 26px;
+  }
+
+  .arrow1 {
+    margin-right: 39px;
   }
 
   .idea-footer > .footer {
-    top: 0;
+    top: -26px;
+    height: 499px;
   }
 
   /* ===============Business Page Mobile
@@ -3279,6 +3293,7 @@ button.zoom-control {
   .idea > .page-heading {
     width: 352px;
     height: 52px;
+    margin: 81px auto 69px auto;
   }
 
   .founder {
@@ -3307,13 +3322,24 @@ button.zoom-control {
   }
 
   .founder::after {
-    top: 994px;
+    top: 999px;
   }
 
   .founder-text {
-    top: -200px;
+    top: -202px;
     width: 595px;
     height: 138px;
+    padding-left: 14px;
+  }
+
+  .referent-name {
+    line-height: 36px;
+    margin-left: -2px;
+  }
+
+  .referent-position {
+    margin-top: 16px;
+    margin-left: -3px;
   }
 
   .arrow-btn {
@@ -3321,11 +3347,11 @@ button.zoom-control {
   }
 
   .arrow1 {
-    margin-right: 66px;
+    margin-right: 61px;
   }
 
   .idea-footer > .footer {
-    top: 0;
+    top: 3px;
   }
 
   /* ================Business Page Tablet
