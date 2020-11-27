@@ -5,6 +5,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  scrollbar-width: none;
 }
 
 ::-webkit-scrollbar {
@@ -206,7 +207,7 @@ body {
 
 .video-container {
   position: relative;
-  top: -47px;
+  top: -43px;
   width: 1366px;
   height: 722px;
   margin: 0 auto;
@@ -218,9 +219,9 @@ body {
   display: none;
   position: absolute;
   top: 300px;
-  width: 126px;
-  height: 123px;
-  margin-left: calc(50% - 63px);
+  width: 132px;
+  height: 129px;
+  margin-left: calc(50% - 65px);
   z-index: 1;
   background: url(../img/play.png) center;
   background-repeat: no-repeat;
@@ -231,7 +232,7 @@ body {
   width: 654px;
   height: 114px;
 
-  margin: 103px auto 150px auto;
+  margin: 107px auto 150px auto;
 }
 
 /* ===Gallery section===*/
@@ -299,8 +300,9 @@ body {
 .contact-section-wrap {
   width: 978px;
   height: 179px;
-
-  margin: 150px auto;
+  margin: 158px auto 101px auto;
+  padding-right: 27px;
+  padding-left: 80px;
 }
 
 .contact-flex-container {
@@ -314,7 +316,7 @@ body {
 }
 
 .contact-inner-row {
-  margin-bottom: 50px;
+  margin-bottom: 43px;
 }
 
 .contact-inner-row .section-titel > .break-line,
@@ -369,7 +371,7 @@ body {
 
 .contact-form {
   width: 612px;
-  height: 804px;
+  height: 818px;
   margin: 0 auto;
 }
 
@@ -382,7 +384,7 @@ body {
 }
 
 .form-title {
-  margin-bottom: 51px;
+  margin-bottom: 58px;
 }
 
 .form-field {
@@ -454,7 +456,7 @@ input[type="checkbox"] {
   display: inline;
   float: right;
   margin-top: 33px;
-  margin-bottom: 50px;
+  margin-bottom: 56px;
 
   line-height: 17px;
 }
@@ -497,7 +499,7 @@ input[type="checkbox"] {
   position: relative;
   width: 1030px;
   height: 80px;
-  top: 218px;
+  top: 182px;
 
   display: flex;
   justify-content: space-between;
@@ -510,7 +512,7 @@ input[type="checkbox"] {
 
 .footer {
   position: relative;
-  top: -50px;
+  top: -85px;
   width: 100%;
   height: 374px;
   z-index: 2;
@@ -569,7 +571,7 @@ input[type="checkbox"] {
 
 .footer-list-item {
   margin-bottom: 19px;
-  padding-bottom: 3px;
+  padding-bottom: 2.6px;
 }
 
 .footer-list-item > a {
@@ -592,8 +594,7 @@ input[type="checkbox"] {
 
 .account-number > p {
   margin: 0;
-  padding-bottom: 11px;
-  padding-top: 2px;
+  line-height: 33px;
 }
 
 .adress {
@@ -617,7 +618,7 @@ input[type="checkbox"] {
 .social-media {
   position: absolute;
   bottom: 81px;
-  right: 0;
+  right: -2px;
   display: flex;
 }
 
@@ -626,7 +627,8 @@ input[type="checkbox"] {
 }
 
 .private {
-  right: -1px;
+  right: -2px;
+  margin-bottom: 1px;
 }
 
 /* ~~~~~~~~~~~~~~Global clases Desktop~~~~~~~~~~~~~~~~~ */
@@ -1505,7 +1507,7 @@ button.zoom-control {
 
 .story-video-playImg {
   position: relative;
-  top: -164px;
+  top: -173px;
   cursor: pointer;
   outline: none;
   align-self: center;
@@ -1761,6 +1763,7 @@ button.zoom-control {
   }
 
   .black-logo {
+    top: 2px;
     left: 20px;
     width: 78px;
     height: auto;
@@ -1845,23 +1848,24 @@ button.zoom-control {
   /* ===Introduction section=== */
 
   .video-container {
-    top: -5px;
+    top: 4px;
     width: 320px;
     height: 169px;
   }
 
   .custom-play-icon {
-    top: 50px;
-    width: 86px;
-    height: 83px;
-    margin-left: calc(50% - 43px);
-    background-size: 70px 68px;
+    top: 43px;
+    width: 92px;
+    height: 89px;
+    margin-left: calc(50% - 46px);
+    background-size: 78px 76px;
   }
 
   .introduction > .page-text {
     width: 280px;
     height: 124px;
-    margin: 75px auto 80px auto;
+    margin: 84px auto 80px auto;
+    font-weight: normal;
   }
 
   /* ===Gallery section===*/
@@ -1871,7 +1875,7 @@ button.zoom-control {
   }
 
   .flex-container-gallery {
-    top: 390px;
+    top: 396px;
     width: 320px;
   }
 
@@ -1929,9 +1933,9 @@ button.zoom-control {
 
   .contact-section-wrap {
     width: 280px;
-    height: 344px;
-
-    margin: 120px auto;
+    height: 323px;
+    margin: 88px auto 120px auto;
+    padding: 0;
   }
 
   .contact-flex-container {
@@ -1950,8 +1954,16 @@ button.zoom-control {
     margin-bottom: 30px;
   }
 
+  .contact-column.dreams {
+    margin-left: 8px;
+  }
+
   .contact-column.wide {
-    margin-top: 80px;
+    margin-top: 52px;
+  }
+
+  .contact-inner-row.btn-wrap {
+    margin-left: 8px;
   }
 
   .section-titel {
@@ -1964,7 +1976,7 @@ button.zoom-control {
   .contact-form {
     width: 280px;
     height: 549px;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
   }
 
   input[type="text"],
@@ -2016,6 +2028,7 @@ button.zoom-control {
     float: right;
 
     margin-top: 12px;
+    margin-bottom: 51px;
     line-height: 15px;
   }
 
@@ -2046,7 +2059,7 @@ button.zoom-control {
   }
 
   .flex-container-logos {
-    top: 170px;
+    top: 152px;
     width: 296px;
     height: 172px;
 
@@ -2071,13 +2084,14 @@ button.zoom-control {
   /* ===Footer=== */
 
   .footer {
-    top: -100px;
+    top: -149px;
     height: 499px;
   }
 
   .flex-container-footer {
     width: 280px;
-    left: 20px;
+    left: 36px;
+    top: 65px;
   }
 
   .golden-logo,
@@ -2103,7 +2117,7 @@ button.zoom-control {
   }
 
   .adress-details > p.street {
-    padding-bottom: 10px;
+    padding-bottom: 11px;
   }
 
   .owner-name {
@@ -2114,7 +2128,6 @@ button.zoom-control {
 
   .route-to-accoount {
     display: block;
-
     font-size: 14px;
     line-height: 17px;
   }
@@ -2127,7 +2140,7 @@ button.zoom-control {
 
   .social-media {
     right: 208px;
-    top: 280px;
+    top: 281px;
     height: 25px;
 
     margin-top: 35px;
@@ -2144,15 +2157,15 @@ button.zoom-control {
   }
 
   .copyright {
-    bottom: 54px;
+    bottom: 45px;
     width: 280px;
     line-height: 13.41px;
   }
 
   .private {
     width: 200px;
-    bottom: 33px;
-    right: 79px;
+    bottom: 23px;
+    right: 80px;
 
     margin-top: 5px;
   }
@@ -2792,7 +2805,7 @@ button.zoom-control {
   }
 
   .story-video-playImg {
-    top: 54px;
+    top: 59px;
     width: 86px;
     height: 83px;
   }
@@ -2940,8 +2953,8 @@ button.zoom-control {
   }
 
   .black-logo {
-    left: 81px;
-    top: 3px;
+    left: 80px;
+    top: 4px;
     width: 128px;
     height: auto;
   }
@@ -3027,19 +3040,20 @@ button.zoom-control {
   /* ===Introduction section=== */
 
   .video-container {
-    top: -20px;
+    top: -15px;
     width: 768px;
     height: 406px;
   }
 
   .custom-play-icon {
-    top: 150px;
+    top: 143px;
   }
 
   .introduction > .page-text {
     width: 608px;
     height: 140px;
-    margin: 130px auto 150px auto;
+    margin: 139px auto 150px auto;
+    font-weight: normal;
   }
 
   /* ===Gallery section===*/
@@ -3050,12 +3064,12 @@ button.zoom-control {
   }
 
   .flex-container-gallery {
-    top: 827px;
+    top: 835px;
     width: 768px;
   }
 
   .flex-container-gallery::before {
-    top: 70px;
+    top: 69px;
     z-index: 1;
   }
 
@@ -3065,7 +3079,7 @@ button.zoom-control {
   }
 
   .flex-container-gallery::after {
-    top: 257px;
+    top: 259px;
   }
 
   /* ===Contacts section=== */
@@ -3073,6 +3087,9 @@ button.zoom-control {
   .contact-section-wrap {
     width: 608px;
     height: 154px;
+    padding: 0;
+    margin-top: 148px;
+    margin-bottom: 144px;
   }
 
   .contact-inner-row .section-titel > .break-line {
@@ -3081,6 +3098,15 @@ button.zoom-control {
 
   .contact-inner-row > .dreamers {
     margin-bottom: 75px;
+  }
+
+  .contact-inner-row > .section-titel {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .business-btn {
+    margin-top: 5px;
   }
 
   .section-titel {
@@ -3092,6 +3118,7 @@ button.zoom-control {
 
   .contact-form {
     width: 608px;
+    height: 774px;
   }
 
   input[type="text"],
@@ -3112,6 +3139,7 @@ button.zoom-control {
   .text-block {
     width: 580px;
     margin-top: 8px;
+    margin-bottom: 60px;
   }
 
   .checkbox {
@@ -3137,7 +3165,7 @@ button.zoom-control {
   }
 
   .flex-container-logos {
-    top: 115px;
+    top: 88px;
     width: 608px;
 
     margin: 0 auto 80px auto;
@@ -3159,18 +3187,19 @@ button.zoom-control {
   /* ===Footer=== */
 
   .footer {
-    top: -40px;
+    top: -87px;
     height: 409px;
   }
 
   .flex-container-footer {
     width: 607px;
-    right: 86px;
-    top: 85px;
+    right: 102px;
+    top: 69px;
   }
 
   .golden-logo {
-    margin-left: 18px;
+    margin-left: 19px;
+    margin-top: 0;
   }
 
   .golden-logo img {
@@ -3179,7 +3208,7 @@ button.zoom-control {
   }
 
   .copyright {
-    bottom: 45px;
+    bottom: 60px;
   }
 
   .copyright-text {
@@ -3188,9 +3217,13 @@ button.zoom-control {
     margin-left: 18px;
   }
 
+  .copyright.private {
+    right: -19px;
+  }
+
   .social-media {
-    bottom: 94px;
-    right: -6px;
+    bottom: 112px;
+    right: -20px;
   }
 
   .fb-icon {
@@ -3205,7 +3238,7 @@ button.zoom-control {
   .owner-name {
     position: absolute;
     top: 150px;
-    right: 437px;
+    right: 452px;
     width: 225px;
   }
 
@@ -3216,13 +3249,14 @@ button.zoom-control {
   }
 
   .adress {
-    top: 44px;
-    right: -6px;
+    top: 43px;
+    right: -20px;
     line-height: 20px;
   }
 
   .route-to-accoount {
     display: block;
+    margin-top: -1px;
   }
 
   .route-to-accoount > p {
@@ -3609,8 +3643,8 @@ button.zoom-control {
   }
 
   .closeIcon {
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
     margin-left: 633px;
     top: 304px;
     background-position: center;

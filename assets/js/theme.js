@@ -986,6 +986,7 @@ function fullscreenOverlay(story) {
 
     playImg.addEventListener("click", () => {
       hideplayImg();
+      storyVideo.play();
     });
 
     storyVideo.addEventListener("click", () => {
