@@ -960,13 +960,14 @@ input[type="checkbox"] {
 .businessman > .page-heading {
   width: 408px;
   height: 70px;
-  margin: 85px auto 60px auto;
+  margin: 115px auto 60px auto;
 }
 
 .businessman > .page-text {
-  width: 710px;
+  width: 790px;
   height: 49px;
   margin: 0 auto 150px auto;
+  font-weight: normal;
 }
 
 .business-form {
@@ -1007,7 +1008,7 @@ input[type="checkbox"] {
 }
 
 .business-footer > .footer {
-  top: 0;
+  top: 6px;
 }
 
 /* ===============Dream bank page Desktop
@@ -2538,14 +2539,15 @@ button.zoom-control {
   .businessman > .page-heading {
     width: 280px;
     height: 46px;
+    margin: 58px auto 36px auto;
+    padding-left: 3px;
   }
 
   .businessman > .page-text {
     width: 280px;
     height: 68px;
-
     margin: 0 auto 120px auto;
-
+    padding-left: 3px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -2568,6 +2570,7 @@ button.zoom-control {
   .business-form > .form-title {
     height: 35px;
     margin-bottom: 30px;
+    margin-top: -2px;
   }
 
   .businessName > input[type="text"] {
@@ -2584,8 +2587,16 @@ button.zoom-control {
     margin-top: 14px;
   }
 
+  .business-form > .business-button {
+    padding-left: 23px;
+  }
+
+  .business-footer {
+    height: 444px;
+  }
+
   .business-footer > .footer {
-    top: 0;
+    top: -55px;
   }
 
   /* ==============Dream bank page Mobile
@@ -3512,6 +3523,7 @@ button.zoom-control {
   .businessman > .page-heading {
     width: 352px;
     height: 52px;
+    margin: 81px auto 69px auto;
   }
 
   .businessman > .page-text {
@@ -3524,6 +3536,11 @@ button.zoom-control {
     width: 608px;
   }
 
+  .business-form > .form-title {
+    padding-top: 2px;
+    margin-bottom: 91px;
+  }
+
   .businessName > input[type="text"] {
     width: 608px;
   }
@@ -3533,8 +3550,9 @@ button.zoom-control {
   }
 
   .business-form > .text-block {
-    margin-top: 10px;
     width: 577px;
+    margin-top: 10px;
+    margin-bottom: 57px;
     line-height: 17px;
   }
 
@@ -3544,7 +3562,7 @@ button.zoom-control {
   }
 
   .business-footer > .footer {
-    top: 0;
+    top: 39px;
   }
 
   /* ==============Dream bank page Tablet
