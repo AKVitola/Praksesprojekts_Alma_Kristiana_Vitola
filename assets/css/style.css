@@ -1,4 +1,38 @@
-/* ======================Index Desktop
+/* Table of Contents
+   - - - - - - - - -
+  Index page Desktop
+  Idea Page Desktop
+  Submit dream page Desktop
+  Business page Desktop
+  Dream bank page Desktop
+  Supporters page Desktop
+  Inspiration page Desktop
+  Error page Desktop
+  Cookie-banner Desktop
+
+Mobile devices______
+  Index page Mobile
+  Idea page Mobile
+  Submit dream page Mobile
+  Business page Mobile
+  Dream bank page Mobile
+  Supporters page Mobile
+  Inspiration page Mobile
+  Error page Mobile
+  Cookie-banner Mobile
+
+Tablet_______________
+  Index page Mobile
+  Idea page Tablet
+  Submit dream page Tablet
+  Business page Tablet
+  Dream bank page Tablet
+  Supporters page Tablet
+  Inspiration page Tablet
+  Cookie-banner Tablet
+   - - - - - - - - - */
+
+/* ================Index page Desktop
     ================================*/
 
 *,
@@ -670,7 +704,7 @@ input[type="checkbox"] {
   margin: 0;
 }
 
-/* =============Idea Page Desktop
+/* =============Idea page Desktop
 ===============================*/
 
 .idea > .page-heading {
@@ -816,7 +850,111 @@ input[type="checkbox"] {
   top: 0;
 }
 
-/* =================Business Page Desktop
+/* =================Submit dream page Desktop
+============================================*/
+
+.about-submit > .page-heading {
+  width: 394px;
+  height: 71px;
+  margin: 115px auto 60px auto;
+}
+
+.about-submit > .page-text.large {
+  width: 818px;
+  height: 31px;
+
+  margin: 0 auto 90px auto;
+
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.flex-container-dreams {
+  width: 1030px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin: 0 auto 150px auto;
+}
+
+.dream-column {
+  width: 394px;
+  height: 594px;
+  align-items: center;
+  text-align: center;
+}
+
+.dream-row > .balloon-img {
+  margin-left: 10px;
+}
+
+.dream-row > .page-undertitle {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.dream-row > .page-undertitle.balloon {
+  margin-top: 49px;
+  margin-bottom: 22px;
+}
+
+.dream-row > .personal {
+  margin-top: 140px;
+  margin-left: -1px;
+}
+
+.dream-row > .professional {
+  margin-top: 50px;
+  margin-left: -1px;
+}
+
+.dream-row > .page-text {
+  font-weight: normal;
+}
+
+.dream-page-gallery > .gallery > .flex-container-gallery {
+  top: 1201px;
+}
+
+.dream-form > .contact-form {
+  width: 612px;
+  height: 654px;
+  margin: 159px auto 150px auto;
+}
+
+.dream-form > .contact-form > .form-title {
+  margin-bottom: 50px;
+}
+
+.submit-message {
+  display: none;
+  width: 603px;
+  height: 80px;
+
+  margin-top: 49px;
+
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #ffa800;
+}
+
+.submit-title {
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.submit-message > .page-text {
+  color: #ffa800;
+}
+
+.dream-footer > .footer {
+  top: 9px;
+}
+
+/* =================Business page Desktop
 =======================================*/
 
 .businessman > .page-heading {
@@ -872,98 +1010,7 @@ input[type="checkbox"] {
   top: 0;
 }
 
-/* =================Submit dream Page Desktop
-============================================*/
-
-.about-submit > .page-heading {
-  width: 394px;
-  height: 71px;
-  margin: 85px auto 60px auto;
-}
-
-.about-submit > .page-text.large {
-  width: 818px;
-  height: 31px;
-
-  margin: 0 auto 90px auto;
-
-  font-size: 24px;
-  line-height: 29px;
-}
-
-.flex-container-dreams {
-  width: 1030px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  margin: 0 auto 150px auto;
-}
-
-.dream-column {
-  width: 394px;
-  height: 594px;
-  align-items: center;
-  text-align: center;
-}
-
-.dream-row > .balloon-img {
-  margin-left: 10px;
-}
-
-.dream-row > .page-undertitle {
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-
-.dream-row > .page-undertitle.balloon {
-  margin-top: 49px;
-  margin-bottom: 21px;
-}
-
-.dream-row > .personal {
-  margin-top: 139px;
-}
-
-.dream-row > .professional {
-  margin-top: 50px;
-}
-
-.dream-form > .contact-form {
-  width: 612px;
-  height: 654px;
-
-  margin: 150px auto;
-}
-
-.submit-message {
-  display: none;
-  width: 603px;
-  height: 80px;
-
-  margin-top: 49px;
-
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  color: #ffa800;
-}
-
-.submit-title {
-  font-size: 24px;
-  line-height: 29px;
-  margin: 0;
-  margin-bottom: 30px;
-}
-
-.submit-message > .page-text {
-  color: #ffa800;
-}
-
-.dream-footer > .footer {
-  top: 0;
-}
-
-/* ===============Dream bank Page Desktop
+/* ===============Dream bank page Desktop
 =======================================*/
 
 .bank-video-container {
@@ -1139,7 +1186,7 @@ input[type="checkbox"] {
   top: 0;
 }
 
-/* ===================Supporters Page Desktop
+/* ===================Supporters page Desktop
 ============================================*/
 
 .dream-supporters > .page-heading {
@@ -1340,7 +1387,7 @@ button.zoom-control {
 .supporters-footer > .footer {
   top: -28px;
 }
-/* =============Inspiration Page Desktop
+/* =============Inspiration page Desktop
 =======================================*/
 
 .stories {
@@ -1611,11 +1658,10 @@ button.zoom-control {
   top: 0;
 }
 
-/* ====================Error Page Desktop
+/* ===================Error page Desktop
 =======================================*/
 
 .error-wrap > .benefactors {
-  /* width: 1366px; */
   height: 877px;
   width: 100%;
 }
@@ -1748,6 +1794,9 @@ button.zoom-control {
 /* Mobile devices
 ================= */
 @media only screen and (max-width: 767px) {
+  /* ==================Index page Mobile
+=======================================*/
+
   /* ===Header=== */
 
   .header {
@@ -2194,7 +2243,7 @@ button.zoom-control {
     line-height: 15px;
   }
 
-  /* ==============Idea page Mobile
+  /* ==========Idea page Mobile
 ===============================*/
 
   .idea > .page-heading {
@@ -2298,80 +2347,30 @@ button.zoom-control {
     margin-right: 39px;
   }
 
+  .idea-footer {
+    height: 473px;
+  }
+
   .idea-footer > .footer {
     top: -26px;
     height: 499px;
   }
 
-  /* ===============Business Page Mobile
-=======================================*/
-
-  .businessman > .page-heading {
-    width: 280px;
-    height: 46px;
-  }
-
-  .businessman > .page-text {
-    width: 280px;
-    height: 68px;
-
-    margin: 0 auto 120px auto;
-
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .business-form {
-    height: 744px;
-    width: 280px;
-  }
-
-  .business-form > .form-field {
-    padding-top: 3px;
-    padding-left: 13px;
-  }
-
-  .business-form > .comment-field {
-    padding-top: 10px;
-    margin-bottom: 5px;
-  }
-
-  .business-form > .form-title {
-    height: 35px;
-    margin-bottom: 30px;
-  }
-
-  .businessName > input[type="text"] {
-    width: 280px;
-  }
-
-  .business-form > .text-block {
-    margin-top: 12px;
-    width: 243px;
-    line-height: 15px;
-  }
-
-  .business-form > .checkbox {
-    margin-top: 14px;
-  }
-
-  .business-footer > .footer {
-    top: 0;
-  }
-
-  /* ===============Submit dream Page Mobile
+  /* ===============Submit dream page Mobile
 ============================================*/
 
   .about-submit > .page-heading {
     width: 280px;
     height: 46px;
+    margin: 58px auto 36px auto;
+    padding-left: 3px;
   }
 
   .about-submit > .page-text.large {
     width: 280px;
     height: 43px;
     margin: 0 auto 80px auto;
-
+    padding-left: 3px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -2400,25 +2399,28 @@ button.zoom-control {
   }
 
   .dream-row > .page-undertitle {
-    margin-top: 29px;
-    margin-bottom: 15px;
+    margin-top: 27px;
+    margin-bottom: 12px;
+    padding-left: 3px;
   }
 
   .dream-row > .page-undertitle.balloon {
-    margin-top: 27px;
+    margin-top: 28px;
     margin-bottom: 12px;
   }
 
   .dream-row > .personal-dream {
     height: 68px;
+    padding-left: 3px;
   }
 
   .dream-row > .professional-dream {
     height: 108px;
+    padding-left: 3px;
   }
 
   .dream-row > .personal {
-    margin-top: 44px;
+    margin-top: 45px;
     margin-bottom: 80px;
   }
 
@@ -2428,7 +2430,7 @@ button.zoom-control {
 
   .dream-page-gallery > .gallery .flex-container-gallery {
     position: absolute;
-    top: 1395px;
+    top: 1397px;
   }
 
   .dream-page-gallery > .gallery .first-img {
@@ -2492,18 +2494,29 @@ button.zoom-control {
   .dream-form > .contact-form {
     width: 280px;
     height: 549px;
-    margin: 110px auto 120px auto;
+    margin: 76px auto 120px auto;
+  }
+
+  .dream-form > .contact-form > .form-title {
+    margin-bottom: 29px;
+  }
+
+  .dream-form > .contact-form .text-block {
+    margin-bottom: 52px;
+  }
+
+  .dream-footer {
+    height: 474px;
   }
 
   .dream-footer > .footer {
-    top: 0px;
+    top: -25px;
   }
 
   .submit-message {
     display: none;
     width: 280px;
     height: 91px;
-
     margin-top: 39px;
   }
 
@@ -2519,7 +2532,63 @@ button.zoom-control {
     line-height: 17px;
   }
 
-  /* ==============Dream bank Page Mobile
+  /* ===============Business page Mobile
+=======================================*/
+
+  .businessman > .page-heading {
+    width: 280px;
+    height: 46px;
+  }
+
+  .businessman > .page-text {
+    width: 280px;
+    height: 68px;
+
+    margin: 0 auto 120px auto;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .business-form {
+    height: 744px;
+    width: 280px;
+  }
+
+  .business-form > .form-field {
+    padding-top: 3px;
+    padding-left: 13px;
+  }
+
+  .business-form > .comment-field {
+    padding-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .business-form > .form-title {
+    height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .businessName > input[type="text"] {
+    width: 280px;
+  }
+
+  .business-form > .text-block {
+    margin-top: 12px;
+    width: 243px;
+    line-height: 15px;
+  }
+
+  .business-form > .checkbox {
+    margin-top: 14px;
+  }
+
+  .business-footer > .footer {
+    top: 0;
+  }
+
+  /* ==============Dream bank page Mobile
 =======================================*/
 
   .bank-video-container {
@@ -2682,7 +2751,7 @@ button.zoom-control {
     height: 80px;
   }
 
-  /* ===================Supporters Page Mobile
+  /* =================Supporters page Mobile
 ============================================*/
 
   .dream-supporters > .page-heading {
@@ -2729,7 +2798,7 @@ button.zoom-control {
     margin-bottom: 50px;
   }
 
-  /* =============Inspiration Page Mobile
+  /* ============Inspiration page Mobile
 =======================================*/
 
   .stories {
@@ -2901,7 +2970,7 @@ button.zoom-control {
     line-height: 17px;
   }
 
-  /* ==================Error Page Mobile
+  /* ==================Error page Mobile
 =======================================*/
 
   .error-wrap > .benefactors {
@@ -2950,6 +3019,9 @@ button.zoom-control {
 /* 768px - Tablet
 ======================== */
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
+  /* ===================Index page Mobile
+=======================================*/
+
   /* ===Header=== */
 
   .header {
@@ -3287,7 +3359,7 @@ button.zoom-control {
     margin: 80px auto 60px auto;
   }
 
-  /* ============Idea Page Tablet
+  /* ===========Idea page Tablet
 ===============================*/
 
   .idea > .page-heading {
@@ -3354,7 +3426,87 @@ button.zoom-control {
     top: 3px;
   }
 
-  /* ================Business Page Tablet
+  /* ================Submit dream page Tablet
+============================================*/
+
+  .about-submit > .page-heading {
+    width: 352px;
+    height: 52px;
+    margin: 81px auto 69px auto;
+  }
+
+  .about-submit > .page-text.large {
+    width: 608px;
+    height: 59px;
+    margin: 0 auto 90px auto;
+  }
+
+  .flex-container-dreams {
+    width: 608px;
+    height: 1157px;
+    flex-direction: column;
+    margin: 0 auto 150px auto;
+  }
+
+  .dream-column {
+    width: 608px;
+    height: 532px;
+  }
+
+  .dream-column.dog-column {
+    height: 473px;
+    margin-bottom: 150px;
+  }
+
+  .dream-row > .personal-dream {
+    height: 48px;
+    margin-left: 1px;
+  }
+
+  .dream-row > .professional-dream {
+    height: 114px;
+  }
+
+  .dream-row > .page-undertitle.dog {
+    margin-bottom: 28px;
+  }
+
+  .dream-row > .personal,
+  .dream-row > .professional {
+    margin-top: 51px;
+  }
+
+  .dream-row > .page-undertitle.balloon {
+    margin-top: 47px;
+  }
+
+  .dream-page-gallery > .gallery .flex-container-gallery {
+    position: absolute;
+    top: 1658px;
+  }
+
+  .dream-form > .contact-form {
+    margin: 149px auto 150px auto;
+  }
+
+  .dream-form > .contact-form > .form-title {
+    margin-bottom: 59px;
+    padding-left: 2px;
+  }
+
+  .dream-form > .contact-form .text-block {
+    margin-top: 8px;
+  }
+
+  .dream-footer {
+    height: 393px;
+  }
+
+  .dream-footer > .footer {
+    top: -16px;
+  }
+
+  /* ==============Business page Tablet
 =======================================*/
 
   .businessman > .page-heading {
@@ -3395,69 +3547,7 @@ button.zoom-control {
     top: 0;
   }
 
-  /* ================Submit dream Page Tablet
-============================================*/
-
-  .about-submit > .page-heading {
-    width: 352px;
-    height: 52px;
-  }
-
-  .about-submit > .page-text.large {
-    width: 608px;
-    height: 59px;
-    margin: 0 auto 90px auto;
-  }
-
-  .flex-container-dreams {
-    width: 608px;
-    height: 1157px;
-    flex-direction: column;
-    margin: 0 auto 150px auto;
-  }
-
-  .dream-column {
-    width: 608px;
-    height: 532px;
-  }
-
-  .dream-column.dog-column {
-    height: 473px;
-    margin-bottom: 150px;
-  }
-
-  .dream-row > .personal-dream {
-    height: 48px;
-    margin-left: 3px;
-  }
-
-  .dream-row > .professional-dream {
-    height: 114px;
-  }
-
-  .dream-row > .page-undertitle.dog {
-    margin-bottom: 28px;
-  }
-
-  .dream-row > .personal,
-  .dream-row > .professional {
-    margin-top: 50px;
-  }
-
-  .dream-page-gallery > .gallery .flex-container-gallery {
-    position: absolute;
-    top: 1665px;
-  }
-
-  .dream-form > .contact-form .text-block {
-    margin-top: 15px;
-  }
-
-  .dream-footer > .footer {
-    top: 0;
-  }
-
-  /* ==============Dream bank Page Tablet
+  /* ==============Dream bank page Tablet
 =======================================*/
 
   .bank-video-container {
@@ -3556,7 +3646,7 @@ button.zoom-control {
     height: 100px;
   }
 
-  /* ===================Supporters Page Tablet
+  /* =================Supporters page Tablet
 ============================================*/
 
   .dream-supporters > .page-heading {
@@ -3580,7 +3670,7 @@ button.zoom-control {
     height: 812px;
   }
 
-  /* =============Inspiration Page Tablet
+  /* ============Inspiration page Tablet
 =======================================*/
 
   .stories {
