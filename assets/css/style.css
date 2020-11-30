@@ -22,7 +22,7 @@ Mobile devices______
   Cookie-banner Mobile
 
 Tablet_______________
-  Index page Mobile
+  Index page Tablet
   Idea page Tablet
   Submit dream page Tablet
   Business page Tablet
@@ -265,8 +265,10 @@ body {
   position: relative;
   width: 654px;
   height: 114px;
+  font-weight: normal;
 
   margin: 107px auto 150px auto;
+  padding-left: 7px;
 }
 
 /* ===Gallery section===*/
@@ -942,6 +944,7 @@ input[type="checkbox"] {
 .submit-title {
   font-size: 24px;
   line-height: 29px;
+  font-weight: 500;
   margin: 0;
   margin-bottom: 30px;
 }
@@ -1017,12 +1020,12 @@ input[type="checkbox"] {
 .bank-video-container {
   width: 1366px;
   height: 904px;
-  margin: 85px auto 150px auto;
+  margin: 115px auto 150px auto;
 }
 
 .video-placeholder {
   position: relative;
-  top: -47px;
+  top: -66px;
   height: 769px;
   margin-top: 130px;
   cursor: pointer;
@@ -1065,11 +1068,12 @@ input[type="checkbox"] {
 .aim-wrap {
   width: 924px;
   height: 1025px;
-  margin: 150px auto;
+  margin: 150px auto 127px auto;
 }
 
 .aim-wrap > .page-undertitle {
-  margin-bottom: 90px;
+  margin-bottom: 88px;
+  padding-top: 2px;
 }
 
 .aim-flex-container {
@@ -1087,12 +1091,14 @@ input[type="checkbox"] {
 .bank-flex-row.first,
 .bank-flex-row.third {
   align-self: flex-end;
+  margin-right: 53px;
 }
 
 .bank-flex-row.second {
   align-self: flex-start;
-  margin-top: 102px;
-  margin-bottom: 113px;
+  margin-top: 96px;
+  margin-bottom: 108px;
+  margin-left: -58px;
 }
 
 .bank-text-col {
@@ -1102,10 +1108,12 @@ input[type="checkbox"] {
 
 .bank-text-col > .page-text {
   text-align: left;
+  font-weight: normal;
 }
 
 .bank-text-col.middle > .page-text {
   text-align: right;
+  font-weight: normal;
 }
 
 .bank-text-col.middle {
@@ -1116,11 +1124,16 @@ input[type="checkbox"] {
 .mission {
   width: 818px;
   height: 126px;
-  margin: 150px auto 0 auto;
+  margin: 149px auto 0 auto;
 }
 
 .mission > .page-undertitle {
   margin-bottom: 50px;
+}
+
+.mission > .page-text.large {
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .yellow-dream-container {
@@ -1130,7 +1143,7 @@ input[type="checkbox"] {
 .earth-wrap,
 .rainbow-wrap {
   position: relative;
-  top: 75px;
+  top: 79px;
   margin: 0 auto;
   text-align: center;
 }
@@ -1150,13 +1163,18 @@ input[type="checkbox"] {
   font-size: 24px;
   line-height: 29px;
   color: #fff;
-  margin-top: 40px;
+  margin-top: 36px;
+  margin-left: 1px;
+}
+
+.rainbow-wrap > .rainbow-img {
+  margin-right: 35px;
 }
 
 .dream-support-wrap {
   width: 816px;
   height: 380px;
-  margin: 150px auto;
+  margin: 155px auto 145px auto;
 }
 
 .dream-select-flex-container {
@@ -1180,11 +1198,15 @@ input[type="checkbox"] {
 .dream-select-column > .page-text.large {
   font-size: 24px;
   line-height: 29px;
-  margin-top: 30px;
+  margin-top: 26px;
+}
+
+.bank-page-wrap > .contact-section-wrap {
+  margin-top: 154px;
 }
 
 .bank-footer > .footer {
-  top: 0;
+  top: 1px;
 }
 
 /* ===================Supporters page Desktop
@@ -1916,7 +1938,7 @@ button.zoom-control {
     width: 280px;
     height: 124px;
     margin: 84px auto 80px auto;
-    font-weight: normal;
+    padding-left: 0;
   }
 
   /* ===Gallery section===*/
@@ -2005,12 +2027,17 @@ button.zoom-control {
     margin-bottom: 30px;
   }
 
+  .contact-column.dreams > .contact-inner-row.btn-wrap {
+    margin-left: 0;
+    padding-top: 1px;
+  }
+
   .contact-column.dreams {
     margin-left: 8px;
   }
 
   .contact-column.wide {
-    margin-top: 52px;
+    margin-top: 51px;
   }
 
   .contact-inner-row.btn-wrap {
@@ -2522,8 +2549,8 @@ button.zoom-control {
   }
 
   .submit-title {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 18px;
+    line-height: 22px;
     margin: 0;
     margin-bottom: 34px;
   }
@@ -2599,17 +2626,17 @@ button.zoom-control {
     top: -55px;
   }
 
-  /* ==============Dream bank page Mobile
+  /* ============== Dream bank page Mobile
 =======================================*/
 
   .bank-video-container {
     height: 256px;
     width: 320px;
-    margin: 50px auto 120px auto;
+    margin: 58px auto 120px auto;
   }
 
   .video-placeholder {
-    top: -5px;
+    top: -3px;
     height: 180px;
     margin-top: 30px;
     background-size: 70px 68px, cover;
@@ -2623,12 +2650,13 @@ button.zoom-control {
   .aim-wrap {
     width: 280px;
     height: 1019px;
+    margin-top: 122px;
   }
 
   .aim-wrap > .page-undertitle {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 69px;
+    margin-bottom: 60px;
   }
 
   .aim-flex-container {
@@ -2641,8 +2669,9 @@ button.zoom-control {
   }
 
   .bank-flex-row.second {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 67px;
+    margin-bottom: 63px;
+    margin-left: 0;
     align-self: center;
     display: flex;
     flex-direction: column-reverse;
@@ -2651,6 +2680,7 @@ button.zoom-control {
   .bank-flex-row.first,
   .bank-flex-row.third {
     align-self: center;
+    margin-right: 0;
   }
 
   .bank-text-col {
@@ -2664,11 +2694,12 @@ button.zoom-control {
 
   .bank-text-col.middle > .page-text {
     text-align: center;
+    margin-top: 19px;
   }
 
   .bank-text-col > .page-text {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 23px;
   }
 
   .sun-img {
@@ -2698,7 +2729,8 @@ button.zoom-control {
     margin-bottom: 25px;
   }
 
-  .mission > .page-text {
+  .mission > .page-text,
+  .mission > .page-text.large {
     font-size: 18px;
     line-height: 22px;
   }
@@ -2710,13 +2742,31 @@ button.zoom-control {
 
   .earth-wrap,
   .rainbow-wrap {
-    width: 280px;
+    width: 286px;
     height: 347px;
   }
 
-  .earth-img,
-  .rainbow-img {
-    width: 249.5px;
+  .earth-wrap {
+    top: 81px;
+  }
+
+  .earth-img {
+    width: 268px;
+    margin-top: -2px;
+    margin-left: 2px;
+  }
+
+  .rainbow-wrap > .rainbow-img {
+    width: 279px;
+    margin-right: 0px;
+  }
+
+  .rainbow-wrap > .page-text.large {
+    margin-top: 22px;
+  }
+
+  .earth-wrap > .page-text.large {
+    margin-top: 25px;
   }
 
   .earth-wrap > .page-text.large,
@@ -2734,32 +2784,73 @@ button.zoom-control {
   .dream-support-wrap > .page-undertitle {
     font-size: 24px;
     line-height: 36px;
+    padding-top: 4px;
   }
 
   .dream-select-column > .page-text.large {
     font-size: 18px;
     line-height: 22px;
-    margin-top: 25px;
+    margin-top: 22px;
+  }
+
+  .dream-select-column {
+    margin-left: -4px;
   }
 
   .dream-select-column.people {
     margin-top: 60px;
     width: 280px;
+    margin-left: 0;
   }
 
   .dream-select-flex-container {
     width: 280px;
     height: 403px;
     flex-direction: column;
+    margin-top: 69px;
+  }
+
+  .bank-page-wrap > .contact-section-wrap {
+    margin-top: 125px;
+  }
+
+  .bank-page-wrap .contact-column.dreams {
+    margin-left: 0;
+  }
+
+  .bank-page-wrap .contact-column.dreams > .contact-inner-row {
+    margin-bottom: 51px;
+  }
+
+  .bank-page-wrap .contact-inner-row.btn-wrap {
+    margin-left: 0;
+  }
+
+  .bank-page-wrap .contact-column.wide {
+    margin-top: 29px;
+  }
+
+  .bank-page-wrap .contact-column.wide > .contact-inner-row {
+    margin-left: -8px;
+    margin-bottom: 50px;
+  }
+
+  .bank-page-wrap .contact-column.wide > .contact-inner-row.btn-wrap {
+    margin-left: -2px;
   }
 
   .megaphone-img {
     width: 102.67px;
     height: 100px;
   }
+
   .people-img {
     width: 125.64px;
     height: 80px;
+  }
+
+  .bank-footer > .footer {
+    top: 15px;
   }
 
   /* =================Supporters page Mobile
@@ -3030,7 +3121,7 @@ button.zoom-control {
 /* 768px - Tablet
 ======================== */
 @media only screen and (min-width: 768px) and (max-width: 1365px) {
-  /* ===================Index page Mobile
+  /* ===================Index page Tablet
 =======================================*/
 
   /* ===Header=== */
@@ -3147,10 +3238,11 @@ button.zoom-control {
   }
 
   .introduction > .page-text {
-    width: 608px;
+    width: 615px;
     height: 140px;
     margin: 139px auto 150px auto;
     font-weight: normal;
+    padding-left: 1px;
   }
 
   /* ===Gallery section===*/
@@ -3226,7 +3318,6 @@ button.zoom-control {
 
   .form-title {
     margin-bottom: 56px;
-    margin-right: 3px;
   }
 
   .comment-field {
@@ -3571,11 +3662,15 @@ button.zoom-control {
   .bank-video-container {
     height: 544px;
     width: 768px;
-    margin: 80px auto 150px auto;
+    margin: 81px auto 158px auto;
+  }
+
+  .bank-video-container > .page-heading {
+    margin: 81px auto 40px auto;
   }
 
   .video-placeholder {
-    top: -20px;
+    top: -10px;
     height: 432px;
     margin-top: 60px;
     background-size: 126px 123px, cover;
@@ -3593,15 +3688,32 @@ button.zoom-control {
 
   .aim-flex-container {
     width: 608px;
+    margin-left: -11px;
+  }
+
+  .bank-flex-row.first,
+  .bank-flex-row.third {
+    margin-right: 0;
+    margin-right: -8px;
+  }
+
+  .bank-flex-row.first > .bank-image-col {
+    margin-right: 11px;
   }
 
   .bank-flex-row.second {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 86px;
+    margin-bottom: 86px;
+    margin-left: 0;
+    margin-left: 8px;
+  }
+
+  .bank-text-col.middle {
+    width: 375px;
   }
 
   .bank-text-col {
-    width: 353px;
+    width: 350px;
   }
 
   .bank-text-col.first {
@@ -3609,11 +3721,25 @@ button.zoom-control {
   }
 
   .bank-text-col.middle {
-    margin-right: 66px;
+    margin-right: 44px;
+    padding-left: 0;
+    padding-right: 21px;
+  }
+
+  .bank-image-col {
+    margin-right: 11px;
+  }
+
+  .bank-flex-row.third > .bank-image-col {
+    margin-right: 5px;
   }
 
   .bank-text-col.third {
     margin-left: 67px;
+  }
+
+  .mountain-img {
+    margin-top: 2px;
   }
 
   .mission {
@@ -3635,9 +3761,22 @@ button.zoom-control {
     height: 424px;
   }
 
+  .earth-wrap {
+    top: 77px;
+  }
+
+  .rainbow-wrap {
+    top: 82px;
+  }
+
   .dream-support-wrap {
     width: 608px;
     height: 300px;
+    margin-top: 154px;
+  }
+
+  .dream-support-wrap > .page-undertitle {
+    padding-left: 3px;
   }
 
   .dream-select-flex-container {
@@ -3656,12 +3795,21 @@ button.zoom-control {
   .dream-select-column > .page-text.large {
     font-size: 18px;
     line-height: 22px;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .megaphone-img,
   .people-img {
     height: 100px;
+  }
+
+  .bank-page-wrap > .contact-section-wrap {
+    margin-top: 159px;
+    padding-left: 1px;
+  }
+
+  .bank-footer > .footer {
+    top: 4px;
   }
 
   /* =================Supporters page Tablet
