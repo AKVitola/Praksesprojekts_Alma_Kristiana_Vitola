@@ -630,6 +630,7 @@ function initMap() {
     ]
   });
 
+  zoomLevel();
   initZoomControl(map);
   initInfoWindow();
 }
@@ -638,6 +639,25 @@ function initInfoWindow() {
     infowindow = new google.maps.InfoWindow({
     content: "",
   });
+}
+
+window.addEventListener("resize", () => {
+  zoomLevel();
+});
+
+function zoomLevel() {
+
+  if(map != undefined) {
+      if(window.innerWidth < 768) {
+      map.setZoom(11);
+      }
+      if (window.innerWidth >= 768 && window.innerWidth <= 1366) {
+        map.setZoom(12);
+      }
+      if ( window.innerWidth > 1366) {
+        map.setZoom(13);
+      }
+  }
 }
 
 //Adds a zoom functionality to the custom buttons.
