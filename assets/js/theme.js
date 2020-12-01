@@ -376,7 +376,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("js-map"), {
     center: { lat: 56.9495211, lng: 24.0959005 },
     disableDefaultUI: true,
-    zoom: 13,
+    zoom: 12,
     styles: [
       {
         "elementType": "geometry",

@@ -1215,18 +1215,19 @@ input[type="checkbox"] {
 .dream-supporters > .page-heading {
   width: 394px;
   height: 74px;
-  margin: 85px auto 60px auto;
+  margin: 115px auto 60px auto;
 }
 
 .dream-supporters > .page-text {
   width: 818px;
   height: 48px;
   margin: 60px auto 90px auto;
+  font-weight: normal;
 }
 
 .select-container {
   width: 601px;
-  height: 78;
+  height: 78px;
   display: flex;
   flex-direction: row;
   margin: 90px auto 60px auto;
@@ -1235,31 +1236,44 @@ input[type="checkbox"] {
 .custom-select > .page-text {
   text-align: left;
   color: #ff8a00;
+  letter-spacing: -0.015em;
 }
 
 .city-select {
   margin-right: 30px;
 }
 
+.city-select > .page-text {
+  margin-left: -2px;
+}
+
+.type-select > .page-text {
+  margin-left: -1px;
+}
+
 .dropdown {
   width: 288px;
   height: 43px;
+  margin-top: 13px;
+  margin-left: -2px;
+  padding-left: 10px;
+  padding-top: 2px;
+  background: rgba(196, 196, 196, 0.4);
+  border: none;
+  border-radius: 6px;
 
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
+  letter-spacing: -0.015em;
   vertical-align: middle;
   color: #2f4858;
-
-  margin-top: 15px;
-  padding-left: 15px;
-
-  background: rgba(196, 196, 196, 0.4);
-  border: none;
-  border-radius: 6px;
-
   outline: none;
+}
+
+.type-select > .dropdown {
+  padding-left: 12px;
 }
 
 .dropdown > option:checked {
@@ -1269,7 +1283,7 @@ input[type="checkbox"] {
 
 .displayInfoWrap {
   width: 820px;
-  margin: 150px auto 60px auto;
+  margin: 0 auto;
 }
 
 .created-div {
@@ -1298,6 +1312,7 @@ input[type="checkbox"] {
 
 .created-div > img {
   width: 120px;
+  max-height: 155px;
 }
 
 .map-container {
@@ -1408,8 +1423,9 @@ button.zoom-control {
 }
 
 .supporters-footer > .footer {
-  top: -28px;
+  top: -31px;
 }
+
 /* =============Inspiration page Desktop
 =======================================*/
 
@@ -2859,13 +2875,15 @@ button.zoom-control {
   .dream-supporters > .page-heading {
     width: 280px;
     height: 46px;
-    margin: 50px auto 30px auto;
+    margin: 58px auto 35px auto;
+    padding-left: 2px;
   }
 
   .dream-supporters > .page-text {
     width: 282px;
     height: 70px;
     margin: 30px auto 80px auto;
+    padding-left: 3px;
   }
 
   .dream-supporters > .page-text,
@@ -2878,6 +2896,13 @@ button.zoom-control {
     width: 280px;
     height: 190px;
     flex-direction: column;
+    margin-top: 79px;
+    margin-bottom: 79px;
+  }
+
+  .custom-select > .page-text {
+    font-size: 14px;
+    line-height: 17px;
   }
 
   .city-select {
@@ -2885,19 +2910,63 @@ button.zoom-control {
     margin-bottom: 40px;
   }
 
+  .city-select > .page-text {
+    margin-left: 2px;
+  }
+
+  .type-select > .page-text {
+    margin-left: 1px;
+  }
+
   .dropdown {
     width: 280px;
+    margin-top: 14px;
+    margin-left: 1px;
+    padding-left: 11px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .type-select > .dropdown {
+    padding-left: 11px;
+    padding-top: 4px;
+  }
+
+  .displayInfoWrap {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .created-div > .page-text.name {
+    width: 110px;
+    margin-left: 15px;
+    margin-right: 1px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .created-div > .page-text.contacts {
+    width: 100px;
+  }
+
+  .created-div > img {
+    width: 70px;
+    max-height: 80px;
   }
 
   .map-container,
   .map {
     width: 100%;
-    height: 606px;
+    height: 585px;
   }
 
   .controls {
     margin-right: 27px;
     margin-bottom: 50px;
+  }
+
+  .supporters-footer > .footer {
+    top: -42px;
   }
 
   /* ============Inspiration page Mobile
@@ -3818,22 +3887,62 @@ button.zoom-control {
   .dream-supporters > .page-heading {
     width: 352px;
     height: 52px;
-    margin: 80px auto 60px auto;
+    margin: 81px auto 70px auto;
   }
 
   .dream-supporters > .page-text {
     width: 608px;
     height: 67px;
+    padding-left: 1px;
+  }
+
+  .city-select {
+    margin-top: -2px;
+  }
+
+  .type-select > .dropdown {
+    margin-left: -1px;
+    margin-top: 12px;
+  }
+
+  .dropdown {
+    margin-top: 14px;
+    padding-top: 2px;
+    padding-left: 11px;
   }
 
   .select-container {
     margin: 90px auto 70px auto;
   }
 
+  .displayInfoWrap {
+    width: 608px;
+    margin: 0 auto;
+  }
+
+  .created-div > .page-text.name {
+    width: 250px;
+    margin-left: 30px;
+    text-transform: none;
+  }
+
+  .created-div > .page-text.contacts {
+    width: 166px;
+  }
+
+  .created-div > img {
+    width: 98px;
+    max-height: 125px;
+  }
+
   .map-container,
   .map {
     width: 100%;
     height: 812px;
+  }
+
+  .supporters-footer > .footer {
+    top: -20px;
   }
 
   /* ============Inspiration page Tablet
