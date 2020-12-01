@@ -1432,19 +1432,21 @@ button.zoom-control {
 .stories {
   width: 818px;
   height: 160px;
-  margin: 85px auto 150px auto;
+  margin: 115px auto 150px auto;
+  padding-left: 5px;
 }
 
-.stories > .page-undertitle {
-  width: 600px;
-  height: 70px;
-  margin: 0 auto 60px auto;
+.stories > .page-heading {
+  padding-left: 4px;
 }
 
 .stories > .page-text {
   width: 818px;
   height: 30px;
-  margin: 60px auto 0 auto;
+  margin: 59px auto 0 auto;
+  padding-right: 10px;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .story-grid-container {
@@ -1503,10 +1505,11 @@ button.zoom-control {
 
 .story-image > .page-undertitle.new-stories {
   position: relative;
-  top: -146px;
+  top: -152px;
   z-index: 3;
   font-size: 18px;
   line-height: 27px;
+  letter-spacing: 0.5px;
   text-transform: none;
   color: #fff;
   margin-top: 42px;
@@ -1524,7 +1527,7 @@ button.zoom-control {
 
 .story-number {
   position: relative;
-  bottom: 43.5px;
+  bottom: 42px;
   right: 14px;
   z-index: 3;
 }
@@ -1628,18 +1631,19 @@ button.zoom-control {
   width: 1035px;
   height: 545px;
   margin: 150px auto;
+  margin-top: -4px;
 }
 
 .sparkle-team > .page-undertitle {
   width: 394px;
-  height: 30px;
+  height: 44px;
   margin: 0 auto 30px auto;
 }
 
 .sparkle-team > .page-text {
   width: 606px;
   height: 46px;
-  margin: 30px auto 60px auto;
+  margin: -8px auto 60px auto;
 }
 
 .team-gallery-container {
@@ -1654,15 +1658,17 @@ button.zoom-control {
   top: unset;
   width: 289px;
   height: 365px;
+  margin-left: 1px;
 }
 
 .team-mate.middle {
-  margin: 0 84px;
+  margin-left: 85px;
+  margin-right: 79px;
 }
 
 .about-founder {
   position: relative;
-  bottom: 98px;
+  bottom: 102px;
   width: 289px;
   margin: 0 auto;
   z-index: 3;
@@ -1670,11 +1676,35 @@ button.zoom-control {
 }
 
 .about-founder.first {
-  bottom: 75px;
+  bottom: 80px;
+  margin-left: -5px;
+}
+
+.about-founder.first > .page-text {
+  margin-left: 13px;
+  margin-top: -2px;
+  letter-spacing: 0.06px;
+}
+
+.about-founder.second {
+  margin-left: -7px;
+}
+
+.about-founder.second > .page-text {
+  margin-left: 11px;
+  margin-top: -2px;
+  letter-spacing: 0.07px;
 }
 
 .about-founder.third {
   width: 271px;
+  margin-left: 3px;
+}
+
+.about-founder.third > .page-text {
+  margin-left: 13px;
+  margin-top: -2px;
+  letter-spacing: 0.08px;
 }
 
 .about-founder > .name {
@@ -1693,8 +1723,12 @@ button.zoom-control {
   color: #fff;
 }
 
+.inspiration-footer {
+  height: 368px;
+}
+
 .inspiration-footer > .footer {
-  top: 0;
+  top: -6px;
 }
 
 /* ===================Error page Desktop
@@ -1707,18 +1741,20 @@ button.zoom-control {
 
 .inner-error {
   position: relative;
-  top: 170px;
+  top: 173px;
   width: 606px;
   height: 372px;
   margin: 0 auto;
 }
 
 .error-number {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 96px;
   line-height: 142px;
   color: #fff;
-  margin-bottom: 40px;
+  margin-bottom: 19px;
+  letter-spacing: 2px;
+  padding-left: 5px;
 }
 
 .error-message {
@@ -1727,10 +1763,13 @@ button.zoom-control {
   line-height: 36px;
   text-transform: none;
   margin-bottom: 30px;
+  padding-right: 6px;
+  letter-spacing: 0.6px;
 }
 
 .inner-error > .page-text {
   margin-bottom: 50px;
+  font-weight: normal;
 }
 
 .error-btn {
@@ -1758,11 +1797,11 @@ button.zoom-control {
 }
 
 .error-footer {
-  height: 254px;
+  height: 179px;
 }
 
 .error-footer > .footer {
-  top: -95px;
+  top: -195px;
 }
 
 /* ================Cookie-banner Desktop
@@ -3035,18 +3074,20 @@ button.zoom-control {
   .stories {
     width: 280px;
     height: 204px;
-    margin: 50px auto 80px auto;
+    margin: 58px auto 83px auto;
   }
 
-  .stories > .page-undertitle {
+  .stories > .page-heading {
     width: 280px;
     height: 99px;
+    margin-left: -4px;
   }
 
   .stories > .page-text {
     width: 280px;
     height: 45px;
-
+    margin-top: 64px;
+    padding-left: 2px;
     font-size: 18px;
     line-height: 22px;
   }
@@ -3058,6 +3099,7 @@ button.zoom-control {
     grid-template-rows: repeat(10, 134px);
     gap: 12px;
     margin: 80px auto 50px auto;
+    padding-left: 1px;
   }
 
   .content-gallery,
@@ -3098,13 +3140,16 @@ button.zoom-control {
   .story-image > .page-undertitle.new-stories {
     font-size: 14px;
     line-height: 21px;
-    margin-top: 52px;
+    margin-top: 63px;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+    padding-left: 3px;
   }
 
   .more-dreams-btn {
     width: 233px;
     display: block;
-    margin: 50px auto 120px auto;
+    margin: 52px auto 120px auto;
   }
 
   .overlay-inner-container {
@@ -3146,7 +3191,7 @@ button.zoom-control {
   .sparkle-team {
     width: 280px;
     height: 1304px;
-    margin: 120px auto;
+    margin: 120px auto 135px auto;
   }
 
   .sparkle-team > .page-undertitle {
@@ -3155,6 +3200,8 @@ button.zoom-control {
     font-size: 24px;
     line-height: 36px;
     margin: 0 auto;
+    margin-top: -3px;
+    padding-left: 2px;
   }
 
   .sparkle-team > .page-text {
@@ -3162,7 +3209,8 @@ button.zoom-control {
     height: 52px;
     font-size: 14px;
     line-height: 17px;
-    margin: 30px auto 80px auto;
+    margin: 34px auto 79px auto;
+    padding-left: 2px;
   }
 
   .team-gallery-container {
@@ -3186,11 +3234,6 @@ button.zoom-control {
     bottom: 85px;
   }
 
-  .about-founder.first,
-  .about-founder.second {
-    bottom: 65px;
-  }
-
   .about-founder > .name {
     font-size: 18px;
     line-height: 27px;
@@ -3199,6 +3242,34 @@ button.zoom-control {
   .about-founder > .page-text {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .about-founder.first,
+  .about-founder.second {
+    bottom: 65px;
+    margin-left: -11px;
+  }
+
+  .about-founder.first > .page-text {
+    margin-left: 12px;
+    letter-spacing: 0.1px;
+  }
+
+  .about-founder.second > .page-text {
+    letter-spacing: 0.08px;
+  }
+
+  .about-founder.third {
+    bottom: 83px;
+    margin-left: 0px;
+  }
+
+  .about-founder.third > .page-text {
+    margin-left: 10px;
+  }
+
+  .inspiration-footer > .footer {
+    top: -37px;
   }
 
   /* ==================Error page Mobile
@@ -3216,6 +3287,15 @@ button.zoom-control {
   .error-number {
     font-size: 66px;
     line-height: 83px;
+    padding-left: 0;
+  }
+
+  .error-message {
+    padding-right: 0;
+  }
+
+  .error-footer > .footer {
+    top: -48px;
   }
 
   /* ==============Cookie-banner Mobile
@@ -4011,12 +4091,14 @@ button.zoom-control {
   .stories {
     width: 608px;
     height: 148px;
-    margin: 80px auto;
+    margin: 81px auto 87px auto;
   }
 
-  .stories > .page-undertitle {
+  .stories > .page-heading {
     width: 608px;
     height: 52px;
+    padding-right: 10px;
+    margin-bottom: 69px;
   }
 
   .stories > .page-text {
@@ -4070,7 +4152,7 @@ button.zoom-control {
   .more-dreams-btn {
     width: 233px;
     display: block;
-    margin: 50px auto 150px auto;
+    margin: 53px auto 149px auto;
   }
 
   .overlay-inner-container {
@@ -4101,6 +4183,10 @@ button.zoom-control {
     background-position: center;
   }
 
+  .story-image > .page-undertitle.new-stories {
+    top: -139px;
+  }
+
   .sparkle-team {
     width: 606px;
     height: 1569px;
@@ -4108,13 +4194,15 @@ button.zoom-control {
 
   .sparkle-team > .page-undertitle {
     width: 394px;
-    height: 30px;
+    margin-bottom: 21px;
+    padding-left: 2px;
   }
 
   .sparkle-team > .page-text {
     width: 606px;
     height: 46px;
-    margin: 30px auto 90px auto;
+    margin: 0 auto 90px auto;
+    padding-left: 2px;
   }
 
   .team-gallery-container {
@@ -4128,17 +4216,56 @@ button.zoom-control {
   .team-mate,
   .team-mate > img,
   .team-mate > .founder-overlay {
-    width: 352px;
-    height: 440px;
+    width: 351px;
+    height: 444px;
+  }
+  .team-mate.last,
+  .team-mate.last > img,
+  .team-mate.last > .founder-overlay {
+    width: 347px;
+    height: 435px;
   }
 
   .team-mate.middle {
     margin: 25px 0;
   }
 
+  .about-founder.first {
+    bottom: 85px;
+    margin-left: 7px;
+  }
+
+  .about-founder.first > .page-text {
+    letter-spacing: 0.16px;
+  }
+
+  .about-founder.second {
+    bottom: 84px;
+    margin-left: 6px;
+  }
+
+  .about-founder.second > .page-text {
+    width: 330px;
+    margin-left: 2px;
+    letter-spacing: 0.14px;
+  }
+
+  .about-founder.third {
+    bottom: 106px;
+    margin-left: 7px;
+  }
+
+  .about-founder.third > .page-text {
+    margin-left: 11px;
+  }
+
   .about-founder,
   .about-founder.third {
     width: 323px;
+  }
+
+  .inspiration-footer > .footer {
+    top: 5px;
   }
 
   /* ================Cookie-banner Tablet
