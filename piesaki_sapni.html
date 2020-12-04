@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGAreWrw02_bh5cUQ2Kgl_k0HRoKnsjPw&callback=initMap&libraries=&v=weekly"
+    defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $(".header").load("views/_header.html");
+      $(".contact-form").load("views/_form.html");
+      $(".topButtonContainer").load("views/_toTopBtn.html");
+      $(".cookie-banner").load("views/_cookies.html");
+      $(".footer").load("views/_footer.html");
+    });
+  </script>
+  <link rel="icon" type="image/png" href="assets/img/favicon-lg.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <title>Sparkle Heart</title>
+</head>
+<body>
+  <div class="container submit-dream">
+
+    <header class="header"></header>
+    <main>
+      <section class="about-submit">
+        <h1 class="page-heading">Piesaki sapni</h1>
+        <p class="page-text large">Tev ir iespēja pieteikt personīgo vai profesionālo sapni.</p>
+      </section>
+
+      <section class="flex-container-dreams">
+        <div class="dream-column dog-column">
+          <div class="dream-row">
+            <img class="dog-img" src="assets/img/dogIcon.png" alt="Ikona ar suni.">
+          </div>
+          <div class="dream-row">
+            <h3 class="page-undertitle dog">Personīgais sapnis</h3>
+          </div>
+          <div class="dream-row">
+            <p class="page-text personal-dream">Bērnības nepiepildītie sapņi... No sev piederoša svaigi spiestas sulas bāra uz Tērbatas ielas līdz iespējai satikties ar
+            Džekiju Čanu.</p>
+          </div>
+          <div class="dream-row">
+            <button class="btn user-btn btn-text personal">Piesaki sapni</button>
+          </div>
+        </div>
+
+        <div class="dream-column">
+          <div class="dream-row">
+            <img class="balloon-img" src="assets/img/balloonIcon.png" alt="Ikona ar gaisa balonu.">
+          </div>
+          <div class="dream-row">
+            <h3 class="page-undertitle balloon">Profesionālais sapnis</h3>
+          </div>
+          <div class="dream-row">
+            <p class="page-text professional-dream">Sapnis vai ideja, kura ir balstīta uz reģiona, pasaules vai cilvēku attīstību 4 virzienos - kultūra, izglītība, zinātne,
+            ģimene jeb sociālā vide. Tā ir iespēja attīstīt ideju, kas uzlabotu ikdienas dzīves kvalitāti vai atrisinātu vietēja vai
+            starptautiska līmeņa problēmu. Pastāsti, kāpēc Tev tas ir tik nozīmīgi?</p>
+          </div>
+          <div class="dream-row">
+            <button class="btn user-btn btn-text professional">Piesaki sapni</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="dream-page-gallery">
+        <div class="gallery">
+          <div class="flex-container-gallery wrap">
+            <div class="col first-img">
+              <img class="responsive-img dream-img1" src="assets/img/Lauma.jpg" alt="Sieviete ar vijoli.">
+            </div>
+            <div class="col colage-img">
+              <div class="row-inner top-img">
+                <img class="responsive-img dream-img2" src="assets/img/Brinuma_meita-3.jpg" alt="Trīs cilvēku kopbilde.">
+              </div>
+              <div class="row-inner bottom-img">
+                <img class="responsive-img dream-img3" src="assets/img/Arta.jpg" alt="Sieviete pastaigā mežā.">
+              </div>
+            </div>
+            <div class="col second-img">
+              <img class="responsive-img dream-img4" src="assets/img/Lauma2.jpg" alt="Sieviete ar kroni.">
+            </div>
+            <div class="col last-img">
+              <img class="responsive-img dream-img5" src="assets/img/Brinuma_meita-2.jpg" alt="Trīs jauniešu kopbilde.">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dream-form">
+        <form class="contact-form" action="/"></form>
+      </section>
+
+      <div class="topButtonContainer"></div>
+    </main>
+
+    <div class="cookie-banner" id="js-cookie-banner"></div>
+
+    <section class="dream-footer">
+      <footer class="footer"></footer>
+    </section>
+
+  </div>
+  </body>
+
+  <script src="assets/js/theme.js"></script>
+</html>

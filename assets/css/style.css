@@ -1,7 +1,7 @@
 /* Table of Contents
    - - - - - - - - -
   Index page Desktop
-  Idea Page Desktop
+  Idea page Desktop
   Submit dream page Desktop
   Business page Desktop
   Dream bank page Desktop
@@ -69,6 +69,9 @@ body {
 /* ===Header=== */
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
   width: 100%;
   height: 90px;
   background: #fff;
@@ -240,11 +243,9 @@ body {
 /* ===Introduction section=== */
 
 .video-container {
-  position: relative;
-  top: -43px;
   width: 1366px;
   height: 722px;
-  margin: 0 auto;
+  margin: 47px auto 150px auto;
   cursor: pointer;
   outline: none;
 }
@@ -252,10 +253,10 @@ body {
 .custom-play-icon {
   display: none;
   position: absolute;
-  top: 300px;
+  top: 350px;
   width: 132px;
   height: 129px;
-  margin-left: calc(50% - 65px);
+  margin-left: 617px;
   z-index: 1;
   background: url(../img/play.png) center;
   background-repeat: no-repeat;
@@ -551,7 +552,7 @@ input[type="checkbox"] {
   top: -85px;
   width: 100%;
   height: 374px;
-  z-index: 2;
+  z-index: 1;
 
   font-weight: 500;
   color: #fff;
@@ -712,7 +713,7 @@ input[type="checkbox"] {
 .idea > .page-heading {
   width: 182px;
   height: 70px;
-  margin: 115px auto 60px auto;
+  margin: 205px auto 60px auto;
 }
 
 .referent-name,
@@ -858,7 +859,7 @@ input[type="checkbox"] {
 .about-submit > .page-heading {
   width: 394px;
   height: 71px;
-  margin: 115px auto 60px auto;
+  margin: 205px auto 60px auto;
 }
 
 .about-submit > .page-text.large {
@@ -963,7 +964,7 @@ input[type="checkbox"] {
 .businessman > .page-heading {
   width: 408px;
   height: 70px;
-  margin: 115px auto 60px auto;
+  margin: 205px auto 60px auto;
 }
 
 .businessman > .page-text {
@@ -1020,7 +1021,7 @@ input[type="checkbox"] {
 .bank-video-container {
   width: 1366px;
   height: 904px;
-  margin: 115px auto 150px auto;
+  margin: 205px auto 150px auto;
 }
 
 .video-placeholder {
@@ -1047,6 +1048,27 @@ input[type="checkbox"] {
   overflow: hidden;
   cursor: pointer;
   text-align: center;
+}
+
+.closeIcon-bankPage {
+  position: relative;
+  height: 23px;
+  width: 90%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.closeIcon-bankPage,
+.closeIcon-bankPage > .closeIcon {
+  top: 9.6%;
+  z-index: 4;
+}
+
+.closeIcon-bankPage > .closeIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: 0;
 }
 
 .video-bcground {
@@ -1215,7 +1237,7 @@ input[type="checkbox"] {
 .dream-supporters > .page-heading {
   width: 394px;
   height: 74px;
-  margin: 115px auto 60px auto;
+  margin: 205px auto 60px auto;
 }
 
 .dream-supporters > .page-text {
@@ -1432,7 +1454,7 @@ button.zoom-control {
 .stories {
   width: 818px;
   height: 160px;
-  margin: 115px auto 150px auto;
+  margin: 205px auto 150px auto;
   padding-left: 5px;
 }
 
@@ -1671,7 +1693,7 @@ button.zoom-control {
   bottom: 102px;
   width: 289px;
   margin: 0 auto;
-  z-index: 3;
+  z-index: 1;
   vertical-align: baseline;
 }
 
@@ -1737,6 +1759,7 @@ button.zoom-control {
 .error-wrap > .benefactors {
   height: 877px;
   width: 100%;
+  margin-top: 90px;
 }
 
 .inner-error {
@@ -1944,7 +1967,7 @@ button.zoom-control {
 
   .inner-nav {
     position: relative;
-    top: 18%;
+    top: 13%;
     margin: 15% 20%;
     z-index: 3;
 
@@ -1976,23 +1999,24 @@ button.zoom-control {
   /* ===Introduction section=== */
 
   .video-container {
-    top: 4px;
+    margin-top: 49px;
+    margin-bottom: 80px;
     width: 320px;
     height: 169px;
   }
 
   .custom-play-icon {
-    top: 43px;
+    top: 80px;
     width: 92px;
     height: 89px;
-    margin-left: calc(50% - 46px);
+    margin-left: 114px;
     background-size: 78px 76px;
   }
 
   .introduction > .page-text {
     width: 280px;
     height: 124px;
-    margin: 84px auto 80px auto;
+    margin: 80px auto 80px auto;
     padding-left: 0;
   }
 
@@ -2332,7 +2356,7 @@ button.zoom-control {
   .idea > .page-heading {
     width: 280px;
     height: 46px;
-    margin: 58px auto 34px auto;
+    margin: 103px auto 34px auto;
     padding-left: 2px;
   }
 
@@ -2340,7 +2364,7 @@ button.zoom-control {
     width: 282px;
     height: 124px;
     margin: 0 auto 80px auto;
-    padding-left: 1.2px;
+    padding-left: 1.8px;
   }
 
   .founder-img,
@@ -2445,7 +2469,7 @@ button.zoom-control {
   .about-submit > .page-heading {
     width: 280px;
     height: 46px;
-    margin: 58px auto 36px auto;
+    margin: 103px auto 36px auto;
     padding-left: 3px;
   }
 
@@ -2621,7 +2645,7 @@ button.zoom-control {
   .businessman > .page-heading {
     width: 280px;
     height: 46px;
-    margin: 58px auto 36px auto;
+    margin: 103px auto 36px auto;
     padding-left: 3px;
   }
 
@@ -2687,7 +2711,7 @@ button.zoom-control {
   .bank-video-container {
     height: 256px;
     width: 320px;
-    margin: 58px auto 120px auto;
+    margin: 103px auto 120px auto;
   }
 
   .video-placeholder {
@@ -2695,6 +2719,15 @@ button.zoom-control {
     height: 180px;
     margin-top: 30px;
     background-size: 70px 68px, cover;
+  }
+
+  .closeIcon-bankPage {
+    width: 97%;
+  }
+
+  .closeIcon-bankPage,
+  .closeIcon-bankPage > .closeIcon {
+    top: 4.6%;
   }
 
   .video {
@@ -2914,7 +2947,7 @@ button.zoom-control {
   .dream-supporters > .page-heading {
     width: 280px;
     height: 46px;
-    margin: 58px auto 35px auto;
+    margin: 103px auto 35px auto;
     padding-left: 2px;
   }
 
@@ -3074,7 +3107,7 @@ button.zoom-control {
   .stories {
     width: 280px;
     height: 204px;
-    margin: 58px auto 83px auto;
+    margin: 103px auto 83px auto;
   }
 
   .stories > .page-heading {
@@ -3277,6 +3310,7 @@ button.zoom-control {
 
   .error-wrap > .benefactors {
     height: 620px;
+    margin-top: 45px;
   }
 
   .inner-error {
@@ -3437,13 +3471,15 @@ button.zoom-control {
   /* ===Introduction section=== */
 
   .video-container {
-    top: -15px;
+    margin-top: 71px;
+    margin-bottom: 154px;
     width: 768px;
     height: 406px;
   }
 
   .custom-play-icon {
-    top: 143px;
+    top: 210px;
+    margin-left: 318px;
   }
 
   .introduction > .page-text {
@@ -3676,7 +3712,7 @@ button.zoom-control {
   .idea > .page-heading {
     width: 352px;
     height: 52px;
-    margin: 81px auto 69px auto;
+    margin: 167px auto 69px auto;
   }
 
   .founder {
@@ -3743,7 +3779,7 @@ button.zoom-control {
   .about-submit > .page-heading {
     width: 352px;
     height: 52px;
-    margin: 81px auto 69px auto;
+    margin: 167px auto 69px auto;
   }
 
   .about-submit > .page-text.large {
@@ -3823,7 +3859,7 @@ button.zoom-control {
   .businessman > .page-heading {
     width: 352px;
     height: 52px;
-    margin: 81px auto 69px auto;
+    margin: 167px auto 69px auto;
   }
 
   .businessman > .page-text {
@@ -3871,7 +3907,7 @@ button.zoom-control {
   .bank-video-container {
     height: 544px;
     width: 768px;
-    margin: 81px auto 158px auto;
+    margin: 167px auto 158px auto;
   }
 
   .bank-video-container > .page-heading {
@@ -3883,6 +3919,10 @@ button.zoom-control {
     height: 432px;
     margin-top: 60px;
     background-size: 126px 123px, cover;
+  }
+
+  .closeIcon-bankPage {
+    width: 97%;
   }
 
   .video {
@@ -4027,7 +4067,7 @@ button.zoom-control {
   .dream-supporters > .page-heading {
     width: 352px;
     height: 52px;
-    margin: 81px auto 70px auto;
+    margin: 167px auto 70px auto;
   }
 
   .dream-supporters > .page-text {
@@ -4091,7 +4131,7 @@ button.zoom-control {
   .stories {
     width: 608px;
     height: 148px;
-    margin: 81px auto 87px auto;
+    margin: 167px auto 87px auto;
   }
 
   .stories > .page-heading {
