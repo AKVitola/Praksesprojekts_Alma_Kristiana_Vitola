@@ -1045,7 +1045,7 @@ input[type="checkbox"] {
   left: 0;
   z-index: 3;
 
-  overflow: hidden;
+  overflow: auto;
   cursor: pointer;
   text-align: center;
 }
@@ -1053,8 +1053,7 @@ input[type="checkbox"] {
 .closeIcon-bankPage {
   position: relative;
   height: 23px;
-  width: 90%;
-  max-width: 1366px;
+  width: 1366px;
   margin: 0 auto;
 }
 
@@ -1080,8 +1079,7 @@ input[type="checkbox"] {
   display: none;
   position: relative;
   top: 10%;
-  width: 90%;
-  max-width: 1366px;
+  width: 1366px;
   z-index: 4;
   margin: auto;
   outline: 0;
@@ -1596,7 +1594,7 @@ button.zoom-control {
   left: 0;
   z-index: 4;
 
-  overflow: hidden;
+  overflow: auto;
   cursor: pointer;
   text-align: center;
   background-color: rgb(0, 0, 0);
@@ -1954,8 +1952,16 @@ button.zoom-control {
     left: 0;
     z-index: 2;
     background: #fff;
-    overflow: hidden;
+    overflow: auto;
     transition: 1s ease-in-out;
+  }
+
+  .overlay-menu-top-block {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 60px;
+    background: #fff;
   }
 
   .nav-lang-item {
@@ -2006,11 +2012,11 @@ button.zoom-control {
   }
 
   .custom-play-icon {
-    top: 80px;
+    top: 90px;
     width: 92px;
     height: 89px;
     margin-left: 114px;
-    background-size: 78px 76px;
+    background-size: 108px 106px;
   }
 
   .introduction > .page-text {
@@ -2391,6 +2397,11 @@ button.zoom-control {
     top: 375px;
   }
 
+  .founder::before,
+  .founder::after {
+    width: 320px;
+  }
+
   .founder::before {
     height: 36px;
   }
@@ -2722,7 +2733,7 @@ button.zoom-control {
   }
 
   .closeIcon-bankPage {
-    width: 97%;
+    width: 320px;
   }
 
   .closeIcon-bankPage,
@@ -2732,7 +2743,7 @@ button.zoom-control {
 
   .video {
     top: 5%;
-    width: 97%;
+    width: 320px;
   }
 
   .aim-wrap {
@@ -3191,13 +3202,13 @@ button.zoom-control {
   }
 
   .story-video {
-    top: 184px;
+    top: 50px;
     width: 279px;
     height: 156px;
   }
 
   .story-video-playImg {
-    top: 59px;
+    top: -70px;
     width: 86px;
     height: 83px;
   }
@@ -3205,7 +3216,7 @@ button.zoom-control {
   .storyteller {
     width: 279px;
     height: 36px;
-    top: 93px;
+    top: -65px;
   }
 
   .storyteller > .page-undertitle {
@@ -3217,7 +3228,7 @@ button.zoom-control {
     width: 15px;
     height: 15px;
     margin-left: 264px;
-    top: 166px;
+    top: 42px;
     background-position: center;
   }
 
@@ -3400,8 +3411,16 @@ button.zoom-control {
     left: 0;
     z-index: 1;
     background: #fff;
-    overflow: hidden;
+    overflow: auto;
     transition: 1s ease-in-out;
+  }
+
+  .overlay-menu-top-block {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+    height: 85px;
+    background: #fff;
   }
 
   .nav-lang-item {
@@ -3736,6 +3755,11 @@ button.zoom-control {
     height: 495px;
   }
 
+  .founder::before,
+  .founder::after {
+    width: 768px;
+  }
+
   .founder::before {
     height: 39px;
   }
@@ -3922,12 +3946,12 @@ button.zoom-control {
   }
 
   .closeIcon-bankPage {
-    width: 97%;
+    width: 768px;
   }
 
   .video {
     top: 10%;
-    width: 97%;
+    width: 768px;
   }
 
   .aim-wrap {
@@ -4201,25 +4225,24 @@ button.zoom-control {
   }
 
   .story-video {
-    top: 349px;
     width: 608px;
     height: 341px;
   }
 
   .story-video-playImg {
-    top: 130px;
+    top: -85px;
   }
 
   .storyteller {
     width: 608px;
-    top: 218px;
+    top: 0;
   }
 
   .closeIcon {
     width: 21px;
     height: 21px;
-    margin-left: 633px;
-    top: 304px;
+    margin-left: 587px;
+    top: 125px;
     background-position: center;
   }
 
