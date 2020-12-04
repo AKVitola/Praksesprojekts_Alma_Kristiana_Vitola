@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGAreWrw02_bh5cUQ2Kgl_k0HRoKnsjPw&callback=initMap&libraries=&v=weekly"
+    defer></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $(".header").load("views/_header.html");
+      $(".topButtonContainer").load("views/_toTopBtn.html");
+      $(".cookie-banner").load("views/_cookies.html");
+      $(".footer").load("views/_footer.html");
+    });
+  </script>
+  <link rel="icon" type="image/png" href="assets/img/favicon-lg.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <title>Sparkle Heart</title>
+</head>
+
+<body>
+  <div class="container idea">
+
+    <header class="header"></header>
+
+    <main>
+      <section class="idea">
+        <h1 class="page-heading">Ideja</h1>
+        <p class="page-text">
+          Juris Gogulis ir pasaules iedvesmots mākslinieks–horeogrāfs un režisors, kura ikdiena aizrit radot aizkustinošus un
+          iedvesmojošus radošus projektus. Juris ir pārliecināts, ka ir vērts ticēt katram savam sapnim un censties to īstenot. Kā
+          smejas pats - daudzu draugu sapņiem viņš tic vairāk, nekā viņi paši!
+        </p>
+      </section>
+
+      <section class="founder">
+        <div class="founder-overlay"></div>
+        <img class="responsive-img founder-img" src="assets/img/juris.jpg" alt="Kompānijas dibinātāja attēls.">
+        <img class="responsive-img founder-img-tablet" src="assets/img/juris-tablet.jpg" alt="Kompānijas dibinātāja attēls.">
+        <img class="responsive-img founder-img-mobile" src="assets/img/juris-mobile.jpg" alt="Kompānijas dibinātāja attēls.">
+        <p class="founder-text">
+          “Kopš 3 gadu vecuma mani ir audzinājusi mamma, pēc viņas piemēra esmu sapratis, cik sieviete ir spēcīga un varoša. Vēlos
+          atlīdzināt un izveidot platformu, kurā satikties un palīdzēt cilvēkiem piepildīt savus sapņus.”
+        </p>
+      </section>
+
+      <section class="reference">
+        <div class="quote-slide js-quote-slide">
+          <h6 class="referent-name">Ken Ludden</h6>
+          <p class="referent-position">Director, Margot Fonteyn Academy of Ballet</p>
+          <p class="referent-quote">For it is Juris work that is the <br>
+            light the human race needs so badly these days. <span><br></span>
+            His vision is inspired and talent is beyond measure.
+          </p>
+        </div>
+
+        <div class="js-quote-slide">
+          <h6 class="referent-name">Regīna Kaupuža</h6>
+          <p class="referent-position">LNOB baleta pedagoģe, JVLMA horeogrāfijas katedras docente</p>
+          <p class="referent-quote">
+            Juris Gogulis ir ļoti radoša un uzņēmīga personība ar nezūdošo optimismu un gaišu prātu. Jaunu un galvenais drosmīgu ideju realizētājs!
+          </p>
+        </div>
+
+        <div class="js-quote-slide">
+          <h6 class="referent-name">Raimonds Dzintars</h6>
+          <p class="referent-position">LU deju ansambļa Pērle mākslinieciskais vadītājs</p>
+          <p class="referent-quote">
+            Juris ir personība ar pozitīvu skatu uz dzīvi, kurš ne tikai māk nospraust mērķus, bet arī tos sasniegt. Turklāt, viņam piemīt spēja iedrošināt un motivēt arī citus.
+          </p>
+        </div>
+
+        <div class="arrow-btn">
+          <a class="prev-quote-btn" onclick="previousSlide()">
+            <img class="arrow1" src="assets/img/arrowLeft.png" alt="Bulta pa kreisi.">
+          </a>
+
+          <a class="next-quote-btn" onclick="nextSlide()">
+            <img src="assets/img/arrowRight.png" alt="Bulta pa labi.">
+          </a>
+        </div>
+      </section>
+
+      <div class="topButtonContainer"></div>
+
+    </main>
+
+    <section class="idea-footer">
+      <footer class="footer"></footer>
+    </section>
+
+  </div>
+</body>
+
+<script src="assets/js/theme.js"></script>
+</html>

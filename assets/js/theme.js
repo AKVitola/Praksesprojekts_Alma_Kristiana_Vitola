@@ -1,3 +1,15 @@
+        //======Runs on page load======
+        //============================
+
+window.onload = function() {
+  showCookieBanner();
+  showSubmitDreamMessage();
+  displayOnScroll();
+  menuItemEventListener();
+  setClassActiveToMenuItems(HEADER_NAV);
+  setClassActiveToMenuItems(FOOTER_NAV);
+}
+
         //====== Embeded youtube video======
         //==================================
 const videoContainer = document.getElementById("js-video-container");
@@ -56,9 +68,8 @@ function onPlayerStateChange(event) {
   }
 }
 
-
-//====== Play video in an overlay ======
-        //============================
+        //====== Play video in an overlay ======
+        //=====================================
 
 const videoImg = document.getElementById("js-video-img");
 const video = document.getElementById("js-video");
@@ -73,6 +84,12 @@ if (videoImg !== null) {
 
 if (pageBcground !== null) {
   pageBcground.addEventListener("click", function() {
+    hideVideo();
+  });
+
+  const closeIcon = document.getElementById("js-closeIcon");
+
+  closeIcon.addEventListener("click", function() {
     hideVideo();
   });
 }
@@ -144,9 +161,11 @@ function hideButtonInOverlayMenu() {
 
 // === Close menu when an list item is clicked on
 
-let liElements = document.getElementById("js-nav").getElementsByTagName("li");
-for (let i = 0; i < liElements.length; i++) {
-  liElements[i].addEventListener("click", closeMenuOnSelect);
+function menuItemEventListener() {
+  let liElements = document.getElementById("js-nav").getElementsByTagName("li");
+  for (let i = 0; i < liElements.length; i++) {
+    liElements[i].addEventListener("click", closeMenuOnSelect);
+  }
 }
 
 function closeMenuOnSelect() {
@@ -158,45 +177,32 @@ function closeMenuOnSelect() {
 
 // === Add class active when a list item is clicked on
 
-let setActive = function () {
+const HEADER_NAV = ".nav ul li a";
+const FOOTER_NAV = ".footer-nav ul li a";
 
-    // Get the last item in the path (e.g. index)
-    let url = window.location.pathname.split('/').pop();
-
-    // Add active nav class based on url
-
-    // header nav bar
-    $(".nav ul li a").each(function () {
-        if ($(this).attr("href") == url || $(this).attr("href") == '') {
-            $(this).closest('li').addClass("active");
-        }
-    })
-
-    //footer nav bar
-    //I add the class to the a tag so the border is as long as the text not as the li element
-    $(".footer-nav ul li a").each(function () {
-        if ($(this).attr("href") == url || $(this).attr("href") == '') {
-            $(this).closest('a').addClass("active");
-        }
-    })
-};
-
-$(function () {
-    setActive();
-});
-
+function setClassActiveToMenuItems(x) {
+  const currentLocation = location.href;
+  const menuItem = document.querySelectorAll(x);
+  const menuLength = menuItem.length;
+  for (let i = 0; i < menuLength; i++) {
+    if(menuItem[i].href === currentLocation ) {
+      menuItem[i].className = "active";
+    }
+  }
+}
 
         //====== Go to top button ======
         //==============================
 
+function displayOnScroll() {
+  goToTopButton = document.getElementById("js-goToTopButton");
+
+  window.onscroll = function () {
+    displayGoToTopButton();
+  };
+}
 
 //Display go to top button when scrolled 20 px
-
-goToTopButton = document.getElementById("js-goToTopButton");
-window.onscroll = function () {
-  displayGoToTopButton();
-};
-
 function displayGoToTopButton() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     goToTopButton.style.display = "block";
@@ -206,52 +212,35 @@ function displayGoToTopButton() {
 }
 
 function goToTop() {
-  let targetDiv = document.querySelector("#js-pageTop");
-  let targetPosition = calculateTargetPos(targetDiv);
-  scrollToLocation(targetPosition);
-}
-
-function scrollToLocation(targetPosition) {
   window.scrollTo({
-    top: targetPosition,
+    top: 0,
     behavior: "smooth",
   });
 }
 
-// Can be used if the header is fixed. Than offset = header height.
-//When scrolled to position header dosn't cover the section.
-
-function calculateTargetPos(target, offset = 0) {
-  let targetDivTopPos = target.getBoundingClientRect().top;
-  let windowOffset = window.pageYOffset;
-  let position = targetDivTopPos + windowOffset - offset;
-
-  return position;
-}
-
-
         //====== Show submit message ======
         //=================================
 
-const hiddenFormEnding = document.getElementById("js-hide-message");
-const submitMessage = document.getElementById("js-submit-message");
-const submitButton = document.getElementById("js-submit-form-btn");
+function showSubmitDreamMessage() {
+  const hiddenFormEnding = document.getElementById("js-hide-message");
+  const submitMessage = document.getElementById("js-submit-message");
+  const submitButton = document.getElementById("js-submit-form-btn");
 
-// Te jāaizvieto ar submit vēlāk.
-if (submitButton !== null) {
-  submitButton.addEventListener("click", function() {
-    hiddenFormEnding.style.display = "none";
-    submitMessage.style.display = "block";
-  });
+  // Te jāaizvieto ar submit vēlāk.
+  if (submitButton !== null) {
+    submitButton.addEventListener("click", function() {
+      hiddenFormEnding.style.display = "none";
+      submitMessage.style.display = "block";
+    });
+  }
 }
-
 
         //====== Supporters company information and location ======
         //========================================================
 
 const companies = [
   {
-    logo : "/img/purch.png",
+    logo : "assets/img/purch.png",
     cityCode: "riga",
     typeCode : "food",
     name  : "PURCH resturant",
@@ -262,7 +251,7 @@ const companies = [
     longitude : "24.190937",
   },
   {
-    logo : "/img/kurts.png",
+    logo : "assets/img/kurts.png",
     cityCode: "riga",
     typeCode : "food",
     name : "Kurts coffee",
@@ -273,7 +262,7 @@ const companies = [
     longitude : "24.121022",
   },
   {
-    logo : "/img/auch.png",
+    logo : "assets/img/auch.png",
     cityCode: "riga",
     typeCode : "beauty",
     name  : "AUCH beauty home",
@@ -284,7 +273,7 @@ const companies = [
     longitude : "24.140532",
   },
   {
-    logo : "/img/logo_Linearis.png",
+    logo : "assets/img/logo_Linearis.png",
     cityCode: "riga",
     typeCode : "translate",
     name  : "Linearis translations",
@@ -678,12 +667,12 @@ function displayMarker(company) {
   const marker = new google.maps.Marker({
     position: new google.maps.LatLng(company.latitude,company.longitude),
     map,
-    icon: "/img/marker.png"
+    icon: "assets/img/marker.png"
   });
   markers.push(marker);
 
-  let activeIcon = {url: "/img/blackMarker.png"};
-  let icon = {url: "/img/marker.png"};
+  let activeIcon = {url: "assets/img/blackMarker.png"};
+  let icon = {url: "assets/img/marker.png"};
   let contentString =
   '<div class="popup-logo"><img src="' + company.logo +
      '"></div><div class="popup-text-wrap"><div class="popup-name"><p class="page-undertitle name">' + company.name +
@@ -711,19 +700,20 @@ function removeMarkers(){
         //====== Cookie banner ======
         //===========================
 
-if (localStorage.getItem("cookieSeen") != "shown") {
-  $("#js-cookie-banner").delay(2000).fadeIn();
-  localStorage.setItem("cookieSeen","shown")
-};
+function showCookieBanner() {
+  if (localStorage.getItem("cookieSeen") != "shown") {
+    $("#js-cookie-banner").delay(2000).fadeIn();
+    localStorage.setItem("cookieSeen","shown")
+  };
 
-$("#js-agreeToCookies").click(function() {
-  $("#js-cookie-banner").fadeOut();
-})
+  $("#js-agreeToCookies").click(function() {
+    $("#js-cookie-banner").fadeOut();
+  })
 
-$("#js-denyToCookies").click(function() {
-  $("#js-cookie-banner").fadeOut();
-})
-
+  $("#js-denyToCookies").click(function() {
+    $("#js-cookie-banner").fadeOut();
+  })
+}
 
         //====== Quotes Slideshow ======
         //==============================
@@ -767,87 +757,87 @@ function nextSlide() {
 const stories = [
   { id : 1,
     name : "Alīna",
-    image : "/img/1.jpg",
+    image : "assets/img/1.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_9OF99_Alina.mp4",
   },
   { id : 2,
     name : "Gunita",
-    image : "/img/2.jpg",
+    image : "assets/img/2.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_16OF99_Gunita.mp4",
   },
   { id : 3,
     name : "Egija",
-    image : "/img/3.jpg",
+    image : "assets/img/3.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_17OF99_Egija.mp4",
   },
   { id : 4,
     name : "Asnāte",
-    image : "/img/4.jpg",
+    image : "assets/img/4.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_7OF99_Asnate.mp4",
   },
   { id : 5,
     name : "Arta",
-    image : "/img/5.jpg",
+    image : "assets/img/5.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_4OF99_Arta.mp4",
   },
   { id : 6,
     name : "Anda",
-    image : "/img/6.jpg",
+    image : "assets/img/6.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_6OF99_Anda.mp4",
   },
   { id : 7,
     name : "Ilze",
-    image : "/img/7.jpg",
+    image : "assets/img/7.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_14OF99_Ilze.mp4",
   },
   { id : 8,
     name : "Indra",
-    image : "/img/8.jpg",
+    image : "assets/img/8.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_8OF99_Indra.mp4",
   },
   { id : 9,
     name : "Katrīna",
-    image : "/img/9.jpg",
+    image : "assets/img/9.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_15OF99_Katrina.mp4",
   },
   { id : 10,
     name : "Ketija",
-    image : "/img/10.jpg",
+    image : "assets/img/10.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_5OF99_Ketija.mp4",
   },
   { id : 11,
     name : "Lauma",
-    image : "/img/11.jpg",
+    image : "assets/img/11.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/Lauma.mp4",
   },
   { id : 12,
     name : "Līga",
-    image : "/img/12.jpg",
+    image : "assets/img/12.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_10OF99_Liga.mp4",
   },
   { id : 13,
     name : "Marta",
-    image : "/img/13.jpg",
+    image : "assets/img/13.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_12OF99_Marta.mp4",
   },
   { id : 14,
     name : "Regīna",
-    image : "/img/14.jpg",
+    image : "assets/img/14.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_11OF99_Regina.mp4",
   },
   { id : 15,
     name : "Zanda",
-    image : "/img/15.jpg",
+    image : "assets/img/15.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_13OF99_Zanda.mp4",
   },
   { id : 16,
     name : "Valentīna",
-    image : "/img/16.jpg",
+    image : "assets/img/16.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/BM_3OF99_Valentina.mp4",
   },
   { id : 17,
     name : "Sibilla",
-    image : "/img/17.jpg",
+    image : "assets/img/17.jpg",
     link : "https://sparkleheart.org/wp-content/uploads/2020/09/Sibilla.mp4",
   },
   { id : 18,
@@ -928,7 +918,7 @@ function generateStoryContent(story) {
 
     if(story.soon) {
       result = `<figure class="story-image">
-                  <img src="/img/extra-gold.png" alt="Zelta krāsas kvadrāts.">
+                  <img src="assets/img/extra-gold.png" alt="Zelta krāsas kvadrāts.">
                   <p class="page-undertitle new-stories">${story.name}</p>
                 </figure>
                 <div class="story-number page-undertitle">${storyNumber}</div>­­`
@@ -1024,7 +1014,7 @@ function generateOverlayContent(story) {
               Jūsu interneta pārlūks neļauj atskaņot video.
               <source src="${story.link}">
             </video>
-            <img class="story-video-playImg" id="js-story-playImg" src="../img/play.png" alt="Atskaņošanas pogas attēls." width="126" height="123">
+            <img class="story-video-playImg" id="js-story-playImg" src="assets/img/play.png" alt="Atskaņošanas pogas attēls." width="126" height="123">
             <div class="storyteller" id="js-storyteller">
               <p class="page-undertitle">${story.name}</p>
             </div>
