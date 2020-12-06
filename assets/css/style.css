@@ -779,7 +779,7 @@ input[type="checkbox"] {
   line-height: 36px;
   text-align: center;
   color: #fff;
-  z-index: 4;
+  z-index: 1;
 }
 
 .reference {
@@ -1960,7 +1960,7 @@ button.zoom-control {
     position: fixed;
     z-index: 4;
     width: 100%;
-    height: 60px;
+    height: 46px;
     background: #fff;
   }
 
@@ -2247,14 +2247,15 @@ button.zoom-control {
   /* ===Footer=== */
 
   .footer {
-    top: -149px;
+    top: -125px;
     height: 499px;
+    background-image: url(../img/footerMobile.png);
   }
 
   .flex-container-footer {
     width: 280px;
-    left: 36px;
-    top: 65px;
+    left: 62px;
+    top: 41px;
   }
 
   .golden-logo,
@@ -2286,7 +2287,7 @@ button.zoom-control {
   .owner-name {
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .route-to-accoount {
@@ -2305,7 +2306,6 @@ button.zoom-control {
     right: 208px;
     top: 281px;
     height: 25px;
-
     margin-top: 35px;
     margin-bottom: 35px;
   }
@@ -2320,14 +2320,14 @@ button.zoom-control {
   }
 
   .copyright {
-    bottom: 45px;
+    bottom: 69px;
     width: 280px;
     line-height: 13.41px;
   }
 
   .private {
     width: 200px;
-    bottom: 23px;
+    bottom: 47px;
     right: 80px;
 
     margin-top: 5px;
@@ -2395,6 +2395,7 @@ button.zoom-control {
 
   .founder-overlay {
     top: 375px;
+    height: 481px;
   }
 
   .founder::before,
@@ -2470,7 +2471,7 @@ button.zoom-control {
   }
 
   .idea-footer > .footer {
-    top: -26px;
+    top: -2px;
     height: 499px;
   }
 
@@ -2628,7 +2629,7 @@ button.zoom-control {
   }
 
   .dream-footer > .footer {
-    top: -25px;
+    top: -1px;
   }
 
   .submit-message {
@@ -2713,7 +2714,7 @@ button.zoom-control {
   }
 
   .business-footer > .footer {
-    top: -55px;
+    top: -31px;
   }
 
   /* ============== Dream bank page Mobile
@@ -2949,7 +2950,7 @@ button.zoom-control {
   }
 
   .bank-footer > .footer {
-    top: 15px;
+    top: 39px;
   }
 
   /* =================Supporters page Mobile
@@ -3109,7 +3110,7 @@ button.zoom-control {
   }
 
   .supporters-footer > .footer {
-    top: -42px;
+    top: -18px;
   }
 
   /* ============Inspiration page Mobile
@@ -3208,9 +3209,9 @@ button.zoom-control {
   }
 
   .story-video-playImg {
-    top: -70px;
-    width: 86px;
-    height: 83px;
+    top: -85px;
+    width: 108px;
+    height: 106px;
   }
 
   .storyteller {
@@ -3313,7 +3314,7 @@ button.zoom-control {
   }
 
   .inspiration-footer > .footer {
-    top: -37px;
+    top: -13px;
   }
 
   /* ==================Error page Mobile
@@ -3419,7 +3420,7 @@ button.zoom-control {
     position: fixed;
     z-index: 4;
     width: 100%;
-    height: 85px;
+    height: 75px;
     background: #fff;
   }
 

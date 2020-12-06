@@ -1026,3 +1026,4 @@ function hideplayImg() {
   const playImg = document.getElementById("js-story-playImg");
   playImg.style.zIndex = "-1";
 }
+
