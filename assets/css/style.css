@@ -81,7 +81,8 @@ body {
   position: relative;
   top: -30px;
 
-  width: 1366px;
+  max-width: 1366px;
+  width: 100%;
   z-index: 2;
 
   background: #fff;
@@ -243,7 +244,7 @@ body {
 /* ===Introduction section=== */
 
 .video-container {
-  width: 1366px;
+  width: 100%;
   height: 722px;
   margin: 47px auto 150px auto;
   cursor: pointer;
@@ -256,7 +257,7 @@ body {
   top: 350px;
   width: 132px;
   height: 129px;
-  margin-left: 617px;
+  margin-left: calc(50% - 66px);
   z-index: 1;
   background: url(../img/play.png) center;
   background-repeat: no-repeat;
@@ -407,7 +408,8 @@ body {
 /* ===Form section=== */
 
 .contact-form {
-  width: 612px;
+  width: 63%;
+  max-width: 612px;
   height: 818px;
   margin: 0 auto;
 }
@@ -425,8 +427,7 @@ body {
 }
 
 .form-field {
-  width: 612px;
-
+  width: 100%;
   border: 0;
   border-radius: 6px;
   padding-left: 12px;
@@ -440,7 +441,7 @@ body {
 
 input[type="text"],
 input[type="email"] {
-  width: 296px;
+  width: 49%;
 }
 
 input[type="email"] {
@@ -489,12 +490,11 @@ input[type="checkbox"] {
 }
 
 .text-block {
-  width: 573px;
+  width: 90%;
   display: inline;
   float: right;
   margin-top: 33px;
   margin-bottom: 56px;
-
   line-height: 17px;
 }
 
@@ -731,9 +731,14 @@ input[type="checkbox"] {
 }
 
 .founder {
-  width: 1366px;
+  width: 100%;
   height: 705px;
-  margin: 0 auto 150px auto;
+  margin: 150px auto;
+}
+
+.founder-img {
+  width: 100%;
+  height: 705px;
 }
 
 .founder-img-tablet,
@@ -744,12 +749,11 @@ input[type="checkbox"] {
 .founder-overlay {
   position: absolute;
   top: 564px;
-  width: 1366px;
+  width: 100%;
   height: 735px;
   z-index: 1;
-
   background-image: url(../img/juris-bcground.png);
-  background-size: cover;
+  background-size: contain;
 }
 
 .founder::before,
@@ -757,7 +761,7 @@ input[type="checkbox"] {
   content: "";
   background-image: url(../img/ripped.png);
   position: absolute;
-  width: 1366px;
+  width: 100%;
   height: 55px;
   z-index: 1;
 }
@@ -921,7 +925,6 @@ input[type="checkbox"] {
 }
 
 .dream-form > .contact-form {
-  width: 612px;
   height: 654px;
   margin: 159px auto 150px auto;
 }
@@ -935,7 +938,7 @@ input[type="checkbox"] {
   width: 603px;
   height: 80px;
 
-  margin-top: 49px;
+  margin: 49px auto 0 auto;
 
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -975,9 +978,9 @@ input[type="checkbox"] {
 }
 
 .business-form {
+  width: 63%;
+  max-width: 612px;
   height: 889px;
-  width: 612px;
-
   margin: 0 auto;
 }
 
@@ -987,7 +990,7 @@ input[type="checkbox"] {
 }
 
 .businessName > input[type="text"] {
-  width: 612px;
+  width: 100%;
 }
 
 .business-form > .business-button {
@@ -1002,12 +1005,10 @@ input[type="checkbox"] {
 
 .business-form > .text-block {
   margin-top: 35px;
-  width: 577px;
   line-height: 17px;
 }
 
 .business-form > .checkbox {
-  margin-right: 15px;
   margin-top: 36px;
 }
 
@@ -1019,9 +1020,10 @@ input[type="checkbox"] {
 =======================================*/
 
 .bank-video-container {
-  width: 1366px;
+  width: 100%;
   height: 904px;
-  margin: 205px auto 150px auto;
+  margin-top: 205px;
+  margin-bottom: 150px;
 }
 
 .video-placeholder {
@@ -1031,8 +1033,18 @@ input[type="checkbox"] {
   margin-top: 130px;
   cursor: pointer;
   outline: none;
-  background: url(../img/play.png) center, url(../img/video-img.jpg);
+  background: url(../img/video-img.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bank-video-Play-img {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  top: -500px;
+  margin-left: calc(50% - 60px);
+  background: url(../img/play.png);
 }
 
 .video-overlay,
@@ -1679,6 +1691,7 @@ button.zoom-control {
   width: 289px;
   height: 365px;
   margin-left: 1px;
+  background-size: cover;
 }
 
 .team-mate.middle {
@@ -1903,7 +1916,6 @@ button.zoom-control {
   }
 
   .inner-header {
-    width: 320px;
     height: 45px;
   }
 
@@ -2007,7 +2019,6 @@ button.zoom-control {
   .video-container {
     margin-top: 49px;
     margin-bottom: 80px;
-    width: 320px;
     height: 169px;
   }
 
@@ -2015,7 +2026,7 @@ button.zoom-control {
     top: 90px;
     width: 92px;
     height: 89px;
-    margin-left: 114px;
+    margin-left: calc(50% - 46px);
     background-size: 108px 106px;
   }
 
@@ -2137,7 +2148,7 @@ button.zoom-control {
   /* ===Form section=== */
 
   .contact-form {
-    width: 280px;
+    width: 90%;
     height: 549px;
     margin-bottom: 100px;
   }
@@ -2146,11 +2157,9 @@ button.zoom-control {
   input[type="email"],
   input[type="tel"],
   .form-field {
-    width: 280px;
+    width: 100%;
     height: 35px;
-
     margin-bottom: 10px;
-
     font-size: 14px;
     line-height: 17px;
   }
@@ -2161,21 +2170,18 @@ button.zoom-control {
 
   .form-title {
     margin-bottom: 30px;
-
     font-size: 24px;
     line-height: 36px;
   }
 
   .comment-field {
     height: 150px;
-
     margin-bottom: 4px;
     padding-top: 9px;
   }
 
   .small-form-text {
     margin-top: 0;
-
     font-size: 12px;
     line-height: 15px;
   }
@@ -2186,10 +2192,6 @@ button.zoom-control {
   }
 
   .text-block {
-    width: 243px;
-    display: inline;
-    float: right;
-
     margin-top: 12px;
     margin-bottom: 51px;
     line-height: 15px;
@@ -2373,34 +2375,27 @@ button.zoom-control {
     padding-left: 1.8px;
   }
 
+  .founder {
+    height: 475px;
+    margin-top: 80px;
+    margin-bottom: 123px;
+  }
+
+  .founder-img-mobile {
+    display: block;
+    width: 100%;
+    height: 475px;
+  }
+
   .founder-img,
   .founder-img-tablet {
     display: none;
   }
 
-  .founder-img-mobile {
-    display: block;
-  }
-
-  .founder,
-  .founder-img-mobile,
   .founder-overlay {
-    width: 320px;
-    height: 475px;
-  }
-
-  .founder {
-    margin-bottom: 123px;
-  }
-
-  .founder-overlay {
-    top: 375px;
+    top: 380px;
     height: 481px;
-  }
-
-  .founder::before,
-  .founder::after {
-    width: 320px;
+    background-size: cover;
   }
 
   .founder::before {
@@ -2408,7 +2403,7 @@ button.zoom-control {
   }
 
   .founder::after {
-    top: 826px;
+    top: 815px;
   }
 
   .founder-text {
@@ -2611,7 +2606,6 @@ button.zoom-control {
   }
 
   .dream-form > .contact-form {
-    width: 280px;
     height: 549px;
     margin: 76px auto 120px auto;
   }
@@ -2671,8 +2665,8 @@ button.zoom-control {
   }
 
   .business-form {
+    width: 90%;
     height: 744px;
-    width: 280px;
   }
 
   .business-form > .form-field {
@@ -2691,13 +2685,8 @@ button.zoom-control {
     margin-top: -2px;
   }
 
-  .businessName > input[type="text"] {
-    width: 280px;
-  }
-
   .business-form > .text-block {
     margin-top: 12px;
-    width: 243px;
     line-height: 15px;
   }
 
@@ -2722,15 +2711,21 @@ button.zoom-control {
 
   .bank-video-container {
     height: 256px;
-    width: 320px;
-    margin: 103px auto 120px auto;
+    margin-top: 103px;
+    margin-bottom: 120px;
   }
 
   .video-placeholder {
     top: -3px;
     height: 180px;
     margin-top: 30px;
-    background-size: 70px 68px, cover;
+  }
+
+  .bank-video-Play-img {
+    top: -150px;
+    background-size: 70px 68px;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .closeIcon-bankPage {
@@ -3386,7 +3381,6 @@ button.zoom-control {
   }
 
   .inner-header {
-    width: 768px;
     height: 74px;
   }
 
@@ -3493,13 +3487,11 @@ button.zoom-control {
   .video-container {
     margin-top: 71px;
     margin-bottom: 154px;
-    width: 768px;
     height: 406px;
   }
 
   .custom-play-icon {
     top: 210px;
-    margin-left: 318px;
   }
 
   .introduction > .page-text {
@@ -3571,7 +3563,8 @@ button.zoom-control {
   /* ===Form section=== */
 
   .contact-form {
-    width: 608px;
+    width: 90%;
+    max-width: none;
     height: 774px;
   }
 
@@ -3590,7 +3583,6 @@ button.zoom-control {
   }
 
   .text-block {
-    width: 580px;
     margin-top: 8px;
     margin-bottom: 60px;
   }
@@ -3736,7 +3728,6 @@ button.zoom-control {
   }
 
   .founder {
-    width: 768px;
     height: 495px;
   }
 
@@ -3746,19 +3737,14 @@ button.zoom-control {
 
   .founder-img-tablet {
     display: block;
-    width: 768px;
+    width: 100%;
     height: 495px;
   }
 
   .founder-overlay {
     top: 545px;
-    width: 768px;
     height: 495px;
-  }
-
-  .founder::before,
-  .founder::after {
-    width: 768px;
+    background-size: cover;
   }
 
   .founder::before {
@@ -3893,8 +3879,9 @@ button.zoom-control {
   }
 
   .business-form {
+    width: 90%;
+    max-width: none;
     height: 840px;
-    width: 608px;
   }
 
   .business-form > .form-title {
@@ -3902,16 +3889,11 @@ button.zoom-control {
     margin-bottom: 91px;
   }
 
-  .businessName > input[type="text"] {
-    width: 608px;
-  }
-
   .business-form > .comment-field {
     margin-bottom: 13px;
   }
 
   .business-form > .text-block {
-    width: 577px;
     margin-top: 10px;
     margin-bottom: 57px;
     line-height: 17px;
@@ -3931,8 +3913,8 @@ button.zoom-control {
 
   .bank-video-container {
     height: 544px;
-    width: 768px;
-    margin: 167px auto 158px auto;
+    margin-top: 167px;
+    margin-bottom: 158px;
   }
 
   .bank-video-container > .page-heading {
@@ -3943,7 +3925,10 @@ button.zoom-control {
     top: -10px;
     height: 432px;
     margin-top: 60px;
-    background-size: 126px 123px, cover;
+  }
+
+  .bank-video-Play-img {
+    top: -280px;
   }
 
   .closeIcon-bankPage {
