@@ -265,12 +265,12 @@ body {
 
 .introduction > .page-text {
   position: relative;
-  width: 654px;
-  height: 114px;
+  max-width: 654px;
+  width: 44%;
+  height: 132px;
+  min-height: 114px;
   font-weight: normal;
-
-  margin: 107px auto 150px auto;
-  padding-left: 7px;
+  margin: 107px auto 140px auto;
 }
 
 /* ===Gallery section===*/
@@ -336,11 +336,9 @@ body {
 /* ===Contacts section=== */
 
 .contact-section-wrap {
-  width: 978px;
-  height: 179px;
+  max-width: 871px;
+  width: 70%;
   margin: 158px auto 101px auto;
-  padding-right: 27px;
-  padding-left: 80px;
 }
 
 .contact-flex-container {
@@ -357,8 +355,7 @@ body {
   margin-bottom: 43px;
 }
 
-.contact-inner-row .section-titel > .break-line,
-.contact-inner-row .section-titel > .break-line-mobile {
+.contact-inner-row .section-titel > .break-line {
   display: none;
 }
 
@@ -528,13 +525,13 @@ input[type="checkbox"] {
 .benefactors-titel {
   position: relative;
   top: 98px;
-  width: 394px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .flex-container-logos {
   position: relative;
-  width: 1030px;
+  max-width: 1030px;
+  width: 72%;
   height: 80px;
   top: 182px;
 
@@ -567,7 +564,8 @@ input[type="checkbox"] {
   right: 65px;
   left: 62px;
   bottom: 0;
-  width: 1240px;
+  max-width: 1240px;
+  width: 100%;
 
   margin: 0 auto;
 
@@ -579,6 +577,10 @@ input[type="checkbox"] {
   margin-top: 3px;
   height: 182px;
   width: 182px;
+}
+
+.underlogo-name {
+  display: none;
 }
 
 .copyright {
@@ -711,9 +713,8 @@ input[type="checkbox"] {
 ===============================*/
 
 .idea > .page-heading {
-  width: 182px;
-  height: 70px;
-  margin: 205px auto 60px auto;
+  margin-top: 205px;
+  margin-bottom: 60px;
 }
 
 .referent-name,
@@ -724,7 +725,8 @@ input[type="checkbox"] {
 }
 
 .idea > .page-text {
-  width: 606px;
+  max-width: 606px;
+  width: 60%;
   height: 112px;
   margin: 0 auto 150px auto;
   font-weight: normal;
@@ -748,9 +750,9 @@ input[type="checkbox"] {
 
 .founder-overlay {
   position: absolute;
-  top: 564px;
+  top: 577px;
   width: 100%;
-  height: 735px;
+  height: 720px;
   z-index: 1;
   background-image: url(../img/juris-bcground.png);
   background-size: contain;
@@ -768,15 +770,14 @@ input[type="checkbox"] {
 
 .founder::after {
   transform: rotate(-180deg);
-  top: 1247px;
+  top: 1248px;
 }
 
 .founder-text {
   position: relative;
   top: -197px;
-  width: 818px;
-  height: 108px;
-
+  max-width: 818px;
+  width: 75%;
   margin: 0 auto;
 
   font-size: 24px;
@@ -787,8 +788,8 @@ input[type="checkbox"] {
 }
 
 .reference {
-  width: 602px;
-  height: 268px;
+  max-width: 602px;
+  width: 60%;
   margin: 150px auto;
 }
 
@@ -797,18 +798,12 @@ input[type="checkbox"] {
 }
 
 .referent-name {
-  width: 388px;
-  height: 29px;
   margin: 0;
-  margin-left: -1px;
   font-size: 24px;
   line-height: 28px;
 }
 
 .referent-position {
-  width: 500px;
-  margin: 0;
-  margin-left: -2px;
   margin-top: 12px;
 }
 
@@ -821,25 +816,19 @@ input[type="checkbox"] {
 }
 
 .referent-quote {
-  width: 602px;
-  height: 119px;
-
   font-style: italic;
   font-size: 24px;
   line-height: 29px;
 
-  margin: 0;
   margin-top: 33px;
 }
 
 .arrow-btn {
-  width: 80px;
-  height: 23px;
   margin-top: 27px;
 }
 
 .arrow1 {
-  margin-right: 41px;
+  margin-right: 7%;
 }
 
 .arrow-btn > img {
@@ -861,23 +850,21 @@ input[type="checkbox"] {
 ============================================*/
 
 .about-submit > .page-heading {
-  width: 394px;
-  height: 71px;
-  margin: 205px auto 60px auto;
+  margin-top: 205px;
+  margin-bottom: 60px;
 }
 
 .about-submit > .page-text.large {
-  width: 818px;
-  height: 31px;
-
+  max-width: 818px;
+  width: 80%;
   margin: 0 auto 90px auto;
-
   font-size: 24px;
   line-height: 29px;
 }
 
 .flex-container-dreams {
-  width: 1030px;
+  max-width: 1030px;
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -887,8 +874,6 @@ input[type="checkbox"] {
 
 .dream-column {
   width: 394px;
-  height: 594px;
-  align-items: center;
   text-align: center;
 }
 
@@ -908,16 +893,20 @@ input[type="checkbox"] {
 
 .dream-row > .personal {
   margin-top: 140px;
-  margin-left: -1px;
 }
 
 .dream-row > .professional {
   margin-top: 50px;
-  margin-left: -1px;
 }
 
 .dream-row > .page-text {
   font-weight: normal;
+}
+
+.dream-row > .user-btn {
+  max-width: 233px;
+  width: 90%;
+  padding: 0;
 }
 
 .dream-page-gallery > .gallery > .flex-container-gallery {
@@ -965,14 +954,13 @@ input[type="checkbox"] {
 =======================================*/
 
 .businessman > .page-heading {
-  width: 408px;
-  height: 70px;
-  margin: 205px auto 60px auto;
+  margin-top: 205px;
+  margin-bottom: 60px;
 }
 
 .businessman > .page-text {
-  width: 790px;
-  height: 49px;
+  max-width: 790px;
+  width: 80%;
   margin: 0 auto 150px auto;
   font-weight: normal;
 }
@@ -1098,18 +1086,15 @@ input[type="checkbox"] {
 }
 
 .aim-wrap {
-  width: 924px;
-  height: 1025px;
+  max-width: 924px;
   margin: 150px auto 127px auto;
 }
 
 .aim-wrap > .page-undertitle {
   margin-bottom: 88px;
-  padding-top: 2px;
 }
 
 .aim-flex-container {
-  width: 924px;
   display: flex;
   flex-direction: column;
 }
@@ -1154,8 +1139,6 @@ input[type="checkbox"] {
 }
 
 .mission {
-  width: 818px;
-  height: 126px;
   margin: 149px auto 0 auto;
 }
 
@@ -1181,13 +1164,11 @@ input[type="checkbox"] {
 }
 
 .earth-wrap {
-  width: 818px;
-  height: 360px;
+  max-width: 818px;
 }
 
 .rainbow-wrap {
-  width: 1030px;
-  height: 369px;
+  max-width: 1030px;
 }
 
 .earth-wrap > .page-text.large,
@@ -1204,14 +1185,12 @@ input[type="checkbox"] {
 }
 
 .dream-support-wrap {
-  width: 816px;
-  height: 380px;
+  max-width: 816px;
+  width: 73%;
   margin: 155px auto 145px auto;
 }
 
 .dream-select-flex-container {
-  width: 816px;
-  height: 240px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1223,7 +1202,7 @@ input[type="checkbox"] {
 }
 
 .dream-select-column {
-  width: 288px;
+  width: 36%;
   text-align: center;
 }
 
@@ -1245,21 +1224,21 @@ input[type="checkbox"] {
 ============================================*/
 
 .dream-supporters > .page-heading {
-  width: 394px;
-  height: 74px;
-  margin: 205px auto 60px auto;
+  width: 100%;
+  margin-top: 205px;
+  margin-bottom: 60px;
 }
 
 .dream-supporters > .page-text {
-  width: 818px;
-  height: 48px;
+  max-width: 818px;
+  width: 80%;
   margin: 60px auto 90px auto;
   font-weight: normal;
 }
 
 .select-container {
-  width: 601px;
-  height: 78px;
+  max-width: 601px;
+  width: 85%;
   display: flex;
   flex-direction: row;
   margin: 90px auto 60px auto;
@@ -1275,16 +1254,8 @@ input[type="checkbox"] {
   margin-right: 30px;
 }
 
-.city-select > .page-text {
-  margin-left: -2px;
-}
-
-.type-select > .page-text {
-  margin-left: -1px;
-}
-
 .dropdown {
-  width: 288px;
+  width: 100%;
   height: 43px;
   margin-top: 13px;
   margin-left: -2px;
@@ -1314,7 +1285,8 @@ input[type="checkbox"] {
 }
 
 .displayInfoWrap {
-  width: 820px;
+  max-width: 820px;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -1325,9 +1297,7 @@ input[type="checkbox"] {
 
 .created-div > .page-text.name {
   margin-left: 97px;
-  margin-right: 30px;
   text-align: left;
-
   font-size: 24px;
   line-height: 29px;
   text-transform: none;
@@ -1338,7 +1308,7 @@ input[type="checkbox"] {
 }
 
 .created-div > .page-text {
-  width: 288px;
+  width: 50%;
   margin: auto 0;
 }
 
@@ -1462,49 +1432,61 @@ button.zoom-control {
 =======================================*/
 
 .stories {
-  width: 818px;
-  height: 160px;
-  margin: 205px auto 150px auto;
-  padding-left: 5px;
-}
-
-.stories > .page-heading {
-  padding-left: 4px;
+  width: 100%;
+  margin-top: 205px;
+  margin-bottom: 150px;
 }
 
 .stories > .page-text {
-  width: 818px;
-  height: 30px;
+  max-width: 818px;
+  width: 80%;
   margin: 59px auto 0 auto;
-  padding-right: 10px;
   font-size: 24px;
   line-height: 29px;
 }
 
-.story-grid-container {
-  position: relative;
-  width: 1030px;
-  height: 2944px;
-  display: grid;
-  z-index: 1;
-  grid-template-columns: repeat(6, 160px);
-  grid-template-rows: repeat(17, 160px);
-  gap: 14px;
+.grid-wrap {
+  max-width: 1030px;
+  width: 80%;
   margin: 150px auto;
+}
 
-  align-content: center;
+.story-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-gallery {
+  position: relative;
+  width: 15.2%;
+  padding-bottom: 15.2%;
+  margin: 0.7%;
+}
+
+.content-gallery > .page-undertitle,
+.content-gallery,
+.story-image,
+.gold-image,
+.story-image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.story-image {
+  position: absolute;
+  margin: 0;
 }
 
 .story-image::before {
   content: "";
   background-image: url(../img/extra-gold.png);
+  background-size: cover;
   position: absolute;
   margin-left: -1px;
-  width: 161px;
-  height: 160px;
-  z-index: 2;
+  width: 101%;
+  height: 100%;
+  z-index: 1;
   opacity: 0.5;
-
   transition: opacity 0.5s;
 }
 
@@ -1512,65 +1494,46 @@ button.zoom-control {
   opacity: 1;
 }
 
-.gold-image,
-.post-gallery,
-.story-image,
-.story-image > img {
-  width: 160px;
-  height: 160px;
-  margin: 0;
-}
-
 .gold-image {
+  position: absolute;
   content: "";
   background-image: url(../img/extra-gold.png);
-  position: absolute;
-  width: 161px;
-  height: 160px;
-}
-
-.gold-number {
-  position: relative;
-  bottom: -117px;
-  right: 14px;
+  background-size: cover;
 }
 
 .story-image > .page-undertitle.new-stories {
-  position: relative;
-  top: -152px;
-  z-index: 3;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  margin-top: 42px;
+  padding: 0 10px;
+
   font-size: 18px;
   line-height: 27px;
   letter-spacing: 0.5px;
   text-transform: none;
+  text-align: center;
   color: #fff;
-  margin-top: 42px;
 }
 
 .gold-number,
 .story-number {
+  position: absolute;
+  bottom: -9px;
+  right: 14px;
+  z-index: 1;
+
   font-weight: bold;
   font-size: 36px;
   line-height: 53px;
-  text-align: right;
   color: #fff;
-  margin: 0;
-}
-
-.story-number {
-  position: relative;
-  bottom: 42px;
-  right: 14px;
-  z-index: 3;
 }
 
 .content-gallery {
-  position: relative;
-  top: -164px;
-  width: 160px;
-  height: 160px;
-  z-index: 4;
-
+  position: absolute;
+  top: 0;
+  z-index: 1;
   opacity: 0;
   transition: opacity 0.6s;
 }
@@ -1581,10 +1544,7 @@ button.zoom-control {
 
 .content-gallery > .page-undertitle {
   position: absolute;
-  top: 0px;
-  width: 160px;
-  height: 98px;
-  margin-top: 62px;
+  padding-top: 62px;
 
   font-weight: bold;
   font-size: 24px;
@@ -1596,6 +1556,13 @@ button.zoom-control {
 
 .more-dreams-btn {
   display: none;
+  max-width: 233px;
+  width: 100%;
+}
+
+.more-dreams-btn > .user-btn {
+  max-width: 233px;
+  width: 100%;
 }
 
 .dream-overlay {
@@ -1614,32 +1581,30 @@ button.zoom-control {
 }
 
 .overlay-inner-container {
-  width: 912px;
-  height: 800px;
+  position: relative;
+  top: 142px;
+  width: 1020px;
   margin: 0 auto;
 }
 
-.story-video {
+.story-video-wrap {
   position: relative;
-  top: 142px;
-  width: 912px;
-  height: 511px;
+}
+
+.story-video {
+  width: 1020px;
   outline: 0;
 }
 
 .story-video-playImg {
-  position: relative;
-  top: -173px;
+  position: absolute;
+  top: calc(50% - 61.5px);
+  left: calc(50% - 63px);
   cursor: pointer;
   outline: none;
-  align-self: center;
 }
 
 .storyteller {
-  position: relative;
-  top: 12px;
-  height: 53px;
-  width: 912px;
   margin: 25px auto 0 auto;
 }
 
@@ -1652,46 +1617,35 @@ button.zoom-control {
 
 .closeIcon {
   position: relative;
-  top: 94px;
   width: 23px;
   height: 23px;
-  margin-left: 957px;
+  margin-left: 1040px;
   background: url(../img/close.png);
 }
 
 .sparkle-team {
-  width: 1035px;
-  height: 545px;
+  max-width: 1035px;
   margin: 150px auto;
-  margin-top: -4px;
 }
 
 .sparkle-team > .page-undertitle {
-  width: 394px;
-  height: 44px;
-  margin: 0 auto 30px auto;
+  margin-bottom: 30px;
 }
 
 .sparkle-team > .page-text {
-  width: 606px;
-  height: 46px;
-  margin: -8px auto 60px auto;
+  min-width: 56%;
+  margin: 0 auto 60px auto;
 }
 
 .team-gallery-container {
-  width: 1035px;
-  height: 365px;
   display: flex;
   flex-direction: row;
 }
 
-.team-mate,
-.team-mate > .founder-overlay {
-  top: unset;
+.team-mate {
+  position: relative;
   width: 289px;
   height: 365px;
-  margin-left: 1px;
-  background-size: cover;
 }
 
 .team-mate.middle {
@@ -1699,45 +1653,25 @@ button.zoom-control {
   margin-right: 79px;
 }
 
-.about-founder {
-  position: relative;
-  bottom: 102px;
-  width: 289px;
-  margin: 0 auto;
+.grey-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
-  vertical-align: baseline;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 72, 88, 0.8) 18.63%,
+    rgba(47, 72, 88, 0) 49.21%
+  );
+  transform: rotate(-180deg);
 }
 
-.about-founder.first {
-  bottom: 80px;
-  margin-left: -5px;
-}
-
-.about-founder.first > .page-text {
-  margin-left: 13px;
-  margin-top: -2px;
-  letter-spacing: 0.06px;
-}
-
-.about-founder.second {
-  margin-left: -7px;
-}
-
-.about-founder.second > .page-text {
-  margin-left: 11px;
-  margin-top: -2px;
-  letter-spacing: 0.07px;
-}
-
-.about-founder.third {
-  width: 271px;
-  margin-left: 3px;
-}
-
-.about-founder.third > .page-text {
-  margin-left: 13px;
-  margin-top: -2px;
-  letter-spacing: 0.08px;
+.about-founder {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  z-index: 1;
 }
 
 .about-founder > .name {
@@ -1916,6 +1850,7 @@ button.zoom-control {
   }
 
   .inner-header {
+    width: 90%;
     height: 45px;
   }
 
@@ -2031,8 +1966,7 @@ button.zoom-control {
   }
 
   .introduction > .page-text {
-    width: 280px;
-    height: 124px;
+    width: 80%;
     margin: 80px auto 80px auto;
     padding-left: 0;
   }
@@ -2101,10 +2035,7 @@ button.zoom-control {
   /* ===Contacts section=== */
 
   .contact-section-wrap {
-    width: 280px;
-    height: 323px;
-    margin: 88px auto 120px auto;
-    padding: 0;
+    margin: 88px auto 100px auto;
   }
 
   .contact-flex-container {
@@ -2115,17 +2046,18 @@ button.zoom-control {
     display: none;
   }
 
-  .contact-inner-row .section-titel > .break-line-mobile {
-    display: block;
-  }
-
   .contact-inner-row {
     margin-bottom: 30px;
   }
 
   .contact-column.dreams > .contact-inner-row.btn-wrap {
     margin-left: 0;
-    padding-top: 1px;
+  }
+
+  .btn-wrap > a > .user-btn {
+    max-width: 233px;
+    width: 100%;
+    padding: 0;
   }
 
   .contact-column.dreams {
@@ -2198,8 +2130,9 @@ button.zoom-control {
   }
 
   .submit-form-btn {
-    width: 140px;
-    height: 48px;
+    max-width: 140px;
+    width: 90%;
+    max-height: 48px;
     left: 71px;
     top: 501px;
 
@@ -2215,7 +2148,6 @@ button.zoom-control {
 
   .benefactors-titel {
     top: 104px;
-    width: 320px;
   }
 
   .benefactors-titel > .section-titel {
@@ -2225,25 +2157,29 @@ button.zoom-control {
 
   .flex-container-logos {
     top: 152px;
-    width: 296px;
+    width: 100%;
     height: 172px;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
     margin: 0 auto 70px auto;
+  }
+
+  .logo {
+    width: 35%;
+    text-align: center;
   }
 
   .logo-teikums img,
   .logo-citybee img,
   .logo-sem img {
-    width: 130px;
+    max-width: 130px;
+    width: 100%;
   }
 
   .logo-linearis img {
-    width: 48px;
-    margin: 6px 40px 0 45px;
+    max-width: 48px;
+    width: 100%;
   }
 
   /* ===Footer=== */
@@ -2255,7 +2191,7 @@ button.zoom-control {
   }
 
   .flex-container-footer {
-    width: 280px;
+    width: unset;
     left: 62px;
     top: 41px;
   }
@@ -2264,6 +2200,17 @@ button.zoom-control {
   .golden-logo img {
     width: 100px;
     height: 100px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .underlogo-name {
+    position: absolute;
+    top: 135px;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 0;
   }
 
   .footer-nav,
@@ -2273,10 +2220,8 @@ button.zoom-control {
   }
 
   .adress {
-    top: 125px;
-    right: -20px;
-    width: 300px;
-
+    top: 182px;
+    left: 0;
     font-size: 12px;
     line-height: 15px;
     text-align: left;
@@ -2286,10 +2231,12 @@ button.zoom-control {
     padding-bottom: 11px;
   }
 
+  .adress-details > p {
+    word-break: break-all;
+  }
+
   .owner-name {
-    font-size: 18px;
-    line-height: 22px;
-    margin-bottom: 20px;
+    display: none;
   }
 
   .route-to-accoount {
@@ -2305,9 +2252,8 @@ button.zoom-control {
   }
 
   .social-media {
-    right: 208px;
+    left: 0;
     top: 281px;
-    height: 25px;
     margin-top: 35px;
     margin-bottom: 35px;
   }
@@ -2323,15 +2269,12 @@ button.zoom-control {
 
   .copyright {
     bottom: 69px;
-    width: 280px;
     line-height: 13.41px;
   }
 
   .private {
-    width: 200px;
     bottom: 47px;
-    right: 80px;
-
+    left: 0;
     margin-top: 5px;
   }
 
@@ -2362,17 +2305,14 @@ button.zoom-control {
 ===============================*/
 
   .idea > .page-heading {
-    width: 280px;
-    height: 46px;
-    margin: 103px auto 34px auto;
-    padding-left: 2px;
+    margin-top: 103px;
+    margin-bottom: 34px;
   }
 
   .idea > .page-text {
-    width: 282px;
     height: 124px;
-    margin: 0 auto 80px auto;
-    padding-left: 1.8px;
+    width: 85%;
+    margin-bottom: 80px;
   }
 
   .founder {
@@ -2400,6 +2340,7 @@ button.zoom-control {
 
   .founder::before {
     height: 36px;
+    margin-top: -3px;
   }
 
   .founder::after {
@@ -2408,40 +2349,28 @@ button.zoom-control {
 
   .founder-text {
     top: -217px;
-    width: 280px;
-    height: 168px;
+    width: 86%;
     font-size: 18px;
     line-height: 27px;
-    padding-left: 2px;
   }
 
   .reference {
-    height: 216px;
+    width: 82%;
     margin: 104px auto 120px auto;
-  }
-
-  .reference,
-  .referent-name,
-  .referent-position,
-  .referent-quote {
-    width: 279px;
   }
 
   .referent-name {
     font-size: 18px;
     line-height: 27px;
-    margin-left: 1px;
   }
 
   .referent-position {
-    height: 39px;
     margin: 11px 2px 20px 0;
     font-size: 14px;
     line-height: 17px;
   }
 
   .referent-quote {
-    height: 66px;
     font-size: 12px;
     line-height: 15px;
     margin-top: 20px;
@@ -2458,7 +2387,7 @@ button.zoom-control {
   }
 
   .arrow1 {
-    margin-right: 39px;
+    margin-right: 12%;
   }
 
   .idea-footer {
@@ -2474,27 +2403,21 @@ button.zoom-control {
 ============================================*/
 
   .about-submit > .page-heading {
-    width: 280px;
-    height: 46px;
-    margin: 103px auto 36px auto;
-    padding-left: 3px;
+    margin-top: 103px;
+    margin-bottom: 36px;
   }
 
   .about-submit > .page-text.large {
-    width: 280px;
-    height: 43px;
-    margin: 0 auto 80px auto;
-    padding-left: 3px;
+    margin-bottom: 80px;
     font-size: 14px;
     line-height: 17px;
   }
 
   .flex-container-dreams {
-    width: 280px;
-    height: 970px;
+    width: 85%;
     flex-direction: column;
     justify-content: unset;
-    margin: 0 auto 120px auto;
+    margin-bottom: 120px;
   }
 
   .dream-row > .dog-img {
@@ -2509,7 +2432,7 @@ button.zoom-control {
   }
 
   .dream-column {
-    width: 280px;
+    width: 100%;
   }
 
   .dream-row > .page-undertitle {
@@ -2530,7 +2453,6 @@ button.zoom-control {
 
   .dream-row > .professional-dream {
     height: 108px;
-    padding-left: 3px;
   }
 
   .dream-row > .personal {
@@ -2649,17 +2571,13 @@ button.zoom-control {
 =======================================*/
 
   .businessman > .page-heading {
-    width: 280px;
-    height: 46px;
-    margin: 103px auto 36px auto;
-    padding-left: 3px;
+    margin-top: 103px;
+    margin-bottom: 36px;
   }
 
   .businessman > .page-text {
-    width: 280px;
-    height: 68px;
-    margin: 0 auto 120px auto;
-    padding-left: 3px;
+    width: 90%;
+    margin-bottom: 120px;
     font-size: 14px;
     line-height: 17px;
   }
@@ -2743,8 +2661,6 @@ button.zoom-control {
   }
 
   .aim-wrap {
-    width: 280px;
-    height: 1019px;
     margin-top: 122px;
   }
 
@@ -2754,13 +2670,9 @@ button.zoom-control {
     margin-bottom: 60px;
   }
 
-  .aim-flex-container {
-    width: 280px;
-  }
-
   .bank-flex-row {
     flex-direction: column;
-    width: 280px;
+    width: 90%;
   }
 
   .bank-flex-row.second {
@@ -2779,8 +2691,8 @@ button.zoom-control {
   }
 
   .bank-text-col {
-    width: 280px;
     margin: 0;
+    width: 100%;
   }
 
   .bank-text-col.middle {
@@ -2798,24 +2710,26 @@ button.zoom-control {
   }
 
   .sun-img {
-    width: 118px;
-    height: 118px;
+    max-width: 118px;
+    width: 100%;
+    max-height: 118px;
   }
 
   .mountain-img {
-    width: 118px;
-    height: 103px;
+    max-width: 118px;
+    width: 100%;
+    max-height: 103px;
   }
 
   .glasses-img {
-    width: 118px;
-    height: 79px;
+    max-width: 118px;
+    width: 100%;
+    max-height: 79px;
   }
 
   .mission {
-    width: 280px;
-    height: 108px;
-    margin: 120px auto;
+    width: 90%;
+    margin: 130px auto;
   }
 
   .mission > .page-undertitle {
@@ -2837,8 +2751,7 @@ button.zoom-control {
 
   .earth-wrap,
   .rainbow-wrap {
-    width: 286px;
-    height: 347px;
+    width: 88%;
   }
 
   .earth-wrap {
@@ -2846,13 +2759,15 @@ button.zoom-control {
   }
 
   .earth-img {
-    width: 268px;
+    max-width: 268px;
+    width: 100%;
     margin-top: -2px;
     margin-left: 2px;
   }
 
   .rainbow-wrap > .rainbow-img {
-    width: 279px;
+    max-width: 279px;
+    width: 100%;
     margin-right: 0px;
   }
 
@@ -2871,15 +2786,13 @@ button.zoom-control {
   }
 
   .dream-support-wrap {
-    width: 280px;
-    height: 508px;
+    width: 100%;
     margin: 120px auto;
   }
 
   .dream-support-wrap > .page-undertitle {
     font-size: 24px;
     line-height: 36px;
-    padding-top: 4px;
   }
 
   .dream-select-column > .page-text.large {
@@ -2889,18 +2802,15 @@ button.zoom-control {
   }
 
   .dream-select-column {
-    margin-left: -4px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .dream-select-column.people {
     margin-top: 60px;
-    width: 280px;
-    margin-left: 0;
   }
 
   .dream-select-flex-container {
-    width: 280px;
-    height: 403px;
     flex-direction: column;
     margin-top: 69px;
   }
@@ -2909,16 +2819,8 @@ button.zoom-control {
     margin-top: 125px;
   }
 
-  .bank-page-wrap .contact-column.dreams {
-    margin-left: 0;
-  }
-
   .bank-page-wrap .contact-column.dreams > .contact-inner-row {
     margin-bottom: 51px;
-  }
-
-  .bank-page-wrap .contact-inner-row.btn-wrap {
-    margin-left: 0;
   }
 
   .bank-page-wrap .contact-column.wide {
@@ -2930,18 +2832,16 @@ button.zoom-control {
     margin-bottom: 50px;
   }
 
-  .bank-page-wrap .contact-column.wide > .contact-inner-row.btn-wrap {
-    margin-left: -2px;
-  }
-
   .megaphone-img {
-    width: 102.67px;
-    height: 100px;
+    max-width: 102.67px;
+    width: 100%;
+    max-height: 100px;
   }
 
   .people-img {
-    width: 125.64px;
-    height: 80px;
+    max-width: 125.64px;
+    width: 100%;
+    max-height: 80px;
   }
 
   .bank-footer > .footer {
@@ -2952,17 +2852,13 @@ button.zoom-control {
 ============================================*/
 
   .dream-supporters > .page-heading {
-    width: 280px;
-    height: 46px;
-    margin: 103px auto 35px auto;
-    padding-left: 2px;
+    margin-top: 103px;
+    margin-bottom: 35px;
   }
 
   .dream-supporters > .page-text {
-    width: 282px;
-    height: 70px;
+    width: 85%;
     margin: 30px auto 80px auto;
-    padding-left: 3px;
   }
 
   .dream-supporters > .page-text,
@@ -2972,7 +2868,7 @@ button.zoom-control {
   }
 
   .select-container {
-    width: 280px;
+    width: 85%;
     height: 190px;
     flex-direction: column;
     margin-top: 79px;
@@ -2989,16 +2885,8 @@ button.zoom-control {
     margin-bottom: 40px;
   }
 
-  .city-select > .page-text {
-    margin-left: 2px;
-  }
-
-  .type-select > .page-text {
-    margin-left: 1px;
-  }
-
   .dropdown {
-    width: 280px;
+    width: 100%;
     margin-top: 14px;
     margin-left: 1px;
     padding-left: 11px;
@@ -3012,20 +2900,14 @@ button.zoom-control {
   }
 
   .displayInfoWrap {
-    width: 280px;
-    margin: 0 auto;
+    min-width: 242px;
   }
 
   .created-div > .page-text.name {
-    width: 110px;
     margin-left: 15px;
     margin-right: 1px;
     font-size: 14px;
     line-height: 17px;
-  }
-
-  .created-div > .page-text.contacts {
-    width: 100px;
   }
 
   .created-div > img {
@@ -3035,7 +2917,6 @@ button.zoom-control {
 
   .map-container,
   .map {
-    width: 100%;
     height: 585px;
   }
 
@@ -3054,42 +2935,48 @@ button.zoom-control {
   }
 
   .gm-style .gm-style-iw {
-    width: 280px;
-    height: 200px;
-    padding: 15px;
+    max-width: 280px;
+    width: 100%;
+    min-height: 200px;
+    height: auto;
+    padding: 0;
+    padding-top: 15px;
   }
 
   .gm-style-iw-d > div {
-    width: 250px;
-    height: 170px;
+    width: 95%;
+    height: 95%;
   }
 
   .popup-logo {
     height: 70px;
-    width: 100px;
-    left: 147px;
+    width: 100%;
+    text-align: end;
   }
 
   .popup-logo > img {
     max-height: 70px;
-    width: auto;
+    height: auto;
     max-width: 80px;
+    width: auto;
+    top: unset;
+    left: unset;
   }
 
   .popup-text-wrap {
-    width: 200px;
-    height: 120px;
+    width: 90%;
+    height: auto;
     top: 75px;
+    right: 15px;
   }
 
   .popup-name,
   .popup-contacts {
-    width: 200px;
+    width: 100%;
   }
 
   .popup-name > p {
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin: 15px 0;
     font-size: 18px;
     line-height: 27px;
   }
@@ -3112,107 +2999,74 @@ button.zoom-control {
 =======================================*/
 
   .stories {
-    width: 280px;
-    height: 204px;
-    margin: 103px auto 83px auto;
-  }
-
-  .stories > .page-heading {
-    width: 280px;
-    height: 99px;
-    margin-left: -4px;
+    margin: 103px 0 83px 0;
   }
 
   .stories > .page-text {
-    width: 280px;
-    height: 45px;
     margin-top: 64px;
-    padding-left: 2px;
     font-size: 18px;
     line-height: 22px;
   }
 
-  .story-grid-container {
-    width: 280px;
-    height: 1450px;
-    grid-template-columns: repeat(2, 134px);
-    grid-template-rows: repeat(10, 134px);
-    gap: 12px;
+  .grid-wrap {
     margin: 80px auto 50px auto;
-    padding-left: 1px;
   }
 
-  .content-gallery,
-  .post-gallery,
-  .story-image,
-  .story-image > img {
-    width: 134px;
-    height: 134px;
+  .story-grid-container {
+    justify-content: center;
   }
 
-  .gold-image,
-  .story-image::before {
-    width: 135px;
-    height: 134px;
-  }
-
-  .content-gallery {
-    top: -138px;
-  }
-
-  .content-gallery > .page-undertitle {
-    width: 134px;
-    height: 85px;
-    margin-top: 49px;
+  .post-gallery {
+    width: 47%;
+    padding-bottom: 47%;
+    margin: 1.5%;
   }
 
   .gold-number,
   .story-number {
-    font-size: 36px;
-    line-height: 53px;
+    right: 10px;
+    bottom: -4px;
   }
 
-  .gold-number {
-    bottom: -90.5px;
-    right: 10px;
+  .content-gallery > .page-undertitle {
+    padding-top: 40%;
   }
 
   .story-image > .page-undertitle.new-stories {
+    margin-top: 30%;
     font-size: 14px;
     line-height: 21px;
-    margin-top: 63px;
     letter-spacing: 0.7px;
     font-weight: normal;
-    padding-left: 3px;
   }
 
   .more-dreams-btn {
-    width: 233px;
     display: block;
     margin: 52px auto 120px auto;
   }
 
+  .more-dreams-btn > .user-btn {
+    padding: 0;
+  }
+
   .overlay-inner-container {
-    width: 279px;
-    height: 430px;
+    top: 50px;
+    width: 100%;
   }
 
   .story-video {
-    top: 50px;
-    width: 279px;
-    height: 156px;
+    width: 100%;
   }
 
   .story-video-playImg {
-    top: -85px;
     width: 108px;
     height: 106px;
+    top: calc(50% - 53px);
+    left: calc(50% - 54px);
   }
 
   .storyteller {
-    width: 279px;
-    height: 36px;
-    top: -65px;
+    margin-top: 0;
   }
 
   .storyteller > .page-undertitle {
@@ -3223,55 +3077,50 @@ button.zoom-control {
   .closeIcon {
     width: 15px;
     height: 15px;
-    margin-left: 264px;
-    top: 42px;
+    margin-left: 97%;
+    margin-bottom: 8px;
     background-position: center;
   }
 
   .sparkle-team {
-    width: 280px;
-    height: 1304px;
+    width: 80%;
     margin: 120px auto 135px auto;
   }
 
   .sparkle-team > .page-undertitle {
-    width: 280px;
-    height: 30px;
     font-size: 24px;
     line-height: 36px;
-    margin: 0 auto;
-    margin-top: -3px;
-    padding-left: 2px;
+    margin: 0;
   }
 
   .sparkle-team > .page-text {
-    width: 280px;
-    height: 52px;
+    width: 100%;
+    margin: 34px 0 79px 0;
     font-size: 14px;
     line-height: 17px;
-    margin: 34px auto 79px auto;
-    padding-left: 2px;
   }
 
   .team-gallery-container {
-    width: 280px;
-    height: 1112px;
+    align-items: center;
     flex-direction: column;
   }
 
-  .team-mate,
-  .team-mate > img,
   .team-mate > .founder-overlay {
-    width: 280px;
-    height: 354px;
+    display: none;
+  }
+
+  .team-mate,
+  .team-mate > img {
+    width: 100%;
+    height: auto;
   }
 
   .team-mate.middle {
     margin: 25px 0;
   }
 
-  .about-founder {
-    bottom: 85px;
+  .grey-overlay {
+    height: 99.5%;
   }
 
   .about-founder > .name {
@@ -3279,37 +3128,14 @@ button.zoom-control {
     line-height: 27px;
   }
 
+  .about-founder.third {
+    width: 200px;
+    margin-left: calc(50% - 100px);
+  }
+
   .about-founder > .page-text {
     font-size: 14px;
     line-height: 17px;
-  }
-
-  .about-founder.first,
-  .about-founder.second {
-    bottom: 65px;
-    margin-left: -11px;
-  }
-
-  .about-founder.first > .page-text {
-    margin-left: 12px;
-    letter-spacing: 0.1px;
-  }
-
-  .about-founder.second > .page-text {
-    letter-spacing: 0.08px;
-  }
-
-  .about-founder.third {
-    bottom: 83px;
-    margin-left: 0px;
-  }
-
-  .about-founder.third > .page-text {
-    margin-left: 10px;
-  }
-
-  .inspiration-footer > .footer {
-    top: -13px;
   }
 
   /* ==================Error page Mobile
@@ -3495,11 +3321,9 @@ button.zoom-control {
   }
 
   .introduction > .page-text {
-    width: 615px;
-    height: 140px;
-    margin: 139px auto 150px auto;
+    height: 220px;
+    margin: 139px auto 60px auto;
     font-weight: normal;
-    padding-left: 1px;
   }
 
   /* ===Gallery section===*/
@@ -3531,15 +3355,16 @@ button.zoom-control {
   /* ===Contacts section=== */
 
   .contact-section-wrap {
-    width: 608px;
-    height: 154px;
-    padding: 0;
     margin-top: 148px;
-    margin-bottom: 144px;
+    margin-bottom: 104px;
   }
 
   .contact-inner-row .section-titel > .break-line {
     display: block;
+  }
+
+  .contact-column {
+    width: 40%;
   }
 
   .contact-inner-row > .dreamers {
@@ -3600,7 +3425,6 @@ button.zoom-control {
 
   .benefactors-titel {
     top: 66px;
-    width: 222px;
     height: 34px;
   }
 
@@ -3611,9 +3435,7 @@ button.zoom-control {
 
   .flex-container-logos {
     top: 88px;
-    width: 608px;
-
-    margin: 0 auto 80px auto;
+    margin-bottom: 80px;
   }
 
   .logo-teikums img,
@@ -3637,9 +3459,8 @@ button.zoom-control {
   }
 
   .flex-container-footer {
-    width: 607px;
-    right: 102px;
     top: 69px;
+    width: unset;
   }
 
   .golden-logo {
@@ -3650,6 +3471,15 @@ button.zoom-control {
   .golden-logo img {
     width: 162px;
     height: 162px;
+  }
+
+  .underlogo-name {
+    display: block;
+    position: absolute;
+    bottom: 112px;
+    left: 0;
+    margin-left: 19px;
+    padding: 0;
   }
 
   .copyright {
@@ -3663,12 +3493,13 @@ button.zoom-control {
   }
 
   .copyright.private {
-    right: -19px;
+    margin: 0;
+    right: 0;
   }
 
   .social-media {
     bottom: 112px;
-    right: -20px;
+    right: 0;
   }
 
   .fb-icon {
@@ -3681,10 +3512,7 @@ button.zoom-control {
   }
 
   .owner-name {
-    position: absolute;
-    top: 150px;
-    right: 452px;
-    width: 225px;
+    display: none;
   }
 
   .footer-nav,
@@ -3695,7 +3523,6 @@ button.zoom-control {
 
   .adress {
     top: 43px;
-    right: -20px;
     line-height: 20px;
   }
 
@@ -3722,9 +3549,8 @@ button.zoom-control {
 ===============================*/
 
   .idea > .page-heading {
-    width: 352px;
-    height: 52px;
-    margin: 167px auto 69px auto;
+    margin-top: 167px;
+    margin-bottom: 69px;
   }
 
   .founder {
@@ -3742,8 +3568,7 @@ button.zoom-control {
   }
 
   .founder-overlay {
-    top: 545px;
-    height: 495px;
+    height: 480px;
     background-size: cover;
   }
 
@@ -3752,32 +3577,23 @@ button.zoom-control {
   }
 
   .founder::after {
-    top: 999px;
+    top: 1015px;
   }
 
   .founder-text {
     top: -202px;
-    width: 595px;
-    height: 138px;
-    padding-left: 14px;
   }
 
   .referent-name {
     line-height: 36px;
-    margin-left: -2px;
   }
 
   .referent-position {
     margin-top: 16px;
-    margin-left: -3px;
-  }
-
-  .arrow-btn {
-    width: 110px;
   }
 
   .arrow1 {
-    margin-right: 61px;
+    margin-right: 11%;
   }
 
   .idea-footer > .footer {
@@ -3788,27 +3604,19 @@ button.zoom-control {
 ============================================*/
 
   .about-submit > .page-heading {
-    width: 352px;
-    height: 52px;
-    margin: 167px auto 69px auto;
-  }
-
-  .about-submit > .page-text.large {
-    width: 608px;
-    height: 59px;
-    margin: 0 auto 90px auto;
+    margin-top: 167px;
+    margin-bottom: 69px;
   }
 
   .flex-container-dreams {
-    width: 608px;
-    height: 1157px;
+    width: 77%;
     flex-direction: column;
     margin: 0 auto 150px auto;
   }
 
   .dream-column {
-    width: 608px;
-    height: 532px;
+    margin: 0 auto;
+    width: 90%;
   }
 
   .dream-column.dog-column {
@@ -3868,14 +3676,8 @@ button.zoom-control {
 =======================================*/
 
   .businessman > .page-heading {
-    width: 352px;
-    height: 52px;
-    margin: 167px auto 69px auto;
-  }
-
-  .businessman > .page-text {
-    width: 608px;
-    height: 47px;
+    margin-top: 167px;
+    margin-bottom: 69px;
   }
 
   .business-form {
@@ -3941,13 +3743,12 @@ button.zoom-control {
   }
 
   .aim-wrap {
-    width: 608px;
-    height: 977px;
+    width: 85%;
   }
 
   .aim-flex-container {
-    width: 608px;
-    margin-left: -11px;
+    margin: 0 auto;
+    width: 90%;
   }
 
   .bank-flex-row.first,
@@ -3967,12 +3768,9 @@ button.zoom-control {
     margin-left: 8px;
   }
 
-  .bank-text-col.middle {
-    width: 375px;
-  }
-
+  .bank-text-col.middle,
   .bank-text-col {
-    width: 350px;
+    width: unset;
   }
 
   .bank-text-col.first {
@@ -4001,11 +3799,6 @@ button.zoom-control {
     margin-top: 2px;
   }
 
-  .mission {
-    width: 608px;
-    height: 106px;
-  }
-
   .mission > .page-undertitle {
     margin-bottom: 30px;
   }
@@ -4016,8 +3809,7 @@ button.zoom-control {
 
   .earth-wrap,
   .rainbow-wrap {
-    width: 608px;
-    height: 424px;
+    width: 80%;
   }
 
   .earth-wrap {
@@ -4029,18 +3821,7 @@ button.zoom-control {
   }
 
   .dream-support-wrap {
-    width: 608px;
-    height: 300px;
     margin-top: 154px;
-  }
-
-  .dream-support-wrap > .page-undertitle {
-    padding-left: 3px;
-  }
-
-  .dream-select-flex-container {
-    width: 608px;
-    height: 199px;
   }
 
   .dream-select-column.people {
@@ -4048,7 +3829,7 @@ button.zoom-control {
   }
 
   .dream-select-column {
-    width: 255px;
+    width: 45%;
   }
 
   .dream-select-column > .page-text.large {
@@ -4075,15 +3856,9 @@ button.zoom-control {
 ============================================*/
 
   .dream-supporters > .page-heading {
-    width: 352px;
     height: 52px;
-    margin: 167px auto 70px auto;
-  }
-
-  .dream-supporters > .page-text {
-    width: 608px;
-    height: 67px;
-    padding-left: 1px;
+    margin-top: 167px;
+    margin-bottom: 70px;
   }
 
   .city-select {
@@ -4102,22 +3877,16 @@ button.zoom-control {
   }
 
   .select-container {
-    margin: 90px auto 70px auto;
-  }
-
-  .displayInfoWrap {
-    width: 608px;
-    margin: 0 auto;
+    max-width: 800px;
+    width: 70%;
+    margin-top: 90px;
+    margin-bottom: 70px;
+    justify-content: space-between;
   }
 
   .created-div > .page-text.name {
-    width: 250px;
     margin-left: 30px;
     text-transform: none;
-  }
-
-  .created-div > .page-text.contacts {
-    width: 166px;
   }
 
   .created-div > img {
@@ -4127,7 +3896,6 @@ button.zoom-control {
 
   .map-container,
   .map {
-    width: 100%;
     height: 812px;
   }
 
@@ -4139,182 +3907,91 @@ button.zoom-control {
 =======================================*/
 
   .stories {
-    width: 608px;
-    height: 148px;
-    margin: 167px auto 87px auto;
+    margin: 167px 0 87px 0;
   }
 
   .stories > .page-heading {
-    width: 608px;
-    height: 52px;
-    padding-right: 10px;
     margin-bottom: 69px;
   }
 
-  .stories > .page-text {
-    width: 608px;
-    height: 36px;
-  }
-
-  .story-grid-container {
-    width: 608px;
-    height: 767px;
-    grid-template-columns: repeat(4, 143px);
-    grid-template-rows: repeat(5, 143px);
-    gap: 12px;
+  .grid-wrap {
     margin: 0 auto;
   }
 
-  .gold-image,
-  .story-image::before {
-    width: 144px;
-    height: 143px;
+  .story-grid-container {
+    justify-content: center;
   }
 
-  .content-gallery,
-  .post-gallery,
-  .story-image,
-  .story-image > img {
-    width: 143px;
-    height: 143px;
+  .post-gallery {
+    width: 23%;
+    padding-bottom: 23%;
+    margin: 1%;
   }
 
-  .gold-number {
-    bottom: -99.5px;
+  .gold-number,
+  .story-number {
     right: 10px;
   }
 
-  .story-image > .page-undertitle.new-stories {
-    top: -146px;
-    margin-top: 42px;
-  }
-
-  .content-gallery {
-    top: -147px;
-  }
-
   .content-gallery > .page-undertitle {
-    width: 143px;
-    height: 89.5px;
-    margin-top: 53.5px;
+    padding-top: 40%;
+  }
+
+  .story-image > .page-undertitle.new-stories {
+    margin-top: 30%;
   }
 
   .more-dreams-btn {
-    width: 233px;
     display: block;
     margin: 53px auto 149px auto;
   }
 
   .overlay-inner-container {
-    width: 608px;
-    height: 500px;
+    width: 80%;
   }
 
   .story-video {
-    width: 608px;
-    height: 341px;
-  }
-
-  .story-video-playImg {
-    top: -85px;
-  }
-
-  .storyteller {
-    width: 608px;
-    top: 0;
+    width: 100%;
   }
 
   .closeIcon {
     width: 21px;
     height: 21px;
-    margin-left: 587px;
-    top: 125px;
+    margin-left: 103%;
     background-position: center;
   }
 
-  .story-image > .page-undertitle.new-stories {
-    top: -139px;
-  }
-
   .sparkle-team {
-    width: 606px;
-    height: 1569px;
+    width: 60%;
   }
 
   .sparkle-team > .page-undertitle {
-    width: 394px;
     margin-bottom: 21px;
-    padding-left: 2px;
   }
 
   .sparkle-team > .page-text {
-    width: 606px;
-    height: 46px;
-    margin: 0 auto 90px auto;
-    padding-left: 2px;
+    margin-bottom: 90px;
   }
 
   .team-gallery-container {
-    width: 352px;
-    height: 1373px;
     flex-direction: column;
-
+    align-items: center;
     margin: 0 auto;
+    width: 80%;
   }
 
   .team-mate,
-  .team-mate > img,
-  .team-mate > .founder-overlay {
-    width: 351px;
-    height: 444px;
-  }
-  .team-mate.last,
-  .team-mate.last > img,
-  .team-mate.last > .founder-overlay {
-    width: 347px;
-    height: 435px;
+  .team-mate > img {
+    width: 100%;
+    height: auto;
   }
 
   .team-mate.middle {
     margin: 25px 0;
   }
 
-  .about-founder.first {
-    bottom: 85px;
-    margin-left: 7px;
-  }
-
-  .about-founder.first > .page-text {
-    letter-spacing: 0.16px;
-  }
-
-  .about-founder.second {
-    bottom: 84px;
-    margin-left: 6px;
-  }
-
-  .about-founder.second > .page-text {
-    width: 330px;
-    margin-left: 2px;
-    letter-spacing: 0.14px;
-  }
-
-  .about-founder.third {
-    bottom: 106px;
-    margin-left: 7px;
-  }
-
-  .about-founder.third > .page-text {
-    margin-left: 11px;
-  }
-
-  .about-founder,
-  .about-founder.third {
-    width: 323px;
-  }
-
-  .inspiration-footer > .footer {
-    top: 5px;
+  .grey-overlay {
+    height: 99.5%;
   }
 
   /* ================Cookie-banner Tablet
