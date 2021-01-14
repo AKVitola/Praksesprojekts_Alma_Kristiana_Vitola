@@ -2731,13 +2731,8 @@ button.zoom-control {
   }
 
   .closeIcon-bankPage {
-    width: 100%;
+    width: 97%;
     top: 50px;
-  }
-
-  .closeIcon-bankPage,
-  .closeIcon-bankPage > .closeIcon {
-    top: 4.6%;
   }
 
   .video {
@@ -3162,7 +3157,7 @@ button.zoom-control {
   .closeIcon {
     width: 15px;
     height: 15px;
-    margin-left: 97%;
+    margin-left: 95%;
     margin-bottom: 8px;
     background-position: center;
   }
