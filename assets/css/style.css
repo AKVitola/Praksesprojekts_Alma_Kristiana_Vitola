@@ -1856,6 +1856,8 @@ button.zoom-control {
   left: 0;
   z-index: 2;
 
+  display: none;
+
   max-width: 818px;
   width: 80%;
   margin-right: auto;
